@@ -17,11 +17,11 @@ LICENSE=	GPLv2
 
 USES=		gettext-tools gmake libtool pathfix pkgconfig \
 		tar:bzip2 xfce
-
-GNU_CONFIGURE=	yes
 USE_GNOME=	glib20 gtk30 intltool intlhack
 USE_LDCONFIG=	yes
 USE_XFCE=	xfconf
+
+GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 
 CONFIGURE_ARGS=	--with-vendor-info=${OPSYS} --without-html-dir

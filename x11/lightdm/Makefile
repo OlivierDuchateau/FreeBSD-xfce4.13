@@ -2,10 +2,9 @@
 # $FreeBSD: head/x11/lightdm/Makefile 487272 2018-12-12 01:35:33Z gerald $
 
 PORTNAME=	lightdm
-PORTVERSION=	1.24.0
-PORTREVISION=	2
+PORTVERSION=	1.28.0
 CATEGORIES=	x11
-MASTER_SITES=	https://launchpad.net/${PORTNAME}/${PORTVERSION:R}/${PORTVERSION}/+download/
+MASTER_SITES=	https://github.com/CanonicalLtd/lightdm/releases/download/${PORTVERSION}/
 
 MAINTAINER=	woodsb02@FreeBSD.org
 COMMENT=	Lightweight Display Manager
@@ -26,13 +25,14 @@ LIB_DEPENDS=	libaccountsservice.so:sysutils/accountsservice \
 USES=		compiler:c++11-lang localbase gettext gmake libtool pathfix \
 		pkgconfig tar:xz
 USE_CXXSTD=	c++11
-GNU_CONFIGURE=	yes
 USE_GNOME=	glib20 intlhack
 USE_XORG=	x11 xcb xdmcp
-CONFIGURE_ARGS=	--disable-tests # PAM errors
-INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	lightdm
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--disable-tests # PAM errors
+INSTALL_TARGET=	install-strip
 SUB_FILES=	Xsession
 
 USERS=		lightdm

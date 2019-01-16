@@ -28,6 +28,9 @@ libexec/lightdm-guest-session
 man/man1/dm-tool.1.gz
 man/man1/lightdm.1.gz
 sbin/lightdm
+share/accountsservice/interfaces/org.freedesktop.DisplayManager.AccountsService.xml
+share/dbus-1/interfaces/org.freedesktop.DisplayManager.AccountsService.xml
+share/polkit-1/actions/org.freedesktop.DisplayManager.AccountsService.policy
 share/bash-completion/completions/dm-tool
 share/bash-completion/completions/lightdm
 %%VALA%%share/gir-1.0/LightDM-1.gir

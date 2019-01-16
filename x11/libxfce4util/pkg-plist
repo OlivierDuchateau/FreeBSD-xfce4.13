@@ -19,10 +19,12 @@ sbin/xfce4-kiosk-query
 %%NLS%%share/locale/am/LC_MESSAGES/libxfce4util.mo
 %%NLS%%share/locale/ar/LC_MESSAGES/libxfce4util.mo
 %%NLS%%share/locale/ast/LC_MESSAGES/libxfce4util.mo
+%%NLS%%share/locale/be/LC_MESSAGES/libxfce4util.mo
 %%NLS%%share/locale/bg/LC_MESSAGES/libxfce4util.mo
 %%NLS%%share/locale/bn/LC_MESSAGES/libxfce4util.mo
 %%NLS%%share/locale/ca/LC_MESSAGES/libxfce4util.mo
 %%NLS%%share/locale/cs/LC_MESSAGES/libxfce4util.mo
+%%NLS%%share/locale/cy/LC_MESSAGES/libxfce4util.mo
 %%NLS%%share/locale/da/LC_MESSAGES/libxfce4util.mo
 %%NLS%%share/locale/de/LC_MESSAGES/libxfce4util.mo
 %%NLS%%share/locale/el/LC_MESSAGES/libxfce4util.mo

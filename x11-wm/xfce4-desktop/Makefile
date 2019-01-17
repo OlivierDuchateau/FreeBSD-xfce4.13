@@ -2,7 +2,7 @@
 # $FreeBSD: head/x11-wm/xfce4-desktop/Makefile 450043 2017-09-18 14:26:03Z madpilot $
 
 PORTNAME=	xfce4-desktop
-PORTVERSION=	4.12.4
+PORTVERSION=	4.13.2
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	XFCE/src/xfce/xfdesktop/${PORTVERSION:R}/
 DISTNAME=	xfdesktop-${PORTVERSION}
@@ -20,12 +20,14 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
 
-USES=		gettext-tools gmake pkgconfig tar:bzip2 xfce
-GNU_CONFIGURE=	yes
-INSTALLS_ICONS=	yes
-USE_GNOME=	glib20 gtk20 intltool libwnck cairo
+USES=		gettext-tools gmake gnome pkgconfig tar:bzip2 xfce
+
+USE_GNOME=	glib20 gtk30 intltool libwnck cairo
 USE_XFCE=	garcon libexo
 USE_XORG=	ice sm x11
+
+GNU_CONFIGURE=	yes
+INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
 CONFIGURE_ARGS+=--enable-gio-unix \
@@ -33,15 +35,15 @@ CONFIGURE_ARGS+=--enable-gio-unix \
 
 OPTIONS_DEFINE=		NLS THUNAR
 OPTIONS_DEFAULT=	THUNAR
-NLS_USES=	gettext-runtime
-NLS_CONFIGURE_ENABLE=	nls
-THUNAR_USE=	xfce=thunar
-THUNAR_CONFIGURE_ENABLE=	thunarx
-THUNAR_CONFIGURE_WITH=	file-manager-fallback=Thunar
-THUNAR_DESC=	Thunar file manager support
-OPTIONS_SUB=	yes
+OPTIONS_SUB=		yes
 
-post-patch-NLS-off:
-	@${REINPLACE_CMD} -e 's|po ||' ${WRKSRC}/Makefile.in
+THUNAR_DESC=		Thunar file manager support
+
+NLS_USES=		gettext-runtime
+NLS_CONFIGURE_ENABLE=	nls
+
+THUNAR_USE=		xfce=thunar
+THUNAR_CONFIGURE_ENABLE=thunarx
+THUNAR_CONFIGURE_WITH=	file-manager-fallback=Thunar
 
 .include <bsd.port.mk>

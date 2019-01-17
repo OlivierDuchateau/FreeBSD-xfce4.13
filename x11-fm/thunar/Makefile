@@ -78,6 +78,6 @@ post-patch:
 
 post-install:
 	${RM} ${STAGEDIR}${PREFIX}/lib/systemd/user/thunar.service
-	${RMDIR} -p ${STAGEDIR}${PREFIX}/lib/systemd/user
+	(cd ${STAGEDIR}${PREFIX}/lib && ${RMDIR} -p systemd/user)
 
 .include <bsd.port.mk>

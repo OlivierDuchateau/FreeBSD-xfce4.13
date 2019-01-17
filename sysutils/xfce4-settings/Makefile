@@ -16,7 +16,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libdbus-glib-1.so:devel/dbus-glib \
 		libfontconfig.so:x11-fonts/fontconfig \
-		libxklavier.so:x11/libxklavier
+		libxklavier.so:x11/libxklavier \
+		libfreetype.so:print/freetype2
 
 #PORTSCOUT=	limit:^4\.12\.
 

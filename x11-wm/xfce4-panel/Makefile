@@ -2,7 +2,7 @@
 # $FreeBSD: head/x11-wm/xfce4-panel/Makefile 456298 2017-12-14 14:40:29Z madpilot $
 
 PORTNAME=	xfce4-panel
-PORTVERSION=	4.12.2
+PORTVERSION=	4.13.4
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	XFCE/src/xfce/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
@@ -20,28 +20,37 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
 
-PORTSCOUT=	limit:^4\.12\.
+#PORTSCOUT=	limit:^4\.12\.
 
-USES=		desktop-file-utils gmake libtool pathfix gettext-tools perl5 \
-		pkgconfig tar:bzip2
-GNU_CONFIGURE=	yes
-INSTALLS_ICONS=	yes
-USE_GNOME=	glib20 gtk20 intltool intlhack libwnck cairo
+USES=		desktop-file-utils gettext-tools gmake gnome libtool pathfix \
+		perl5 pkgconfig tar:bzip2
+USE_GNOME=	glib20 gtk30 intltool intlhack libwnck cairo
 USE_LDCONFIG=	yes
 USE_XFCE=	garcon libexo
 USE_XORG=	ice sm x11 xext
+
+GNU_CONFIGURE=	yes
+INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
 CONFIGURE_ARGS+=--enable-gio-unix --without-html-dir
 
-OPTIONS_DEFINE=		GTK3 NLS
-OPTIONS_DEFAULT=	GTK3
-GTK3_USES=		xfce:gtk3
-GTK3_USE=		gnome=gtk30
-GTK3_CONFIGURE_ENABLE=	gtk3
-GTK3_USES_OFF=		xfce
+OPTIONS_DEFINE=		GIR GTK2 NLS
+OPTIONS_SUB=		yes
+
+GIR_DESC=		Use Gobject Introspection
+
+GIR_BUILD_DEPENDS=	vapigen:lang/vala
+GIR_USE=		gnome=introspection:build
+GIR_CONFIGURE_ON=       --enable-intropsection=yes
+GIR_CONFIGURE_OFF=      --enable-intropsection=no
+
+GTK2_USES=		xfce:gtk2
+GTK2_USE=		gnome=gtk20
+GTK2_CONFIGURE_ENABLE=	gtk2
+GTK2_USES_OFF=		xfce
+
 NLS_USES=		gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
-OPTIONS_SUB=		yes
 
 .include <bsd.port.mk>

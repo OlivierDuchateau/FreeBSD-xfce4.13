@@ -45,6 +45,7 @@ OPTIONS_DEFAULT=	NOTIFY PLUG_APR PLUG_SBR PLUG_TPA PLUG_UCA PLUG_WALL
 OPTIONS_SUB=		yes
 
 # Override NOTIFY_DESC
+GIR_DESC=	Use Gobject Introspection
 NOTIFY_DESC=	Display notifications
 PLUG_APR_DESC=	Advanced Properties plugin
 PLUG_SBR_DESC=	Simple Builtin Renamers plugin

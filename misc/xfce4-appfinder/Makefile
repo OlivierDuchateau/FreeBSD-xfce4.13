@@ -2,9 +2,9 @@
 # $FreeBSD: head/misc/xfce4-appfinder/Makefile 412348 2016-04-01 14:17:44Z mat $
 
 PORTNAME=	xfce4-appfinder
-PORTVERSION=	4.12.0
+PORTVERSION=	4.13.2
 CATEGORIES=	misc xfce
-MASTER_SITES=	XFCE
+MASTER_SITES=	XFCE/src/xfce/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
@@ -14,20 +14,17 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib
 
-GNU_CONFIGURE=	yes
-USES=		gmake pkgconfig gettext-tools tar:bzip2
-USE_GNOME=	glib20 intltool intlhack
+USES=		gettext-tools gmake gnome pkgconfig tar:bzip2 xfce
+USE_GNOME=	glib20 gtk30 intltool intlhack
 USE_XFCE=	garcon
 
-OPTIONS_DEFINE=	GTK3 NLS
-GTK3_USES=	xfce:gtk3
-GTK3_USE=	gnome=gtk30
-GTK3_CONFIGURE_ENABLE=	gtk3
-GTK3_USES_OFF=	xfce
-GTK3_USE_OFF=	gnome=gtk20
+GNU_CONFIGURE=	yes
+
+OPTIONS_DEFINE=	NLS
+OPTIONS_SUB=	yes
+
 NLS_USES=	gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
-OPTIONS_SUB=	yes
 
 post-patch:
 	${REINPLACE_CMD} -e 's|=gtk-find|=system-search|' \

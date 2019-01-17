@@ -22,7 +22,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 
 USES=		gettext-tools gmake gnome pkgconfig tar:bzip2 xfce
 
-USE_GNOME=	glib20 gtk30 intltool libwnck cairo
+USE_GNOME=	glib20 gtk30 intltool libwnck3 cairo
 USE_XFCE=	garcon libexo
 USE_XORG=	ice sm x11
 

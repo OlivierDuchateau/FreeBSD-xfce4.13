@@ -5,7 +5,7 @@
 #
 # Feature:	xfce
 # Usage:	USES=xfce or USES=xfce:ARGS
-# Valid ARGS:	gtk3
+# Valid ARGS:	gtk2
 #
 # Variables, which can be set by the port:
 #
@@ -19,24 +19,14 @@ _USES_POST+=	xfce
 
 _USE_XFCE_ALL=	garcon libexo libgui libmenu libutil panel thunar xfconf
 
-XFCE_MASTER_SITE_VER=	4.12
+XFCE_MASTER_SITE_VER=	4.13
 
 xfce_ARGS?=	# empty
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 LIBS+=	-L${LOCALBASE}/lib
 
-.if ${xfce_ARGS:Mgtk3}
-libmenu_LIB_DEPENDS=	libxfce4ui-2.so:x11/libxfce4menu
-libmenu_USE_XFCE_REQ=	xfconf
-
-garcon_LIB_DEPENDS=	libgarcon-gtk3-1.so:sysutils/garcon
-garcon_USE_XFCE_REQ=	libmenu
-
-panel_LIB_DEPENDS=	libxfce4panel-2.0.so:x11-wm/xfce4-panel
-panel_RUN_DEPENDS=	xfce4-panel:x11-wm/xfce4-panel
-panel_USE_XFCE_REQ=	garcon libexo xfconf
-.else
+.if ${xfce_ARGS:Mgtk2}
 libmenu_LIB_DEPENDS=	libxfce4ui-1.so:x11/libxfce4menu
 libmenu_USE_XFCE_REQ=	xfconf
 
@@ -44,6 +34,16 @@ garcon_LIB_DEPENDS=	libgarcon-gtk2-1.so:sysutils/garcon
 garcon_USE_XFCE_REQ=	libmenu
 
 panel_LIB_DEPENDS=	libxfce4panel-1.0.so:x11-wm/xfce4-panel
+panel_RUN_DEPENDS=	xfce4-panel:x11-wm/xfce4-panel
+panel_USE_XFCE_REQ=	garcon libexo xfconf
+.else
+libmenu_LIB_DEPENDS=	libxfce4ui-2.so:x11/libxfce4menu
+libmenu_USE_XFCE_REQ=	xfconf
+
+garcon_LIB_DEPENDS=	libgarcon-gtk3-1.so:sysutils/garcon
+garcon_USE_XFCE_REQ=	libmenu
+
+panel_LIB_DEPENDS=	libxfce4panel-2.0.so:x11-wm/xfce4-panel
 panel_RUN_DEPENDS=	xfce4-panel:x11-wm/xfce4-panel
 panel_USE_XFCE_REQ=	garcon libexo xfconf
 .endif

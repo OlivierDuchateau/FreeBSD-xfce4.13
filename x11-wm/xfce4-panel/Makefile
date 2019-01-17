@@ -42,8 +42,8 @@ GIR_DESC=		Use Gobject Introspection
 
 GIR_BUILD_DEPENDS=	vapigen:lang/vala
 GIR_USE=		gnome=introspection:build
-GIR_CONFIGURE_ON=       --enable-intropsection=yes
-GIR_CONFIGURE_OFF=      --enable-intropsection=no
+GIR_CONFIGURE_ON=       --enable-introspection=yes
+GIR_CONFIGURE_OFF=      --enable-introspection=no
 
 GTK2_USES=		xfce:gtk2
 GTK2_USE=		gnome=gtk20

@@ -76,4 +76,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|internet-mail|emblem-mail|' \
 		${WRKSRC}/plugins/thunar-sendto-email/thunar-sendto-email.desktop.in.in
 
+post-install:
+	${RM} ${STAGEDIR}${PREFIX}/lib/systemd/user/thunar.service
+	${RMDIR} -p ${STAGEDIR}${PREFIX}/lib/systemd/user
+
 .include <bsd.port.mk>

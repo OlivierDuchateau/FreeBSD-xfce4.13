@@ -56,7 +56,7 @@ libgui_USE_XFCE_REQ=	libutil
 
 libutil_LIB_DEPENDS=	libxfce4util.so:x11/libxfce4util
 
-thunar_LIB_DEPENDS=	libthunarx-2.so:x11-fm/thunar
+thunar_LIB_DEPENDS=	libthunarx-3.so:x11-fm/thunar
 thunar_RUN_DEPENDS=	Thunar:x11-fm/thunar
 thunar_USE_XFCE_REQ=	xfconf libmenu
 

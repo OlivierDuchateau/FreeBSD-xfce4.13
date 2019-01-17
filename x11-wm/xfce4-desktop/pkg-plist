@@ -22,6 +22,7 @@ share/icons/hicolor/scalable/apps/xfce4-menueditor.svg
 %%NLS%%share/locale/de/LC_MESSAGES/xfdesktop.mo
 %%NLS%%share/locale/el/LC_MESSAGES/xfdesktop.mo
 %%NLS%%share/locale/en_AU/LC_MESSAGES/xfdesktop.mo
+%%NLS%%share/locale/en_CA/LC_MESSAGES/xfdesktop.mo
 %%NLS%%share/locale/en_GB/LC_MESSAGES/xfdesktop.mo
 %%NLS%%share/locale/eo/LC_MESSAGES/xfdesktop.mo
 %%NLS%%share/locale/es/LC_MESSAGES/xfdesktop.mo

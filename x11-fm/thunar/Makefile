@@ -38,7 +38,7 @@ CONFIGURE_ARGS=	--enable-gio-unix \
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
-OPTIONS_DEFINE=		NLS NOTIFY
+OPTIONS_DEFINE=		GIR NLS NOTIFY
 OPTIONS_GROUP=		PLUGINS
 OPTIONS_GROUP_PLUGINS=	PLUG_APR PLUG_SBR PLUG_TPA PLUG_UCA PLUG_WALL
 OPTIONS_DEFAULT=	NOTIFY PLUG_APR PLUG_SBR PLUG_TPA PLUG_UCA PLUG_WALL
@@ -52,10 +52,17 @@ PLUG_TPA_DESC=	Trash Panel Applet plugin
 PLUG_UCA_DESC=	User Customizable Actions plugin
 PLUG_WALL_DESC=	Wallpaper plugin
 
+GIR_BUILD_DEPENDS=		vapigen:lang/vala
+GIR_USE=			gnome=introspection:build
+GIR_CONFIGURE_ON=		--enable-introspection=yes
+GIR_CONFIGURE_OFF=		--enable-introspection=no
+
 NLS_USES=			gettext-runtime
 NLS_CONFIGURE_ENABLE=		nls
+
 NOTIFY_LIB_DEPENDS=		libnotify.so:devel/libnotify
 NOTIFY_CONFIGURE_ENABLE=	notifications
+
 PLUG_APR_LIB_DEPENDS=		libexif.so:graphics/libexif
 PLUG_APR_CONFIGURE_ENABLE=	apr-plugin exif
 PLUG_SBR_LIB_DEPENDS=		libpcre.so:devel/pcre

@@ -24,6 +24,8 @@ share/icons/hicolor/128x128/devices/xfce-display-extend.png
 share/icons/hicolor/128x128/devices/xfce-display-external.png
 share/icons/hicolor/128x128/devices/xfce-display-internal.png
 share/icons/hicolor/128x128/devices/xfce-display-mirror.png
+share/icons/hicolor/128x128/devices/xfce-display-profile.png
+%%NLS%%share/locale/am/LC_MESSAGES/xfce4-settings.mo
 %%NLS%%share/locale/ar/LC_MESSAGES/xfce4-settings.mo
 %%NLS%%share/locale/ast/LC_MESSAGES/xfce4-settings.mo
 %%NLS%%share/locale/be/LC_MESSAGES/xfce4-settings.mo
@@ -59,13 +61,14 @@ share/icons/hicolor/128x128/devices/xfce-display-mirror.png
 %%NLS%%share/locale/oc/LC_MESSAGES/xfce4-settings.mo
 %%NLS%%share/locale/pa/LC_MESSAGES/xfce4-settings.mo
 %%NLS%%share/locale/pl/LC_MESSAGES/xfce4-settings.mo
-%%NLS%%share/locale/pt/LC_MESSAGES/xfce4-settings.mo
 %%NLS%%share/locale/pt_BR/LC_MESSAGES/xfce4-settings.mo
+%%NLS%%share/locale/pt/LC_MESSAGES/xfce4-settings.mo
 %%NLS%%share/locale/ro/LC_MESSAGES/xfce4-settings.mo
 %%NLS%%share/locale/ru/LC_MESSAGES/xfce4-settings.mo
 %%NLS%%share/locale/si/LC_MESSAGES/xfce4-settings.mo
 %%NLS%%share/locale/sk/LC_MESSAGES/xfce4-settings.mo
 %%NLS%%share/locale/sl/LC_MESSAGES/xfce4-settings.mo
+%%NLS%%share/locale/sq/LC_MESSAGES/xfce4-settings.mo
 %%NLS%%share/locale/sr/LC_MESSAGES/xfce4-settings.mo
 %%NLS%%share/locale/sv/LC_MESSAGES/xfce4-settings.mo
 %%NLS%%share/locale/te/LC_MESSAGES/xfce4-settings.mo
@@ -73,8 +76,8 @@ share/icons/hicolor/128x128/devices/xfce-display-mirror.png
 %%NLS%%share/locale/tr/LC_MESSAGES/xfce4-settings.mo
 %%NLS%%share/locale/ug/LC_MESSAGES/xfce4-settings.mo
 %%NLS%%share/locale/uk/LC_MESSAGES/xfce4-settings.mo
-%%NLS%%share/locale/ur/LC_MESSAGES/xfce4-settings.mo
 %%NLS%%share/locale/ur_PK/LC_MESSAGES/xfce4-settings.mo
+%%NLS%%share/locale/ur/LC_MESSAGES/xfce4-settings.mo
 %%NLS%%share/locale/zh_CN/LC_MESSAGES/xfce4-settings.mo
 %%NLS%%share/locale/zh_HK/LC_MESSAGES/xfce4-settings.mo
 %%NLS%%share/locale/zh_TW/LC_MESSAGES/xfce4-settings.mo

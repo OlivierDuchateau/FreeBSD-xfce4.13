@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib
 
 USES=		gettext-tools gmake gnome pkgconfig tar:bzip2 xfce
-USE_GNOME=	glib20 gtk30 intltool intlhack
+USE_GNOME=	cairo glib20 gdkpixbuf2 gtk30 intltool intlhack
 USE_XFCE=	garcon
 
 GNU_CONFIGURE=	yes

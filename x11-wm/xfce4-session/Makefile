@@ -22,13 +22,14 @@ LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib \
 USES=		gettext-tools gmake gnome libtool pathfix pkgconfig \
 		tar:bzip2 xfce
 
-USE_GNOME=	gtk30 glib20 intltool intlhack libwnck3
+USE_GNOME=	cairo gtk30 glib20 intltool intlhack libwnck3
 USE_LDCONFIG=	yes
 USE_XFCE=	libmenu
 USE_XORG=	x11 sm ice
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
+INSTALL_TARGET=	install-strip
 CONFIGURE_ARGS+=--enable-legacy-sm \
 		--with-xsession-prefix=${PREFIX}
 

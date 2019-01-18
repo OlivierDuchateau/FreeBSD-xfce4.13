@@ -34,6 +34,7 @@ CFLAGS+=	-Wno-return-type
 
 OPTIONS_DEFINE=			KEYBINDER NLS
 OPTIONS_DEFAULT=		KEYBINDER
+OPTIONS_SUB=			yes
 
 KEYBINDER_DESC=			Keyboard shortcuts
 KEYBINDER_LIB_DEPENDS=		libkeybinder-3.0.so:x11/keybinder-gtk3

@@ -18,25 +18,25 @@ RUN_DEPENDS=	xfwm4:x11-wm/xfce4-wm \
 
 USES=	metaport
 
-OPTIONS_DEFINE=	APPFINDER ICONS MOUSEPAD NOTIFY ORAGE PRINT SLIM SQUEEZE TERMINAL XPM
+OPTIONS_DEFINE=		APPFINDER ICONS MOUSEPAD NOTIFY ORAGE PRINT SLIM SQUEEZE TERMINAL XPM
 OPTIONS_DEFAULT=	APPFINDER ICONS MOUSEPAD NOTIFY ORAGE TERMINAL
 APPFINDER_RUN_DEPENDS=	xfce4-appfinder:misc/xfce4-appfinder
-APPFINDER_DESC=	Launcher and finder
+APPFINDER_DESC=		Launcher and finder
 ICONS_RUN_DEPENDS=	adwaita-icon-theme>0:x11-themes/adwaita-icon-theme
 MOUSEPAD_RUN_DEPENDS=	mousepad:editors/mousepad
-MOUSEPAD_DESC=	Text editor
+MOUSEPAD_DESC=		Text editor
 NOTIFY_RUN_DEPENDS=	xfce4-notifyd-config:deskutils/xfce4-notifyd
 ORAGE_RUN_DEPENDS=	orage:deskutils/orage
-ORAGE_DESC=	Calendar
+ORAGE_DESC=		Calendar
 PRINT_RUN_DEPENDS=	xfprint4:print/xfce4-print
 SLIM_RUN_DEPENDS=	slim:x11/slim
-SLIM_DESC=	SLiM, login manager
+SLIM_DESC=		SLiM, login manager
 SQUEEZE_RUN_DEPENDS=	squeeze:archivers/squeeze
-SQUEEZE_DESC=	Archive manager
+SQUEEZE_DESC=		Archive manager
 TERMINAL_RUN_DEPENDS=	xfce4-terminal:x11/xfce4-terminal
-TERMINAL_DESC=	Terminal emulator
+TERMINAL_DESC=		Terminal emulator
 XPM_RUN_DEPENDS=	xfce4-power-manager:sysutils/xfce4-power-manager
-XPM_DESC=	Power manager
+XPM_DESC=		Power manager
 
 do-install:	# empty
 

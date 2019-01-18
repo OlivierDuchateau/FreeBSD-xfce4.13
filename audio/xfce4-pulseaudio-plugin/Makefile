@@ -3,7 +3,7 @@
 
 PORTNAME=	xfce4-pulseaudio-plugin
 PORTVERSION=	0.4.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio xfce
 MASTER_SITES=	XFCE/src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
@@ -18,7 +18,7 @@ LIB_DEPENDS=	libpulse-mainloop-glib.so:audio/pulseaudio \
 		libdbus-glib-1.so:devel/dbus-glib
 RUN_DEPENDS=	pavucontrol>=2.0:audio/pavucontrol
 
-USES=		gettext gmake gnome libtool pkgconfig tar:bzip2 xfce:gtk3
+USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
 USE_GNOME=	glib20 gtk30 intltool cairo libwnck3
 USE_XFCE=	panel
 USE_XORG=	x11
@@ -32,10 +32,14 @@ CONFIGURE_ARGS=--with-mixer-command=${LOCALBASE}/bin/pavucontrol \
 		--enable-wnck
 CFLAGS+=	-Wno-return-type
 
-OPTIONS_DEFINE=			KEYBINDER
+OPTIONS_DEFINE=			KEYBINDER NLS
 OPTIONS_DEFAULT=		KEYBINDER
+
 KEYBINDER_DESC=			Keyboard shortcuts
 KEYBINDER_LIB_DEPENDS=		libkeybinder-3.0.so:x11/keybinder-gtk3
 KEYBINDER_CONFIGURE_ENABLE=	keybinder
+
+NLS_USES=			gettext-runtime
+NLS_CONFIGURE_ENABLE=		nls
 
 .include <bsd.port.mk>

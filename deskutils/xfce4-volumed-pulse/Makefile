@@ -17,10 +17,11 @@ LIB_DEPENDS=	libpulse.so:audio/pulseaudio \
 		libnotify.so:devel/libnotify \
 		libkeybinder-3.0.so:x11/keybinder-gtk3
 
-USES=		gmake libtool pkgconfig tar:bz2 xfce:gtk3
-GNU_CONFIGURE=	yes
+USES=		gmake gnome libtool pkgconfig tar:bz2 xfce
 USE_GNOME=	glib20 gtk30
 USE_XFCE=	xfconf
+
+GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 
 CONFIGURE_ARGS=	--enable-libnotify

@@ -17,9 +17,16 @@ LIB_DEPENDS=	libtag.so:audio/taglib
 
 USES=		gettext gmake gnome libtool pkgconfig tar:bzip2 xfce
 
-USE_GNOME=	gtk30 intltool intlhack
-USE_XFCE=	thunar
+USE_GNOME=	cairo gdkpixbuf2 gtk30 intltool intlhack
+USE_XFCE=	libexo thunar
 
 GNU_CONFIGURE=	yes
+INSTALL_TARGET=	install-strip
+
+OPTIONS_DEFINE=	NLS
+OPTIONS_SUB=	yes
+
+NLS_USES=		gettext-runtime
+NLS_CONFIGURE_ENABLE=	nls
 
 .include <bsd.port.mk>

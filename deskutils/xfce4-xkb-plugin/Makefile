@@ -12,12 +12,19 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	libxklavier.so:x11/libxklavier
 
-USES=		gettext gmake libtool pkgconfig tar:bzip2 xfce:gtk3
-GNU_CONFIGURE=	yes
+USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
 USE_GNOME=	gtk30 intltool librsvg2 libwnck3 cairo
 USE_XFCE=	panel
 USE_XORG=	x11
+
+GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
+
+OPTIONS_DEFINE=	NLS
+OPTIONS_SUB=	yes
+
+NLS_USES=		gettext-runtime
+NLS_CONFIGURE_ENABLE=	nls
 
 # Downgrade libxklavier
 post-patch:

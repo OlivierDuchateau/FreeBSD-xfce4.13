@@ -36,6 +36,7 @@ INSTALL_TARGET=	install-strip
 CONFIGURE_ARGS+=--enable-gio-unix --without-html-dir
 
 OPTIONS_DEFINE=		GIR GTK2 NLS
+OPTIONS_DEFAULT=	GTK2
 OPTIONS_SUB=		yes
 
 GIR_DESC=		Use Gobject Introspection

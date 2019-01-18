@@ -12,8 +12,8 @@ COMMENT=	Version Control System plugin for Thunar
 
 USES=		gettext-tools gmake gnome libtool localbase pkgconfig tar:bzip2 \
 		xfce
-USE_GNOME=	gtk30 glib20 intltool intlhack
-USE_XFCE=	thunar
+USE_GNOME=	cairo gtk30 glib20 intltool intlhack
+USE_XFCE=	libexo thunar
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
@@ -31,7 +31,8 @@ NLS_CONFIGURE_ENABLE=	nls
 GIT_RUN_DEPENDS=	git:devel/git
 GIT_CONFIGURE_ENABLE=	git
 
-SVN_LIB_DEPENDS=	libsvn_client-1.so:devel/subversion
+SVN_LIB_DEPENDS=	libsvn_client-1.so:devel/subversion \
+			libapr-1.so:devel/apr1
 SVN_CONFIGURE_ENABLE=	subversion
 
 .include <bsd.port.mk>

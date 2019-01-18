@@ -10,11 +10,18 @@ DIST_SUBDIR=	xfce4
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Archive plugin for the Thunar File Manager
 
-USES=		gettext gmake gnome libtool pkgconfig tar:bzip2 xfce
-USE_XFCE=	thunar
-USE_GNOME=	intltool
+USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
+USE_XFCE=	libexo thunar
+USE_GNOME=	cairo gtk30 intltool
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
+INSTALL_TARGET=	install-strip
+
+OPTIONS_DEFINE=	NLS
+OPTIONS_SUB=	yes
+
+NLS_USES=		gettext-runtime
+NLS_CONFIGURE_ENABLE=	nls
 
 .include <bsd.port.mk>

@@ -3,7 +3,7 @@
 
 PORTNAME=	xfce4-volumed
 PORTVERSION=	0.1.13
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	deskutils xfce
 MASTER_SITES=	XFCE/src/apps/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
@@ -16,10 +16,11 @@ LICENSE=	GPLv3
 LIB_DEPENDS=	libnotify.so:devel/libnotify \
 		libkeybinder.so:x11/keybinder
 
-USES=		pkgconfig gmake xfce tar:bzip2
-GNU_CONFIGURE=	yes
+USES=		gmake gnome pkgconfig tar:bzip2 xfce:gtk2
 USE_GNOME=	glib20
 USE_GSTREAMER=	yes
 USE_XFCE=	xfconf
+
+GNU_CONFIGURE=	yes
 
 .include <bsd.port.mk>

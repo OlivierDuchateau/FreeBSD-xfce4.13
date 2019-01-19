@@ -3,6 +3,7 @@
 
 PORTNAME=	xfce4-fsguard-plugin
 PORTVERSION=	1.1.0
+PORTREVISION=	1
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	XFCE/src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
@@ -13,20 +14,19 @@ COMMENT=	Panel plugin which displays free space of mountpoint
 # COPYING file is wrong compared to license header
 LICENSE=	BSD2CLAUSE
 
-GNU_CONFIGURE=	yes
-INSTALLS_ICONS=	yes
-INSTALL_TARGET=	install-strip
-USES=		gettext-tools gmake libtool pkgconfig tar:bzip2 xfce:gtk3
+USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
 USE_GNOME=	gtk30 intltool cairo
 USE_XFCE=	panel
 USE_XORG=	x11
 
-OPTIONS_DEFINE= NLS
-NLS_USES=	gettext-runtime
-NLS_CONFIGURE_ENABLE=	nls
-OPTIONS_SUB=	yes
+GNU_CONFIGURE=	yes
+INSTALLS_ICONS=	yes
+INSTALL_TARGET=	install-strip
 
-post-patch-NLS-off:
-	@${REINPLACE_CMD} -e 's|	po||' ${WRKSRC}/Makefile.in
+OPTIONS_DEFINE=		NLS
+OPTIONS_SUB=		yes
+
+NLS_USES=		gettext-runtime
+NLS_CONFIGURE_ENABLE=	nls
 
 .include <bsd.port.mk>

@@ -13,13 +13,17 @@ COMMENT=	Widgets library for the Xfce desktop environment
 
 LICENSE=	GPLv2
 
+LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2
+
 #PORTSCOUT=	limit:^4\.12\.
 
 USES=		gettext-tools gmake libtool pathfix pkgconfig \
 		tar:bzip2 xfce
-USE_GNOME=	glib20 gtk30 intltool intlhack
+USE_GNOME=	cairo glib20 gtk30 intltool intlhack
 USE_LDCONFIG=	yes
 USE_XFCE=	xfconf
+USE_X11=	ice sm x11
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes

@@ -3,7 +3,7 @@
 
 PORTNAME=	xfce4-quicklauncher-plugin
 PORTVERSION=	1.9.4
-PORTREVISION=	17
+PORTREVISION=	18
 CATEGORIES=	x11 xfce
 MASTER_SITES=	XFCE/src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
@@ -13,10 +13,11 @@ COMMENT=	Quicklauncher plugin for Xfce
 
 LICENSE=	GPLv2
 
-SSP_UNSAFE=	yes
-GNU_CONFIGURE=	yes
-USES=		gettext gmake libtool pkgconfig xfce tar:bzip2
+USES=		gettext gmake gnome libtool pkgconfig tar:bzip2 xfce:gtk2
 USE_GNOME=	gtk20 intltool intlhack
 USE_XFCE=	libgui panel
+
+SSP_UNSAFE=	yes
+GNU_CONFIGURE=	yes
 
 .include <bsd.port.mk>

@@ -21,17 +21,15 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 
 #PORTSCOUT=	limit:^4\.12\.
 
-USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 \
-		xfce
+USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
 USE_GNOME=	glib20 gtk30 cairo intltool intlhack
 USE_XFCE=	garcon libexo
 USE_XORG=	xorgproto x11 xcursor xi xrandr
 
 GNU_CONFIGURE=	yes
-INSTALLS_ICONS=	yes
-
 CONFIGURE_ARGS=	--enable-debug=yes \
 		--disable-xorg-libinput
+INSTALLS_ICONS=	yes
 
 OPTIONS_DEFINE=		NOTIFY NLS UPOWER
 OPTIONS_DEFAULT=	NOTIFY

@@ -19,5 +19,6 @@ USE_XFCE=	libgui panel
 
 SSP_UNSAFE=	yes
 GNU_CONFIGURE=	yes
+INSTALL_TARGET=	install-strip
 
 .include <bsd.port.mk>

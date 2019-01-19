@@ -16,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib
 
-USES=		gettext gmake gnome pkgconfig tar:bzip2 xfce
+USES=		gettext-tools gmake gnome pkgconfig tar:bzip2 xfce
 USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30 intltool libxml2 vte3
 USE_XFCE=	libmenu
 USE_XORG=	x11

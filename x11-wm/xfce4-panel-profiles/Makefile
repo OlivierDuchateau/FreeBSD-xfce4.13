@@ -2,6 +2,7 @@
 
 PORTNAME=	xfce4-panel-profiles
 PORTVERSION=	1.0.8
+PORTREVISION=	1
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	XFCE/src/apps/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
@@ -14,6 +15,7 @@ LICENSE=	GPLv3
 USES=		gettext gmake gnome python:3.3+ shebangfix tar:bz2
 USE_GNOME=	gtk30 intltool
 USE_XFCE=	panel
+
 NO_ARCH=	yes
 HAS_CONFIGURE=	yes
 SHEBANG_FILES=	xfce4-panel-profiles/xfce4-panel-profiles.py \

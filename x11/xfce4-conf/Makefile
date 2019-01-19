@@ -18,7 +18,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libdbus-glib-1.so:devel/dbus-glib
 
 USES=		gettext-tools gmake gnome libtool pathfix perl5 pkgconfig \
-		tar:bzip2 xfce
+		tar:bzip2 xfce:gtk2
 USE_GNOME=	glib20 gtk20 intltool intlhack
 USE_LDCONFIG=	yes
 USE_PERL5=	build

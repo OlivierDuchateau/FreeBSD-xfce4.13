@@ -3,6 +3,7 @@
 
 PORTNAME=	xfce4-dict
 PORTVERSION=	0.8.2
+PORTREVISION=	1
 CATEGORIES=	textproc xfce
 MASTER_SITES=	XFCE/src/apps/${PORTNAME}/${PORTVERSION:R}
 PKGNAMESUFFIX=	-plugin
@@ -14,8 +15,8 @@ COMMENT=	Xfce4 plugin to query different dictionaries
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		gettext-tools gmake libtool pkgconfig tar:bzip2 xfce:gtk3
-USE_GNOME=	glib20 gtk30 intltool cairo
+USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
+USE_GNOME=	cairo glib20 gtk30 intltool
 USE_XFCE=	panel
 USE_XORG=	x11
 USE_LDCONFIG=	yes

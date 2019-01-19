@@ -24,10 +24,4 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
-OPTIONS_DEFINE=	NLS
-OPTIONS_SUB=	yes
-
-NLS_USES=		gettext-runtime
-NLS_CONFIGURE_ENABLE=	nls
-
 .include <bsd.port.mk>

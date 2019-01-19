@@ -3,6 +3,7 @@
 
 PORTNAME=	xfce4-diskperf-plugin
 PORTVERSION=	2.6.1
+PORTREVISION=	1
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	XFCE/src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
@@ -13,19 +14,21 @@ COMMENT=	Graphical representation of the disk IO
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-GNU_CONFIGURE=	yes
-INSTALLS_ICONS=	yes
-INSTALL_TARGET=	install-strip
-USES=		gettext-tools gmake libtool pkgconfig tar:bzip2 xfce:gtk3
+USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
 USE_GNOME=	gtk30 intltool cairo
 USE_XFCE=	panel
 
+GNU_CONFIGURE=	yes
+INSTALLS_ICONS=	yes
+INSTALL_TARGET=	install-strip
+
 LIBS+=		-ldevstat
 
-OPTIONS_DEFINE=	NLS
-OPTIONS_SUB=	yes
+OPTIONS_DEFINE=		NLS
+OPTIONS_SUB=		yes
+
 NLS_CONFIGURE_ENABLE=	nls
-NLS_USES=	gettext-runtime
+NLS_USES=		gettext-runtime
 
 .include <bsd.port.options.mk>
 

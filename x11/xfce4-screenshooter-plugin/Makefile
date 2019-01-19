@@ -24,6 +24,7 @@ USE_XORG=	ice sm x11 xfixes xext
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
+INSTALL_TARGET= install-strip
 
 OPTIONS_DEFINE=		NLS
 OPTIONS_SUB=		yes

@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 ONLY_FOR_ARCHS=	amd64 i386
 
 USES=		alias gettext-tools gmake gnome libtool pkgconfig \
-		tar:bzip2 xfce:gtk3
+		tar:bzip2 xfce
 USE_GNOME=	gtk30 glib20 intltool cairo
 USE_XFCE=	panel
 USE_LDCONFIG=	yes
@@ -25,9 +25,10 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
-OPTIONS_DEFINE=	NLS
-NLS_USES=	gettext-runtime
+OPTIONS_DEFINE=		NLS
+OPTIONS_SUB=		yes
+
+NLS_USES=		gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
-OPTIONS_SUB=	yes
 
 .include <bsd.port.mk>

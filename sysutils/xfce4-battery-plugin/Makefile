@@ -17,7 +17,7 @@ ONLY_FOR_ARCHS=	amd64 i386
 
 USES=		alias gettext-tools gmake gnome libtool pkgconfig \
 		tar:bzip2 xfce
-USE_GNOME=	gtk30 glib20 intltool cairo
+USE_GNOME=	cairo gtk30 glib20 intltool
 USE_XFCE=	panel
 USE_LDCONFIG=	yes
 

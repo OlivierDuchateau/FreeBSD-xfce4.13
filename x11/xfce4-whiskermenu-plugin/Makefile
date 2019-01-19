@@ -2,8 +2,7 @@
 # $FreeBSD: head/x11/xfce4-whiskermenu-plugin/Makefile 488341 2018-12-25 20:25:39Z tcberner $
 
 PORTNAME=	xfce4-whiskermenu-plugin
-PORTVERSION=	2.3.0
-PORTREVISION=	2
+PORTVERSION=	2.3.1
 CATEGORIES=	x11 xfce
 MASTER_SITES=	XFCE/src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4

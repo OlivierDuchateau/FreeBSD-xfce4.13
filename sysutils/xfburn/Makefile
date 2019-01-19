@@ -23,7 +23,7 @@ RUN_DEPENDS=	cdrdao:sysutils/cdrdao \
 
 USES=		desktop-file-utils gettext-tools gmake gnome pkgconfig \
 		tar:bzip2 xfce:gtk2
-USE_GNOME=	cairo intltool intlhack glib20 gtk20
+USE_GNOME=	cairo glib20 gtk20 intlhack intltool
 USE_XFCE=	libexo
 
 GNU_CONFIGURE=	yes

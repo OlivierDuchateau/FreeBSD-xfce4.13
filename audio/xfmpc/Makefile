@@ -14,11 +14,14 @@ COMMENT=	Graphical MPD client focusing on low footprint
 LICENSE=	GPLv2
 
 BUILD_DEPENDS=	valac:lang/vala
-LIB_DEPENDS=	libmpd.so:audio/libmpd
+LIB_DEPENDS=	libmpd.so:audio/libmpd \
+		libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2
 
 USES=		gettext-tools gmake gnome pkgconfig tar:bzip2 xfce:gtk2
-USE_GNOME=	gtk20 intltool intlhack
+USE_GNOME=	cairo gtk20 intltool intlhack
 USE_XFCE=	libmenu
+USE_XORG=	ice sm x11
 
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes

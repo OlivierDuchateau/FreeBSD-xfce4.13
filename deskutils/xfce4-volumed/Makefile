@@ -14,10 +14,12 @@ COMMENT=	Volume management daemon for the Xfce desktop
 LICENSE=	GPLv3
 
 LIB_DEPENDS=	libnotify.so:devel/libnotify \
-		libkeybinder.so:x11/keybinder
+		libkeybinder.so:x11/keybinder \
+		libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2
 
 USES=		gmake gnome pkgconfig tar:bzip2 xfce:gtk2
-USE_GNOME=	glib20
+USE_GNOME=	atk cairo gdkpixbuf2 glib20 gtk20 libxml2 pango
 USE_GSTREAMER=	yes
 USE_XFCE=	xfconf
 

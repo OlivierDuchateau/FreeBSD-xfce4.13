@@ -23,6 +23,7 @@ INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
 OPTIONS_DEFINE=		NLS QRCODE
+OPTIONS_SUB=		yes
 
 QRCODE_DESC=		QR Code support
 

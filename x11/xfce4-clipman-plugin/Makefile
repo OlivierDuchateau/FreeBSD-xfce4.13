@@ -13,7 +13,7 @@ COMMENT=	Clipboard manager for the Xfce panel
 
 LICENSE=	GPLv2
 
-USES=		gettext gmake gnome libtool pkgconfig tar:bzip2 xfce
+USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
 USE_GNOME=	cairo glib20 gtk30 intltool
 USE_XFCE=	panel
 USE_XORG=	ice sm x11 xtst xorgproto

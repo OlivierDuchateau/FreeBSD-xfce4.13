@@ -2,7 +2,7 @@
 # $FreeBSD: head/x11/xfce4-verve-plugin/Makefile 467447 2018-04-16 00:21:41Z madpilot $
 
 PORTNAME=	verve-plugin
-PORTVERSION=	1.1.1
+PORTVERSION=	2.0.0
 CATEGORIES=	x11 xfce
 MASTER_SITES=	XFCE/src/panel-plugins/${PKGNAMEPREFIX}${PORTNAME}/${PORTVERSION:R}
 PKGNAMEPREFIX=	xfce4-
@@ -17,17 +17,18 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	libpcre.so:devel/pcre \
 		libdbus-glib-1.so:devel/dbus-glib
 
-GNU_CONFIGURE=	yes
-USES=		gettext-tools gmake libtool pkgconfig tar:bzip2 xfce
+USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
 USE_GNOME=	glib20 intltool intlhack
 USE_XFCE=	panel
-INSTALL_TARGET=	install-strip
 
+GNU_CONFIGURE=	yes
+INSTALL_TARGET=	install-strip
 CONFIGURE_ARGS=--enable-dbus
 
-OPTIONS_DEFINE=	NLS
+OPTIONS_DEFINE=		NLS
+OPTIONS_SUB=		yes
+
 NLS_CONFIGURE_ENABLE=	nls
-NLS_USES=	gettext-runtime
-OPTIONS_SUB=	yes
+NLS_USES=		gettext-runtime
 
 .include <bsd.port.mk>

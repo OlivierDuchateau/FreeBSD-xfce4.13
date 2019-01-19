@@ -18,7 +18,7 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 
 #PORTSCOUT=	limit:^4\.12\.
 
-USES=		gettext-tools gmake libtool pathfix pkgconfig \
+USES=		gettext-tools gmake gnome libtool pathfix pkgconfig \
 		tar:bzip2 xfce
 USE_GNOME=	cairo glib20 gtk30 intltool intlhack
 USE_LDCONFIG=	yes

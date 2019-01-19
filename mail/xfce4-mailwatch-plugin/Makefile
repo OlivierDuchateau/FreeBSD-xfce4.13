@@ -12,11 +12,14 @@ MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Mail notification applet for the Xfce panel
 
 LIB_DEPENDS=	libgnutls.so:security/gnutls \
-		libgcrypt.so:security/libgcrypt
+		libgcrypt.so:security/libgcrypt \
+		libgpg-error.so:security/libgpg-error \
+		libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 \
 		xfce:gtk2
-USE_GNOME=	glib20 gtk20 intltool intlhack
+USE_GNOME=	cairo glib20 gtk20 intltool intlhack
 USE_XFCE=	panel
 USE_XORG=	x11
 

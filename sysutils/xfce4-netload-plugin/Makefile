@@ -3,6 +3,7 @@
 
 PORTNAME=	xfce4-netload-plugin
 PORTVERSION=	1.3.1
+PORTREVISSION=	1
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	XFCE/src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4

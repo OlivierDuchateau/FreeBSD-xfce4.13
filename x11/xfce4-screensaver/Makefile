@@ -2,7 +2,7 @@
 
 PORTNAME=	xfce4-screensaver
 PORTVERSION=	0.1.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 xfce
 MASTER_SITES=	XFCE/src/apps/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
@@ -21,7 +21,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libstartup-notification-1.so:x11/startup-notification \
 		libxklavier.so:x11/libxklavier
 
-USES=		gettext-tools gmake pkgconfig tar:bzip2 xfce:gtk3
+USES=		gettext-tools gmake gnome pkgconfig tar:bzip2 xfce
 USE_GL=		gl
 USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30 intltool
 USE_XFCE=	garcon libexo libutil
@@ -45,7 +45,7 @@ XSCREENSAVER_DESC=	Use xscreensaver hacks
 OPTIONS_SUB=	yes
 
 NLS_CONFIGURE_ENABLE=	nls
-NLS_USES=	gettext-runtime
+NLS_USES=		gettext-runtime
 
 PAM_RUN_DEPENDS=	pam_helper:security/pam_helper
 PAM_CONFIGURE_ON=	--enable-authentication-scheme=helper \

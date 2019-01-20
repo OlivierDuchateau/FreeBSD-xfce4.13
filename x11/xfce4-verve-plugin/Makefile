@@ -18,7 +18,7 @@ LIB_DEPENDS=	libpcre.so:devel/pcre \
 		libdbus-glib-1.so:devel/dbus-glib
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
-USE_GNOME=	glib20 intltool intlhack
+USE_GNOME=	atk cairo gdkpixbuf2 gtk30 glib20 intltool intlhack pango
 USE_XFCE=	panel
 
 GNU_CONFIGURE=	yes

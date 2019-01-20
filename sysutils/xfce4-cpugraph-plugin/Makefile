@@ -13,9 +13,12 @@ COMMENT=	Graphical representation of the CPU load
 
 LICENSE=	GPLv2
 
-USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce:gtk2
+LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2
 
-USE_GNOME=	gtk20 intltool intlhack
+USES=		gettext-tools gmake gnome libtool pkgconfig \
+		tar:bzip2 xfce:gtk2
+USE_GNOME=	cairo gtk20 intltool intlhack
 USE_XFCE=	panel
 
 GNU_CONFIGURE=	yes

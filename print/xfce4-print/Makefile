@@ -17,11 +17,15 @@ LICENSE=	GPLv2
 BUILD_DEPENDS=	a2ps:print/a2ps
 RUN_DEPENDS=	a2ps:print/a2ps
 
-USES=		gettext gmake gnome libtool pathfix pkgconfig tar:bzip2 \
-		xfce:gtk2
-USE_GNOME=	glib20 gtk20 intltool intlhack
+LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2
+
+USES=		gettext gmake gnome libtool pathfix pkgconfig \
+		tar:bzip2 xfce:gtk2
+USE_GNOME=	cairo glib20 gtk20 intltool intlhack
 USE_LDCONFIG=	yes
 USE_XFCE=	libgui xfconf
+USE_XORG=	x11
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes

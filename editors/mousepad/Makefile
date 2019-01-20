@@ -17,7 +17,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib \
 		libdbus-1.so:devel/dbus
 
-USES=		desktop-file-utils gettext gmake gnome libtool perl5 \
+USES=		desktop-file-utils gettext-tools gmake gnome libtool perl5 \
 		pkgconfig tar:bzip2
 USE_GNOME=	glib20 intltool intlhack
 
@@ -25,11 +25,15 @@ GNU_CONFIGURE=	yes
 
 GLIB_SCHEMAS=	org.xfce.mousepad.gschema.xml
 
-OPTIONS_DEFINE=	GTK3
+OPTIONS_DEFINE=		GTK3 NLS
 OPTIONS_DEFAULT=	GTK3
+OPTIONS_SUB=		yes
 
 GTK3_CONFIGURE_ENABLE=	gtk3
-GTK3_USE=	gnome=gtk30,gtksourceview3,dconf
-GTK3_USE_OFF=	gnome=gtk20,gtksourceview2
+GTK3_USE=		gnome=gtk30,gtksourceview3,dconf
+GTK3_USE_OFF=		gnome=gtk20,gtksourceview2
+
+NLS_CONFIGURE_ENABLE=	nls
+NLS_USES=		gettext-runtime
 
 .include <bsd.port.mk>

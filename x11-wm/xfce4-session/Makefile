@@ -25,7 +25,7 @@ USES=		gettext-tools gmake gnome libtool pathfix pkgconfig \
 USE_GNOME=	cairo gtk30 glib20 intltool intlhack libwnck3
 USE_LDCONFIG=	yes
 USE_XFCE=	libmenu
-USE_XORG=	x11 sm ice
+USE_XORG=	ice sm x11
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes

@@ -27,6 +27,7 @@ USE_GNOME=	cairo glib20 gtk30 intlhack intltool libwnck3
 USE_XFCE=	garcon
 USE_XORG=	x11 xcomposite xdamage xext xfixes xi xinerama xrandr
 USE_GL=		egl gl
+USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes

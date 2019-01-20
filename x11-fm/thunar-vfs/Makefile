@@ -23,6 +23,7 @@ USES=		desktop-file-utils gettext-tools gmake gnome jpeg libtool pathfix \
 USE_GNOME=	glib20 gtk20 gdkpixbuf2 intltool intlhack
 USE_XFCE=	libexo
 USE_XORG=	x11
+USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-debug --without-html-dir

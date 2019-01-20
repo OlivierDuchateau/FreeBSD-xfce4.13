@@ -20,7 +20,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libepoxy.so:graphics/libepoxy
 
 USES=		gettext-tools gmake gnome pkgconfig tar:bzip2 xfce
-USE_GNOME=	gtk30 intltool libwnck3 cairo
+USE_GNOME=	cairo gtk30 intltool libwnck3
 USE_XFCE=	libmenu
 USE_XORG=	ice sm x11 xcomposite xdamage xext xfixes xi xinerama \
 		xrandr xrender

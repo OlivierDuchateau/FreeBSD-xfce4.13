@@ -18,7 +18,8 @@ LICENSE=	GPLv2
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
 
-USES=		gettext-tools gmake libtool pathfix pkgconfig tar:bzip2 xfce
+USES=		gettext-tools gmake gnome libtool pathfix pkgconfig \
+		tar:bzip2 xfce
 USE_GNOME=	glib20 gtk20 gtk30 intltool cairo gdkpixbuf2
 USE_XFCE=	libmenu
 USE_LDCONFIG=	yes

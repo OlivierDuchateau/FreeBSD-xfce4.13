@@ -19,7 +19,7 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libcurl.so:ftp/curl
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce:gtk2
-USE_GNOME=	glib20 gtk20 intltool cairo
+USE_GNOME=	cairo glib20 gtk20 intltool
 USE_XFCE=	panel
 USE_XORG=	x11
 

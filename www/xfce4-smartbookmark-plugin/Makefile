@@ -16,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 \
 		xfce
-USE_GNOME=	gtk30 intltool cairo gdkpixbuf2
+USE_GNOME=	cairo gdkpixbuf2 gtk30 intltool
 USE_XFCE=	panel
 
 GNU_CONFIGURE=	yes

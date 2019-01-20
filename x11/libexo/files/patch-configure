@@ -1,4 +1,4 @@
---- configure.orig	2018-10-16 01:46:48 UTC
+--- configure.orig	2019-01-20 01:00:30 UTC
 +++ configure
 @@ -633,6 +633,9 @@ ac_includes_default="\
  #endif

@@ -18,12 +18,12 @@ LICENSE_FILE_LGPL21=	${WRKSRC}/COPYING.LIB
 
 LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
-BUILD_DEPENDS=	p5-URI>=1.60:net/p5-URI
-RUN_DEPENDS=	p5-URI>=1.60:net/p5-URI
+BUILD_DEPENDS=	p5-URI>=1.70:net/p5-URI
+RUN_DEPENDS=	p5-URI>=1.70:net/p5-URI
 
 USES=		desktop-file-utils gettext-tools gmake gnome libtool pathfix \
 		perl5 pkgconfig tar:bzip2 xfce
-USE_GNOME=	cairo glib20 gtk20 gtk30 intltool intlhack
+USE_GNOME=	cairo glib20 gtk20 gtk30 intltool
 USE_LDCONFIG=	yes
 USE_XFCE=	libmenu
 USE_XORG=	ice sm x11
@@ -39,9 +39,5 @@ OPTIONS_SUB=	yes
 
 NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=		gettext-runtime
-
-post-patch:
-	${REINPLACE_CMD} -e 's|internet-mail|mail-send|' \
-		${WRKSRC}/exo-open/exo-mail-reader.desktop.in
 
 .include <bsd.port.mk>

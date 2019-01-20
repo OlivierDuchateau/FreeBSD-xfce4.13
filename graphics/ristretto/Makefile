@@ -22,7 +22,7 @@ LIB_DEPENDS=	libexif.so:graphics/libexif \
 
 USES=		desktop-file-utils gettext-tools gmake gnome pkgconfig \
 		tar:bzip2 xfce:gtk2
-USE_GNOME=	gtk20 glib20 intltool intlhack cairo
+USE_GNOME=	cairo gtk20 glib20 intltool intlhack
 USE_XFCE=	libmenu
 USE_XORG=	ice sm x11
 

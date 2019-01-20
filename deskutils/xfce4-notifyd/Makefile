@@ -22,7 +22,7 @@ LIB_DEPENDS=	libnotify.so:devel/libnotify \
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 \
 		xfce:gtk3
-USE_GNOME=	gtk30 glib20 cairo intltool
+USE_GNOME=	cairo gtk30 glib20 intltool
 USE_XFCE=	libutil panel
 USE_XORG=	ice sm x11
 
@@ -30,10 +30,10 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
-OPTIONS_DEFINE=	NLS
-OPTIONS_SUB=	yes
+OPTIONS_DEFINE=		NLS
+OPTIONS_SUB=		yes
 
-NLS_USES=	gettext-runtime
+NLS_USES=		gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
 
 .include <bsd.port.mk>

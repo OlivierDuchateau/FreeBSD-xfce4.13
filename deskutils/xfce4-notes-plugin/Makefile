@@ -22,7 +22,7 @@ USES=		gettext-tools gmake gnome libtool pkgconfig \
 
 USE_GNOME=	cairo glib20 gtk20 intltool intlhack
 USE_XFCE=	panel
-USE_XORG=	x11 sm ice
+USE_XORG=	ice sm x11
 
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes

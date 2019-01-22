@@ -3,6 +3,7 @@
 
 PORTNAME=	midori
 PORTVERSION=	0.7.0
+PORTREVISION=	1
 CATEGORIES=	www xfce
 
 MAINTAINER=	xfce@FreeBSD.org

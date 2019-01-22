@@ -3,6 +3,7 @@
 
 PORTNAME=	xfce4-power-manager
 PORTVERSION=	1.6.1
+PORTREVISION=	1
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	XFCE/src/xfce/${PORTNAME}/${PORTVERSION:R}/
 DIST_SUBDIR=	xfce4

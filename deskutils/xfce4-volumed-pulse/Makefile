@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: head/deskutils/xfce4-volumed-pulse/Makefile 461764 2018-02-14 07:50:13Z madpilot $
+# $FreeBSD: head/deskutils/xfce4-volumed-pulse/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-volumed-pulse
 PORTVERSION=	0.2.3
@@ -19,12 +19,11 @@ LIB_DEPENDS=	libpulse.so:audio/pulseaudio \
 		libkeybinder-3.0.so:x11/keybinder-gtk3
 
 USES=		gmake gnome libtool pkgconfig tar:bz2 xfce
-USE_GNOME=	glib20 gtk30
+USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30
 USE_XFCE=	xfconf
 
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
-
 CONFIGURE_ARGS=	--enable-libnotify
 
 PLIST_FILES=	bin/xfce4-volumed-pulse \

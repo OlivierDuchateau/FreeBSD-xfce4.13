@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: head/x11-fm/thunar/Makefile 466719 2018-04-07 12:14:32Z madpilot $
+# $FreeBSD: head/x11-fm/thunar/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	Thunar
 DISTVERSION=	1.8.2
@@ -22,8 +22,6 @@ LIB_DEPENDS=	libtumbler-1.so:deskutils/xfce4-tumbler \
 		libfreetype.so:print/freetype2
 RUN_DEPENDS=	pkexec:sysutils/polkit
 
-#PORTSCOUT=	limit:^1\.6\.
-
 USES=		desktop-file-utils gettext-tools gmake gnome libtool pathfix \
 		perl5 pkgconfig tar:bzip2 xfce
 USE_GNOME=	cairo gdkpixbuf2 glib20 gtk20 intltool
@@ -37,6 +35,8 @@ CONFIGURE_ARGS=	--enable-gio-unix \
 		--enable-dbus
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
+
+PORTSCOUT=	limit:^1\.6\.
 
 OPTIONS_DEFINE=		GIR NLS NOTIFY
 OPTIONS_GROUP=		PLUGINS
@@ -58,27 +58,26 @@ GIR_USE=			gnome=introspection:build
 GIR_CONFIGURE_ON=		--enable-introspection=yes
 GIR_CONFIGURE_OFF=		--enable-introspection=no
 
-NLS_USES=			gettext-runtime
 NLS_CONFIGURE_ENABLE=		nls
+NLS_USES=			gettext-runtime
 
-NOTIFY_LIB_DEPENDS=		libnotify.so:devel/libnotify
 NOTIFY_CONFIGURE_ENABLE=	notifications
+NOTIFY_LIB_DEPENDS=		libnotify.so:devel/libnotify
 
-PLUG_APR_LIB_DEPENDS=		libexif.so:graphics/libexif
 PLUG_APR_CONFIGURE_ENABLE=	apr-plugin exif
-PLUG_SBR_LIB_DEPENDS=		libpcre.so:devel/pcre
+PLUG_APR_LIB_DEPENDS=		libexif.so:graphics/libexif
+
 PLUG_SBR_CONFIGURE_ENABLE=	sbr-plugin pcre
-PLUG_TPA_USE=			gnome=gvfs xfce=panel
+PLUG_SBR_LIB_DEPENDS=		libpcre.so:devel/pcre
+
 PLUG_TPA_CONFIGURE_ENABLE=	tpa-plugin
+PLUG_TPA_USE=			gnome=gvfs xfce=panel
+
 PLUG_UCA_CONFIGURE_ENABLE=	uca-plugin
 PLUG_WALL_CONFIGURE_ENABLE=	wallpaper-plugin
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|internet-mail|emblem-mail|' \
 		${WRKSRC}/plugins/thunar-sendto-email/thunar-sendto-email.desktop.in.in
-
-post-install:
-	${RM} ${STAGEDIR}${PREFIX}/lib/systemd/user/thunar.service
-	(cd ${STAGEDIR}${PREFIX}/lib && ${RMDIR} -p systemd/user)
 
 .include <bsd.port.mk>

@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: head/misc/xfce4-appfinder/Makefile 412348 2016-04-01 14:17:44Z mat $
+# $FreeBSD: head/misc/xfce4-appfinder/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-appfinder
 PORTVERSION=	4.13.2
@@ -12,19 +12,20 @@ COMMENT=	Application launcher and finder
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib
+LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib \
+		libdbus-1.so:devel/dbus
 
 USES=		gettext-tools gmake gnome pkgconfig tar:bzip2 xfce
-USE_GNOME=	cairo glib20 gdkpixbuf2 gtk30 intltool intlhack
+USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30 intlhack intltool
 USE_XFCE=	garcon
 
 GNU_CONFIGURE=	yes
 
-OPTIONS_DEFINE=	NLS
-OPTIONS_SUB=	yes
+OPTIONS_DEFINE=		NLS
+OPTIONS_SUB=		yes
 
-NLS_USES=	gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
+NLS_USES=		gettext-runtime
 
 post-patch:
 	${REINPLACE_CMD} -e 's|=gtk-find|=system-search|' \

@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: head/audio/xfmpc/Makefile 417862 2016-07-01 04:36:36Z olivierd $
+# $FreeBSD: head/audio/xfmpc/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfmpc
 PORTVERSION=	0.2.3
@@ -19,7 +19,7 @@ LIB_DEPENDS=	libmpd.so:audio/libmpd \
 		libfreetype.so:print/freetype2
 
 USES=		gettext-tools gmake gnome pkgconfig tar:bzip2 xfce:gtk2
-USE_GNOME=	cairo gtk20 intltool intlhack
+USE_GNOME=	cairo gtk20 intlhack intltool
 USE_XFCE=	libmenu
 USE_XORG=	ice sm x11
 
@@ -30,7 +30,7 @@ INSTALL_TARGET=	install-strip
 OPTIONS_DEFINE=	NLS
 OPTIONS_SUB=	yes
 
-NLS_USES=		gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
+NLS_USES=		gettext-runtime
 
 .include <bsd.port.mk>

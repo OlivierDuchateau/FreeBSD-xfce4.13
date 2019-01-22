@@ -1,9 +1,9 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: head/x11/xfce4-screenshooter-plugin/Makefile 476880 2018-08-11 12:00:50Z madpilot $
+# $FreeBSD: head/x11/xfce4-screenshooter-plugin/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-screenshooter-plugin
 PORTVERSION=	1.9.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 xfce
 MASTER_SITES=	XFCE/src/apps/xfce4-screenshooter/${PORTVERSION:R}
 DISTNAME=	xfce4-screenshooter-${PORTVERSION}
@@ -18,13 +18,13 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libsoup-2.4.so:devel/libsoup
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
-USE_GNOME=	cairo glib20 gtk30 intltool intlhack libxml2
+USE_GNOME=	cairo glib20 gtk30 intlhack intltool libxml2
 USE_XFCE=	panel
 USE_XORG=	ice sm x11 xfixes xext
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-INSTALL_TARGET= install-strip
+INSTALL_TARGET=	install-strip
 
 OPTIONS_DEFINE=		NLS
 OPTIONS_SUB=		yes

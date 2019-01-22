@@ -1,5 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: head/x11/libxfce4util/Makefile 384919 2015-04-28 17:01:46Z bdrewery $
+# $FreeBSD: head/x11/libxfce4util/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	libxfce4util
 PORTVERSION=	4.13.2
@@ -14,7 +14,7 @@ LICENSE=	GPLv2
 
 USES=		gettext-tools gmake gnome libtool pathfix perl5 pkgconfig \
 		tar:bzip2 xfce
-USE_GNOME=	glib20 intltool intlhack
+USE_GNOME=	glib20 intlhack intltool
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
@@ -30,8 +30,7 @@ GIR_BUILD_DEPENDS=	vapigen:lang/vala
 GIR_USE=		gnome=introspection:build
 GIR_CONFIGURE_ON=       --enable-introspection=yes
 GIR_CONFIGURE_OFF=      --enable-introspection=no
-
-NLS_USES=		gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
+NLS_USES=		gettext-runtime
 
 .include <bsd.port.mk>

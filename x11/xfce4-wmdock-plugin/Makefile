@@ -1,9 +1,9 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: head/x11/xfce4-wmdock-plugin/Makefile 489673 2019-01-08 11:54:12Z tobik $
+# $FreeBSD: head/x11/xfce4-wmdock-plugin/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-wmdock-plugin
 PORTVERSION=	0.6.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11 xfce
 MASTER_SITES=	XFCE/src/panel-plugins/xfce4-wmdock-plugin/0.6
 DIST_SUBDIR=	xfce4
@@ -15,7 +15,7 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce:gtk2
-USE_GNOME=	cairo gtk20 intltool intlhack libwnck
+USE_GNOME=	cairo gtk20 intlhack intltool libwnck
 USE_XFCE=	libgui panel
 USE_XORG=	x11
 
@@ -25,7 +25,7 @@ INSTALLS_ICONS=	yes
 OPTIONS_DEFINE=		NLS
 OPTIONS_SUB=		yes
 
-NLS_USES=		gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
+NLS_USES=		gettext-runtime
 
 .include <bsd.port.mk>

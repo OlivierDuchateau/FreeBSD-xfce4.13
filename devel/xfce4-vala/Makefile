@@ -1,9 +1,9 @@
 # Created by: Olivier Duchateau <olivierd@FreeBSD.org>
-# $FreeBSD: head/devel/xfce4-vala/Makefile 480951 2018-09-30 11:58:29Z kwm $
+# $FreeBSD: head/devel/xfce4-vala/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-vala
 PORTVERSION=	4.10.3
-PORTREVISION=	6
+PORTREVISION=	5
 CATEGORIES=	devel xfce
 MASTER_SITES=	XFCE/src/bindings/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4

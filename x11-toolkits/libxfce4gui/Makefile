@@ -1,9 +1,9 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: head/x11-toolkits/libxfce4gui/Makefile 415742 2016-05-23 20:35:01Z amdmi3 $
+# $FreeBSD: head/x11-toolkits/libxfce4gui/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	libxfce4gui
 PORTVERSION=	4.10.0
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	x11-toolkits xfce
 MASTER_SITES=	XFCE/src/archive/libxfcegui4/${PORTVERSION:R}
 DISTNAME=	libxfcegui4-${PORTVERSION}
@@ -18,7 +18,7 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
 
 USES=		gettext-tools gmake gnome libtool pathfix pkgconfig tar:bzip2 xfce:gtk2
-USE_GNOME=	cairo gtk20 intltool intlhack libglade2
+USE_GNOME=	cairo gtk20 intlhack intltool libglade2
 USE_XFCE=	libutil
 USE_XORG=	ice sm x11
 USE_LDCONFIG=	yes
@@ -27,6 +27,7 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--disable-gladeui --disable-static \
 		--without-html-dir
+INSTALL_TARGET=	install-strip
 
 OPTIONS_DEFINE=		NLS STARTUP
 OPTIONS_DEFAULT=	STARTUP

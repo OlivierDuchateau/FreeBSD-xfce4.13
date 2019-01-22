@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: head/x11-clocks/xfce4-timer-out-plugin/Makefile 393429 2015-08-02 15:03:19Z tijl $
+# $FreeBSD: head/x11-clocks/xfce4-timer-out-plugin/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-time-out-plugin
 PORTVERSION=	1.0.2
@@ -17,7 +17,7 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce:gtk2
-USE_GNOME=	cairo gtk20 intltool intlhack
+USE_GNOME=	cairo gtk20 intlhack intltool
 USE_XFCE=	panel
 USE_XORG=	x11
 
@@ -28,7 +28,7 @@ INSTALL_TARGET=	install-strip
 OPTIONS_DEFINE=		NLS
 OPTIONS_SUB=		yes
 
-NLS_USES=		gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
+NLS_USES=		gettext-runtime
 
 .include <bsd.port.mk>

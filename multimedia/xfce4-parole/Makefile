@@ -1,9 +1,9 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: head/multimedia/xfce4-parole/Makefile 489767 2019-01-09 11:03:30Z madpilot $
+# $FreeBSD: head/multimedia/xfce4-parole/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	parole
 PORTVERSION=	1.0.1
-PORTREVISION=	2
+PORTREVISION=	1
 CATEGORIES=	multimedia xfce
 MASTER_SITES=	XFCE/src/apps/${PORTNAME}/${PORTVERSION:R}/
 DIST_SUBDIR=	xfce4
@@ -22,7 +22,7 @@ RUN_DEPENDS=	xdg-screensaver:devel/xdg-utils
 
 USES=		compiler:c++11-lang desktop-file-utils gettext-tools \
 		gmake gnome libtool pkgconfig tar:bzip2 xfce:gtk3
-USE_GNOME=	cairo gtk30 glib20 intltool intlhack
+USE_GNOME=	cairo gtk30 glib20 intlhack intltool
 USE_GSTREAMER1=	core faad flac wavpack rtmp x
 USE_XFCE=	panel
 USE_XORG=	ice sm x11
@@ -43,9 +43,12 @@ OPTIONS_DEFAULT=	HTTP
 OPTIONS_SUB=		yes
 
 CDDA_USE=		gstreamer1=cdparanoia
+
 GST_PLUG_DESC=		Additional GStreamer plugins
+
 HTTP_DESC=		HTTP streaming (libsoup)
 HTTP_USE=		gstreamer1=soup
+
 NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=		gettext-runtime
 

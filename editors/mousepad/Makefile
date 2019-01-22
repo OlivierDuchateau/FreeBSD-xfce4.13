@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: head/editors/mousepad/Makefile 471293 2018-06-01 20:57:35Z madpilot $
+# $FreeBSD: head/editors/mousepad/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	mousepad
 PORTVERSION=	0.4.1
@@ -19,7 +19,7 @@ LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib \
 
 USES=		desktop-file-utils gettext-tools gmake gnome libtool perl5 \
 		pkgconfig tar:bzip2
-USE_GNOME=	glib20 intltool intlhack
+USE_GNOME=	cairo gdkpixbuf2 glib20 intlhack intltool
 
 GNU_CONFIGURE=	yes
 

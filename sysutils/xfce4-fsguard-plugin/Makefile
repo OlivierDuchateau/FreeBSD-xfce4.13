@@ -1,5 +1,5 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD: head/sysutils/xfce4-fsguard-plugin/Makefile 434852 2017-02-26 09:58:48Z olivierd $
+# $FreeBSD: head/sysutils/xfce4-fsguard-plugin/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-fsguard-plugin
 PORTVERSION=	1.1.0
@@ -15,7 +15,7 @@ COMMENT=	Panel plugin which displays free space of mountpoint
 LICENSE=	BSD2CLAUSE
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
-USE_GNOME=	gtk30 intltool cairo
+USE_GNOME=	cairo gtk30 intltool
 USE_XFCE=	panel
 USE_XORG=	x11
 
@@ -26,7 +26,7 @@ INSTALL_TARGET=	install-strip
 OPTIONS_DEFINE=		NLS
 OPTIONS_SUB=		yes
 
-NLS_USES=		gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
+NLS_USES=		gettext-runtime
 
 .include <bsd.port.mk>

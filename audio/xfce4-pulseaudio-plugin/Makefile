@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: head/audio/xfce4-pulseaudio-plugin/Makefile 489766 2019-01-09 11:01:26Z madpilot $
+# $FreeBSD: head/audio/xfce4-pulseaudio-plugin/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-pulseaudio-plugin
 PORTVERSION=	0.4.1
@@ -40,7 +40,7 @@ KEYBINDER_DESC=			Keyboard shortcuts
 KEYBINDER_LIB_DEPENDS=		libkeybinder-3.0.so:x11/keybinder-gtk3
 KEYBINDER_CONFIGURE_ENABLE=	keybinder
 
-NLS_USES=			gettext-runtime
 NLS_CONFIGURE_ENABLE=		nls
+NLS_USES=			gettext-runtime
 
 .include <bsd.port.mk>

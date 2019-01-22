@@ -1,5 +1,5 @@
 # Created by: Thorsten Greiner <thorsten.greiner@web.de>
-# $FreeBSD: head/deskutils/xfce4-notes-plugin/Makefile 412346 2016-04-01 14:00:51Z mat $
+# $FreeBSD: head/deskutils/xfce4-notes-plugin/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-notes-plugin
 PORTVERSION=	1.8.1
@@ -14,24 +14,22 @@ COMMENT=	Notes plugin for the Xfce panel
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	libunique-1.0.so:x11-toolkits/unique \
-		libfontconfig.so:x11-fonts/fontconfig \
-		libfreetype.so:print/freetype2
+		libdbus-glib-1.so:devel/dbus-glib \
+		libdbus-1.so:devel/dbus
 
-USES=		gettext-tools gmake gnome libtool pkgconfig \
-		tar:bzip2 xfce:gtk2
-
-USE_GNOME=	cairo glib20 gtk20 intltool intlhack
+USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce:gtk2
+USE_GNOME=	cairo glib20 gtk20 intlhack intltool
 USE_XFCE=	panel
 USE_XORG=	ice sm x11
 
-INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
+INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
-OPTIONS_DEFINE=	NLS
-OPTIONS_SUB=	yes
+OPTIONS_DEFINE=		NLS
+OPTIONS_SUB=		yes
 
-NLS_USES=		gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
+NLS_USES=		gettext-runtime
 
 .include <bsd.port.mk>

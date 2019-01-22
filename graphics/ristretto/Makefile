@@ -1,5 +1,5 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: head/graphics/ristretto/Makefile 473524 2018-06-28 23:05:23Z madpilot $
+# $FreeBSD: head/graphics/ristretto/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	ristretto
 PORTVERSION=	0.8.3
@@ -22,7 +22,7 @@ LIB_DEPENDS=	libexif.so:graphics/libexif \
 
 USES=		desktop-file-utils gettext-tools gmake gnome pkgconfig \
 		tar:bzip2 xfce:gtk2
-USE_GNOME=	cairo gtk20 glib20 intltool intlhack
+USE_GNOME=	cairo gtk20 glib20 intlhack intltool
 USE_XFCE=	libmenu
 USE_XORG=	ice sm x11
 

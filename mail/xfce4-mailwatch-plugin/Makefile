@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: head/mail/xfce4-mailwatch-plugin/Makefile 412348 2016-04-01 14:17:44Z mat $
+# $FreeBSD: head/mail/xfce4-mailwatch-plugin/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-mailwatch-plugin
 PORTVERSION=	1.2.0
@@ -17,9 +17,8 @@ LIB_DEPENDS=	libgnutls.so:security/gnutls \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
 
-USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 \
-		xfce:gtk2
-USE_GNOME=	cairo glib20 gtk20 intltool intlhack
+USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce:gtk2
+USE_GNOME=	cairo glib20 gtk20 intlhack intltool
 USE_XFCE=	panel
 USE_XORG=	x11
 

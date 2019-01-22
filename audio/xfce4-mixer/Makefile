@@ -1,5 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: head/audio/xfce4-mixer/Makefile 412344 2016-04-01 13:29:15Z mat $
+# $FreeBSD: head/audio/xfce4-mixer/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-mixer
 PORTVERSION=	4.11.0
@@ -14,10 +14,11 @@ COMMENT=	Volume control for the Xfce desktop
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib \
-		libunique-1.0.so:x11-toolkits/unique
+		libdbus-1.so:devel/dbus \
+		libunique-1.0.so:x11-toolkits/unique \
 
-USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce:gtk2
-USE_GNOME=	glib20 gtk20 intltool intlhack
+USES=		gmake libtool pkgconfig gettext-tools xfce tar:bzip2
+USE_GNOME=	cairo glib20 gtk20 intlhack intltool libxml2
 USE_XFCE=	panel
 USE_GSTREAMER=	good
 
@@ -25,15 +26,14 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS= yes
 MAKE_JOBS_UNSAFE=	yes
 
-OPTIONS_DEFINE=	KEYBIND NLS
-OPTIONS_SUB=	yes
+OPTIONS_DEFINE=		KEYBIND NLS
+OPTIONS_SUB=		yes
 
-KEYBIND_DESC=	Multimedia keyboard shortcuts
-
+KEYBIND_DESC=		Multimedia keyboard shortcuts
 KEYBIND_LIB_DEPENDS=	libkeybinder.so:x11/keybinder
 KEYBIND_CONFIGURE_ENABLE=	keybinder
 
-NLS_USES=	gettext-runtime
+NLS_USES=		gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
 
 post-patch:

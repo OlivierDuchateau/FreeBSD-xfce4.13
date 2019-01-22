@@ -1,5 +1,5 @@
 # Created by: Thorsten Greiner <thorsten.greiner@web.de>
-# $FreeBSD: head/sysutils/xfce4-battery-plugin/Makefile 490257 2019-01-14 14:12:47Z madpilot $
+# $FreeBSD: head/sysutils/xfce4-battery-plugin/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-battery-plugin
 PORTVERSION=	1.1.2
@@ -29,7 +29,7 @@ INSTALL_TARGET=	install-strip
 OPTIONS_DEFINE=		NLS
 OPTIONS_SUB=		yes
 
-NLS_USES=		gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
+NLS_USES=		gettext-runtime
 
 .include <bsd.port.mk>

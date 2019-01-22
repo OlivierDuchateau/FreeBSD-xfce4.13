@@ -1,9 +1,9 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: head/print/xfce4-print/Makefile 412348 2016-04-01 14:16:16Z mat $
+# $FreeBSD: head/print/xfce4-print/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-print
 PORTVERSION=	4.6.1
-PORTREVISION=	15
+PORTREVISION=	16
 CATEGORIES=	print xfce
 MASTER_SITES=	XFCE/src/archive/xfprint/${PORTVERSION:R}
 DISTNAME=	xfprint-${PORTVERSION}
@@ -16,12 +16,10 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	a2ps:print/a2ps
 RUN_DEPENDS=	a2ps:print/a2ps
-LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
-		libfreetype.so:print/freetype2
 
 USES=		gettext-tools gmake gnome libtool pathfix pkgconfig \
 		tar:bzip2 xfce:gtk2
-USE_GNOME=	glib20 gtk20 intltool intlhack
+USE_GNOME=	cairo glib20 gtk20 intlhack intltool
 USE_LDCONFIG=	yes
 USE_XFCE=	libgui xfconf
 USE_XORG=	x11

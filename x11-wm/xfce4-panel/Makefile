@@ -1,5 +1,5 @@
 # Created by: James Earl <jdearl@telus.net>
-# $FreeBSD: head/x11-wm/xfce4-panel/Makefile 456298 2017-12-14 14:40:29Z madpilot $
+# $FreeBSD: head/x11-wm/xfce4-panel/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-panel
 PORTVERSION=	4.13.4
@@ -20,11 +20,9 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
 
-#PORTSCOUT=	limit:^4\.12\.
-
 USES=		desktop-file-utils gettext-tools gmake gnome libtool pathfix \
 		perl5 pkgconfig tar:bzip2
-USE_GNOME=	cairo glib20 gtk30 intltool intlhack libwnck3
+USE_GNOME=	cairo glib20 gtk30 intlhack intltool libwnck
 USE_LDCONFIG=	yes
 USE_XFCE=	garcon libexo
 USE_XORG=	ice sm x11 xext
@@ -50,7 +48,7 @@ GTK2_USE=		gnome=gtk20
 GTK2_CONFIGURE_ENABLE=	gtk2
 GTK2_USES_OFF=		xfce
 
-NLS_USES=		gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
+NLS_USES=		gettext-runtime
 
 .include <bsd.port.mk>

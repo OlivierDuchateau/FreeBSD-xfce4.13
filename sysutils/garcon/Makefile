@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: head/sysutils/garcon/Makefile 486916 2018-12-08 07:49:10Z madpilot $
+# $FreeBSD: head/sysutils/garcon/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	garcon
 PORTVERSION=	0.6.2
@@ -20,7 +20,7 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 
 USES=		gettext-tools gmake gnome libtool pathfix pkgconfig \
 		tar:bzip2 xfce
-USE_GNOME=	glib20 gtk20 gtk30 intltool cairo gdkpixbuf2
+USE_GNOME=	cairo gdkpixbuf2 glib20 gtk20 gtk30 intltool
 USE_XFCE=	libmenu
 USE_LDCONFIG=	yes
 
@@ -30,8 +30,9 @@ CONFIGURE_ARGS=	--without-html-dir \
 		--enable-gtk2
 
 OPTIONS_DEFINE=		NLS
-NLS_USES=		gettext-runtime
-NLS_CONFIGURE_ENABLE=	nls
 OPTIONS_SUB=		yes
+
+NLS_CONFIGURE_ENABLE=	nls
+NLS_USES=		gettext-runtime
 
 .include <bsd.port.mk>

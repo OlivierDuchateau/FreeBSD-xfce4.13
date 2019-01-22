@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: head/audio/thunar-media-tags-plugin/Makefile 412344 2016-04-01 13:29:15Z mat $
+# $FreeBSD: head/audio/thunar-media-tags-plugin/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	thunar-media-tags-plugin
 PORTVERSION=	0.3.0
@@ -23,10 +23,10 @@ USE_XFCE=	libexo thunar
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 
-OPTIONS_DEFINE=	NLS
-OPTIONS_SUB=	yes
+OPTIONS_DEFINE=		NLS
+OPTIONS_SUB=		yes
 
-NLS_USES=		gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
+NLS_USES=		gettext-runtime
 
 .include <bsd.port.mk>

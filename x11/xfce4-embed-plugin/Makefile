@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: head/x11/xfce4-embed-plugin/Makefile 392164 2015-07-15 16:02:07Z olivierd $
+# $FreeBSD: head/x11/xfce4-embed-plugin/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-embed-plugin
 PORTVERSION=	1.6.0
@@ -17,17 +17,17 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce:gtk2
-USE_XORG=	ice sm x11
-USE_GNOME=	cairo gdkpixbuf2 glib20 gtk20 intltool intlhack
+USE_GNOME=	cairo gdkpixbuf2 glib20 gtk20 intlhack intltool
 USE_XFCE=	panel
+USE_XORG=	ice sm x11
 
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 
-OPTIONS_DEFINE=	NLS
-OPTIONS_SUB=	yes
+OPTIONS_DEFINE=		NLS
+OPTIONS_SUB=		yes
 
-NLS_USES=		gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
+NLS_USES=		gettext-runtime
 
 .include <bsd.port.mk>

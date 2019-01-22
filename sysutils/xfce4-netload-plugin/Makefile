@@ -1,5 +1,5 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
-# $FreeBSD: head/sysutils/xfce4-netload-plugin/Makefile 434829 2017-02-25 17:26:38Z olivierd $
+# $FreeBSD: head/sysutils/xfce4-netload-plugin/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-netload-plugin
 PORTVERSION=	1.3.1
@@ -22,8 +22,8 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
-OPTIONS_DEFINE=	NLS
-OPTIONS_SUB=	yes
+OPTIONS_DEFINE=		NLS
+OPTIONS_SUB=		yes
 
 NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=		gettext-runtime

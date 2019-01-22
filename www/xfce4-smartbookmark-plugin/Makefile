@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: head/www/xfce4-smartbookmark-plugin/Makefile 434834 2017-02-25 18:25:49Z olivierd $
+# $FreeBSD: head/www/xfce4-smartbookmark-plugin/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-smartbookmark-plugin
 PORTVERSION=	0.5.0

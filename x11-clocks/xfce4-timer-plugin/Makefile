@@ -1,9 +1,9 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: head/x11-clocks/xfce4-timer-plugin/Makefile 460005 2018-01-26 15:03:10Z madpilot $
+# $FreeBSD: head/x11-clocks/xfce4-timer-plugin/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-timer-plugin
 PORTVERSION=	1.7.0
-PORTREVISION=	2
+PORTREVISION=	1
 CATEGORIES=	x11-clocks xfce
 MASTER_SITES=	XFCE/src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
@@ -17,9 +17,9 @@ USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
 USE_GNOME=	cairo gtk30 intltool
 USE_XFCE=	panel
 
+GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
-GNU_CONFIGURE=	yes
 
 OPTIONS_DEFINE=		NLS
 OPTIONS_SUB=		yes

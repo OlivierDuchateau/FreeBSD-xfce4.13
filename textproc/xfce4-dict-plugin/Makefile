@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann (oliver@FreeBSD.org)
-# $FreeBSD: head/textproc/xfce4-dict-plugin/Makefile 486160 2018-11-29 09:58:05Z madpilot $
+# $FreeBSD: head/textproc/xfce4-dict-plugin/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-dict
 PORTVERSION=	0.8.2

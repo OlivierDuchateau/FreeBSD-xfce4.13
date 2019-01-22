@@ -1,5 +1,5 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: head/sysutils/xfburn/Makefile 484458 2018-11-08 15:00:34Z madpilot $
+# $FreeBSD: head/sysutils/xfburn/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfburn
 PORTVERSION=	0.5.5
@@ -34,11 +34,11 @@ OPTIONS_DEFINE=			GSTREAMER NLS
 OPTIONS_DEFAULT=		GSTREAMER
 OPTIONS_SUB=			yes
 
-GSTREAMER_USE=			gstreamer1=yes,faac,flac,lame,vorbis,wavpack
 GSTREAMER_CONFIGURE_ENABLE=	gstreamer
+GSTREAMER_USE=			gstreamer1=yes,faac,flac,lame,vorbis,wavpack
 
-NLS_USES=			gettext-runtime
 NLS_CONFIGURE_ENABLE=		nls
+NLS_USES=			gettext-runtime
 
 post-patch:
 	${REINPLACE_CMD} -e 's|media-cdrom|media-optical|g' \

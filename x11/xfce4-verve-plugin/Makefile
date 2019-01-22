@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: head/x11/xfce4-verve-plugin/Makefile 467447 2018-04-16 00:21:41Z madpilot $
+# $FreeBSD: head/x11/xfce4-verve-plugin/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	verve-plugin
 PORTVERSION=	2.0.0
@@ -14,16 +14,15 @@ COMMENT=	Command line plugin for the Xfce Desktop
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	libpcre.so:devel/pcre \
-		libdbus-glib-1.so:devel/dbus-glib
+LIB_DEPENDS=	libpcre.so:devel/pcre
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
-USE_GNOME=	atk cairo gdkpixbuf2 gtk30 glib20 intltool intlhack pango
+USE_GNOME=	atk cairo gdkpixbuf2 glib20 gtk30 intlhack intltool pango
 USE_XFCE=	panel
 
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
-CONFIGURE_ARGS=--enable-dbus
+CONFIGURE_ARGS=	--enable-dbus
 
 OPTIONS_DEFINE=		NLS
 OPTIONS_SUB=		yes

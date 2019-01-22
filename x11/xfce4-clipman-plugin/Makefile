@@ -1,5 +1,5 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD: head/x11/xfce4-clipman-plugin/Makefile 483324 2018-10-28 18:32:50Z madpilot $
+# $FreeBSD: head/x11/xfce4-clipman-plugin/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-clipman-plugin
 PORTVERSION=	1.4.3
@@ -16,7 +16,7 @@ LICENSE=	GPLv2
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
 USE_GNOME=	cairo glib20 gtk30 intltool
 USE_XFCE=	panel
-USE_XORG=	ice sm x11 xtst xorgproto
+USE_XORG=	ice sm x11 xorgproto xtst
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
@@ -30,7 +30,7 @@ QRCODE_DESC=		QR Code support
 NLS_USES=		gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
 
-QRCODE_LIB_DEPENDS=		libqrencode.so:graphics/libqrencode
-QRCODE_CONFIGURE_ENABLE=	libqrencode
+QRCODE_LIB_DEPENDS=	libqrencode.so:graphics/libqrencode
+QRCODE_CONFIGURE_ENABLE=libqrencode
 
 .include <bsd.port.mk>

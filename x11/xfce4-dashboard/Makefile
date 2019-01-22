@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: head/x11/xfce4-dashboard/Makefile 441503 2017-05-23 05:03:14Z rezny $
+# $FreeBSD: head/x11/xfce4-dashboard/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	dashboard
 PORTVERSION=	0.6.1
@@ -36,8 +36,8 @@ INSTALL_TARGET=	install-strip
 OPTIONS_DEFINE=	NLS
 OPTIONS_SUB=	yes
 
-NLS_USES=		gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
+NLS_USES=	gettext-runtime
 
 post-patch:
 # Decrease default value of desaturation factor (0.0 -> no desaturation)

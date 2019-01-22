@@ -1,5 +1,5 @@
 # Created by: Matt Lancereau
-# $FreeBSD: head/x11/xfce4-terminal/Makefile 473049 2018-06-22 17:18:45Z danilo $
+# $FreeBSD: head/x11/xfce4-terminal/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-terminal
 PORTVERSION=	0.8.7.4
@@ -14,8 +14,7 @@ COMMENT=	Terminal emulator for the X windowing system
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib \
-		libpcre2-8.so:devel/pcre2 \
+LIB_DEPENDS=	libpcre2-8.so:devel/pcre2 \
 		libgnutls.so:security/gnutls
 
 USES=		gettext-tools gmake gnome pkgconfig tar:bzip2 xfce

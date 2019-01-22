@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: head/x11-clocks/xfce4-datetime-plugin/Makefile 434835 2017-02-25 18:37:06Z olivierd $
+# $FreeBSD: head/x11-clocks/xfce4-datetime-plugin/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-datetime-plugin
 PORTVERSION=	0.7.0
@@ -24,7 +24,7 @@ INSTALL_TARGET=	install-strip
 OPTIONS_DEFINE=		NLS
 OPTIONS_SUB=		yes
 
-NLS_USES=		gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
+NLS_USES=		gettext-runtime
 
 .include <bsd.port.mk>

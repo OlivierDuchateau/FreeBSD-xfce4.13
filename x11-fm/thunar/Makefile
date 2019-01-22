@@ -17,9 +17,7 @@ LICENSE_FILE_LGPL20=	${WRKSRC}/COPYING.LIB
 
 LIB_DEPENDS=	libtumbler-1.so:deskutils/xfce4-tumbler \
 		libdbus-1.so:devel/dbus \
-		libdbus-glib-1.so:devel/dbus-glib \
-		libfontconfig.so:x11-fonts/fontconfig \
-		libfreetype.so:print/freetype2
+		libdbus-glib-1.so:devel/dbus-glib
 RUN_DEPENDS=	pkexec:sysutils/polkit
 
 USES=		desktop-file-utils gettext-tools gmake gnome libtool pathfix \

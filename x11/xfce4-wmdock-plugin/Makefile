@@ -15,7 +15,7 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce:gtk2
-USE_GNOME=	cairo gtk20 intlhack intltool libwnck
+USE_GNOME=	cairo gtk20 intltool libwnck
 USE_XFCE=	libgui panel
 USE_XORG=	x11
 

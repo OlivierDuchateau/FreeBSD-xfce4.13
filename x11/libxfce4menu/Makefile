@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 
 USES=		gettext-tools gmake gnome libtool pathfix pkgconfig \
 		tar:bzip2 xfce
-USE_GNOME=	cairo glib20 gtk30 intlhack intltool
+USE_GNOME=	cairo glib20 gtk30 intltool
 USE_LDCONFIG=	yes
 USE_XFCE=	xfconf
 USE_XORG=	ice sm x11

@@ -23,7 +23,7 @@ LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib \
 USES=		gettext-tools gmake gnome libtool pathfix pkgconfig \
 		tar:bzip2 xfce
 
-USE_GNOME=	cairo gtk30 glib20 intlhack intltool libwnck3
+USE_GNOME=	cairo gtk30 glib20 intltool libwnck3
 USE_LDCONFIG=	yes
 USE_XFCE=	libmenu
 USE_XORG=	ice sm x11

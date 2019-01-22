@@ -21,7 +21,7 @@ LIB_DEPENDS=	libpng.so:graphics/png \
 
 USES=		desktop-file-utils gettext-tools gmake gnome jpeg libtool pathfix \
 		perl5 pkgconfig tar:bzip2 xfce:gtk2
-USE_GNOME=	cairo gdkpixbuf2 glib20 gtk20 intlhack intltool
+USE_GNOME=	cairo gdkpixbuf2 glib20 gtk20 intltool
 USE_XFCE=	libexo
 USE_XORG=	ice x11 sm
 USE_LDCONFIG=	yes

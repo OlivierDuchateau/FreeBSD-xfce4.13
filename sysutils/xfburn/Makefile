@@ -14,8 +14,6 @@ COMMENT=	CD/DVD burning tool for Xfce
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	libburn.so:devel/libburn \
-		libfontconfig.so:x11-fonts/fontconfig \
-		libfreetype.so:print/freetype2 \
 		libisofs.so:devel/libisofs
 RUN_DEPENDS=	cdrdao:sysutils/cdrdao \
 		${LOCALBASE}/include/libburn/libburn.h:devel/libburn \
@@ -23,7 +21,7 @@ RUN_DEPENDS=	cdrdao:sysutils/cdrdao \
 
 USES=		desktop-file-utils gettext-tools gmake gnome pkgconfig \
 		tar:bzip2 xfce:gtk2
-USE_GNOME=	cairo glib20 gtk20 intlhack intltool
+USE_GNOME=	cairo glib20 gtk20 intltool
 USE_XFCE=	libexo
 
 GNU_CONFIGURE=	yes

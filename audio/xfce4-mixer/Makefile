@@ -18,7 +18,7 @@ LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib \
 		libunique-1.0.so:x11-toolkits/unique \
 
 USES=		gmake libtool pkgconfig gettext-tools xfce tar:bzip2
-USE_GNOME=	cairo glib20 gtk20 intlhack intltool libxml2
+USE_GNOME=	cairo glib20 gtk20 intltool libxml2
 USE_XFCE=	panel
 USE_GSTREAMER=	good
 

@@ -14,9 +14,7 @@ COMMENT=	Earthquake monitor plugin for the Xfce panel
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
-		libfreetype.so:print/freetype2 \
-		libcurl.so:ftp/curl
+LIB_DEPENDS=	libcurl.so:ftp/curl
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce:gtk2
 USE_GNOME=	cairo glib20 gtk20 intltool

@@ -19,7 +19,7 @@ LIB_DEPENDS=	libmpd.so:audio/libmpd \
 		libfreetype.so:print/freetype2
 
 USES=		gettext-tools gmake gnome pkgconfig tar:bzip2 xfce:gtk2
-USE_GNOME=	cairo gtk20 intlhack intltool
+USE_GNOME=	cairo gtk20  intltool
 USE_XFCE=	libmenu
 USE_XORG=	ice sm x11
 

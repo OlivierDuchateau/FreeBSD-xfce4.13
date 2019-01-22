@@ -12,7 +12,7 @@ COMMENT=	Version Control System plugin for Thunar
 
 USES=		gettext-tools gmake gnome libtool localbase pkgconfig tar:bzip2 \
 		xfce
-USE_GNOME=	cairo gtk30 glib20 intltool intlhack
+USE_GNOME=	cairo gtk30 glib20 intltool
 USE_XFCE=	libexo thunar
 
 GNU_CONFIGURE=	yes

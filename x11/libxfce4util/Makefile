@@ -14,7 +14,7 @@ LICENSE=	GPLv2
 
 USES=		gettext-tools gmake gnome libtool pathfix perl5 pkgconfig \
 		tar:bzip2 xfce
-USE_GNOME=	glib20 intlhack intltool
+USE_GNOME=	glib20 intltool
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes

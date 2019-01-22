@@ -18,7 +18,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libxklavier.so:x11/libxklavier
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
-USE_GNOME=	cairo glib20 gtk30 intlhack intltool
+USE_GNOME=	cairo glib20 gtk30 intltool
 USE_XFCE=	garcon libexo
 USE_XORG=	xorgproto x11 xcursor xi xrandr
 

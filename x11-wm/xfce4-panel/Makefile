@@ -16,13 +16,11 @@ LICENSE_FILE_GPLv2=	${WRKSRC}/COPYING
 LICENSE_FILE_LGPL21=	${WRKSRC}/COPYING.LIB
 
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
-		libdbus-glib-1.so:devel/dbus-glib \
-		libfontconfig.so:x11-fonts/fontconfig \
-		libfreetype.so:print/freetype2
+		libdbus-glib-1.so:devel/dbus-glib
 
 USES=		desktop-file-utils gettext-tools gmake gnome libtool pathfix \
 		perl5 pkgconfig tar:bzip2
-USE_GNOME=	cairo glib20 gtk30 intlhack intltool libwnck
+USE_GNOME=	cairo glib20 gtk30 intltool libwnck
 USE_LDCONFIG=	yes
 USE_XFCE=	garcon libexo
 USE_XORG=	ice sm x11 xext

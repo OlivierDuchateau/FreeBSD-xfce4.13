@@ -14,9 +14,7 @@ COMMENT=	Xfce's window manager
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
-		libdbus-glib-1.so:devel/dbus-glib \
-		libfontconfig.so:x11-fonts/fontconfig \
-		libfreetype.so:print/freetype2
+		libdbus-glib-1.so:devel/dbus-glib
 
 USES=		gettext-tools gmake gnome pkgconfig tar:bzip2 xfce
 USE_GNOME=	cairo gtk30 intltool libwnck3

@@ -3,6 +3,7 @@
 
 PORTNAME=	thunar-media-tags-plugin
 PORTVERSION=	0.3.0
+PORTREVISION=	1
 CATEGORIES=	audio xfce
 MASTER_SITES=	XFCE/src/thunar-plugins/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
@@ -17,7 +18,7 @@ LIB_DEPENDS=	libtag.so:audio/taglib
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
 
-USE_GNOME=	cairo gdkpixbuf2 gtk30 intltool intlhack
+USE_GNOME=	cairo gdkpixbuf2 gtk30 intltool
 USE_XFCE=	libexo thunar
 
 GNU_CONFIGURE=	yes

@@ -17,8 +17,8 @@ LICENSE_COMB=	multi
 LICENSE_FILE_GPLv2=	${WRKSRC}/COPYING
 LICENSE_FILE_LGPL21=	${WRKSRC}/COPYING.LIB
 
-LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
-		libfreetype.so:print/freetype2
+#LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
+#		libfreetype.so:print/freetype2
 BUILD_DEPENDS=	p5-URI>=1.70:net/p5-URI
 RUN_DEPENDS=	p5-URI>=1.70:net/p5-URI
 

@@ -3,7 +3,7 @@
 
 PORTNAME=	squeeze
 PORTVERSION=	0.2.3
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=	archivers xfce
 MASTER_SITES=	XFCE/src/apps/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
@@ -22,7 +22,7 @@ USES=		tar:bzip2 pkgconfig gmake gettext pathfix desktop-file-utils \
 		libtool xfce
 USE_XFCE=	thunar
 USE_XORG=	x11
-USE_GNOME=	gtk20 glib20 intltool intlhack
+USE_GNOME=	gtk20 glib20 intltool
 USE_LDCONFIG=	yes
 MAKE_JOB_SAFE=	yes
 

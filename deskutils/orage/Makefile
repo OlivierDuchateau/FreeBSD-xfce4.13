@@ -23,7 +23,7 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USES=		desktop-file-utils gettext gmake gnome libtool pkgconfig \
 		tar:bzip2 xfce
-USE_GNOME=	cairo gtk20 intlhack intltool
+USE_GNOME=	cairo gtk20 intltool
 USE_XFCE=	panel
 USE_XORG=	x11
 

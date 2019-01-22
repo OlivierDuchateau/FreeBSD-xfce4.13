@@ -19,7 +19,7 @@ RUN_DEPENDS=	a2ps:print/a2ps
 
 USES=		gettext-tools gmake gnome libtool pathfix pkgconfig \
 		tar:bzip2 xfce:gtk2
-USE_GNOME=	cairo glib20 gtk20 intlhack intltool
+USE_GNOME=	cairo glib20 gtk20 intltool
 USE_LDCONFIG=	yes
 USE_XFCE=	libgui xfconf
 USE_XORG=	x11

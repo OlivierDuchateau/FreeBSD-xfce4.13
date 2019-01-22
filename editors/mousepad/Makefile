@@ -19,7 +19,7 @@ LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib \
 
 USES=		desktop-file-utils gettext-tools gmake gnome libtool perl5 \
 		pkgconfig tar:bzip2
-USE_GNOME=	cairo gdkpixbuf2 glib20 intlhack intltool
+USE_GNOME=	cairo gdkpixbuf2 glib20 intltool
 
 GNU_CONFIGURE=	yes
 

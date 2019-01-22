@@ -13,8 +13,8 @@ COMMENT=	Task manager for the Xfce desktop
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
-		libfreetype.so:print/freetype2
+#LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
+#		libfreetype.so:print/freetype2
 
 USES=		gettext-tools gmake gnome localbase pkgconfig tar:bzip2
 USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30 intltool libwnck

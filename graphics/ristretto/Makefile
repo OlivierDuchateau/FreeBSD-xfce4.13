@@ -16,13 +16,11 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libexif.so:graphics/libexif \
 		libdbus-glib-1.so:devel/dbus-glib \
-		libdbus-1.so:devel/dbus \
-		libfreetype.so:print/freetype2 \
-		libfontconfig.so:x11-fonts/fontconfig
+		libdbus-1.so:devel/dbus
 
 USES=		desktop-file-utils gettext-tools gmake gnome pkgconfig \
 		tar:bzip2 xfce:gtk2
-USE_GNOME=	cairo gtk20 glib20 intlhack intltool
+USE_GNOME=	cairo gtk20 glib20 intltool
 USE_XFCE=	libmenu
 USE_XORG=	ice sm x11
 

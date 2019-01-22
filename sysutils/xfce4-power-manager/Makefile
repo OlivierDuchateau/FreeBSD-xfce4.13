@@ -20,7 +20,7 @@ LIB_DEPENDS=	libnotify.so:devel/libnotify \
 		libupower-glib.so:sysutils/upower
 
 USES=		gettext gmake gnome libtool pkgconfig tar:bzip2 xfce
-USE_GNOME=	cairo glib20 gtk30 intlhack intltool
+USE_GNOME=	cairo glib20 gtk30 intltool
 USE_XFCE=	panel
 USE_XORG=	ice sm xrandr x11 xext xtst xscrnsaver
 

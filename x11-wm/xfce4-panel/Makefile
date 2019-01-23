@@ -28,7 +28,7 @@ USE_XORG=	ice sm x11 xext
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
-CONFIGURE_ARGS+=--enable-gio-unix --without-html-dir
+CONFIGURE_ARGS=	--enable-gio-unix --without-html-dir
 
 OPTIONS_DEFINE=		GIR GTK2 NLS
 OPTIONS_DEFAULT=	GTK2

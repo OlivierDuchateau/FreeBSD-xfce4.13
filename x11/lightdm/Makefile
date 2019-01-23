@@ -25,7 +25,7 @@ LIB_DEPENDS=	libaccountsservice.so:sysutils/accountsservice \
 USES=		compiler:c++11-lang localbase gettext gmake libtool pathfix \
 		pkgconfig tar:xz
 USE_CXXSTD=	c++11
-USE_GNOME=	glib20
+USE_GNOME=	glib20 intltool
 USE_XORG=	x11 xcb xdmcp
 USE_LDCONFIG=	yes
 USE_RC_SUBR=	lightdm

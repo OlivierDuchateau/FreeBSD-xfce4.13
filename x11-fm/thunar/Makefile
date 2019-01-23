@@ -22,7 +22,7 @@ RUN_DEPENDS=	pkexec:sysutils/polkit
 
 USES=		desktop-file-utils gettext-tools gmake gnome libtool pathfix \
 		perl5 pkgconfig tar:bzip2 xfce
-USE_GNOME=	cairo gdkpixbuf2 glib20 gtk20 intltool
+USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30 intltool
 USE_LDCONFIG=	yes
 USE_XFCE=	libexo
 USE_XORG=	ice sm x11
@@ -33,8 +33,6 @@ CONFIGURE_ARGS=	--enable-gio-unix \
 		--enable-dbus
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
-
-PORTSCOUT=	limit:^1\.6\.
 
 OPTIONS_DEFINE=		GIR NLS NOTIFY
 OPTIONS_GROUP=		PLUGINS
@@ -77,5 +75,9 @@ PLUG_WALL_CONFIGURE_ENABLE=	wallpaper-plugin
 post-patch:
 	@${REINPLACE_CMD} -e 's|internet-mail|emblem-mail|' \
 		${WRKSRC}/plugins/thunar-sendto-email/thunar-sendto-email.desktop.in.in
+
+post-install:
+	${RM} ${STAGEDIR}${PREFIX}/lib/systemd/user/thunar.service
+	(cd ${STAGEDIR}${PREFIX}/lib && ${RMDIR} -p systemd/user)
 
 .include <bsd.port.mk>

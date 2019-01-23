@@ -15,8 +15,8 @@ COMMENT=	Freedesktop compliant menu library
 # documentation is under GFDL 1.1.
 LICENSE=	GPLv2
 
-#LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
-#		libfreetype.so:print/freetype2
+LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2
 
 USES=		gettext-tools gmake gnome libtool pathfix pkgconfig \
 		tar:bzip2 xfce

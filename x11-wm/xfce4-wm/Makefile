@@ -14,12 +14,13 @@ COMMENT=	Xfce's window manager
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
-		libdbus-glib-1.so:devel/dbus-glib
+		libdbus-glib-1.so:devel/dbus-glib \
+		libepoxy.so:graphics/libepoxy
 
 USES=		gettext-tools gmake gnome pkgconfig tar:bzip2 xfce
 USE_GNOME=	cairo gtk30 intltool libwnck3
 USE_XFCE=	libmenu
-USE_XORG=	ice sm x11 xcomposite xdamage xext xfixes xinerama \
+USE_XORG=	ice sm x11 xcomposite xdamage xext xfixes xi xinerama \
 		xrandr xrender
 
 CONFIGURE_ARGS=	--enable-xsync \

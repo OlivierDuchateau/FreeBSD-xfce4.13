@@ -12,8 +12,8 @@ COMMENT=	Slider plugin to adjust and/or monitor any numeric variable
 LICENSE=	GPLv3
 
 BUILD_DEPENDS=	xdt-autogen:devel/xfce4-dev-tools
-#LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
-#		libfreetype.so:print/freetype2
+LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2
 
 USES=		gettext gmake gnome libtool pkgconfig xfce:gtk2
 USE_GNOME=	atk cairo gdkpixbuf2 glib20 gtk20 intltool pango

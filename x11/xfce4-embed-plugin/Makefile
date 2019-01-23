@@ -13,8 +13,8 @@ COMMENT=	Embed arbitrary windows into the Xfce panel
 
 LICENSE=	GPLv2
 
-#LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
-#		libfreetype.so:print/freetype2
+LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce:gtk2
 USE_GNOME=	cairo gdkpixbuf2 glib20 gtk20 intltool

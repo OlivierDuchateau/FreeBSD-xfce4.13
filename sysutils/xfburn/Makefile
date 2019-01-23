@@ -14,7 +14,9 @@ COMMENT=	CD/DVD burning tool for Xfce
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	libburn.so:devel/libburn \
-		libisofs.so:devel/libisofs
+		libisofs.so:devel/libisofs \
+		libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2
 RUN_DEPENDS=	cdrdao:sysutils/cdrdao \
 		${LOCALBASE}/include/libburn/libburn.h:devel/libburn \
 		${LOCALBASE}/include/libisofs/libisofs.h:devel/libisofs

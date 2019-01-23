@@ -17,7 +17,9 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libpopt.so:devel/popt \
 		libdbus-glib-1.so:devel/dbus-glib \
 		libdbus-1.so:devel/dbus \
-		libical.so:devel/libical
+		libical.so:devel/libical \
+		libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2
 
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes

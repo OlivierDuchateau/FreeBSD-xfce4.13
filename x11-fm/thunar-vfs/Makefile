@@ -16,10 +16,11 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libpng.so:graphics/png \
 		libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2 \
 		libgamin-1.so:devel/gamin \
 		libdbus-1.so:devel/dbus
 
-USES=		desktop-file-utils gettext-tools gmake gnome jpeg libtool pathfix \
+USES=		gettext-tools gmake gnome jpeg libtool pathfix \
 		perl5 pkgconfig tar:bzip2 xfce:gtk2
 USE_GNOME=	cairo gdkpixbuf2 glib20 gtk20 intltool
 USE_XFCE=	libexo

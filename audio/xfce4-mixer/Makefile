@@ -13,6 +13,7 @@ COMMENT=	Volume control for the Xfce desktop
 
 LICENSE=	GPLv2
 
+BUILD_DEPENDS=	xdt-autogen:devel/xfce4-dev-tools
 LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib \
 		libdbus-1.so:devel/dbus \
 		libunique-1.0.so:x11-toolkits/unique \
@@ -44,5 +45,8 @@ post-patch:
 		-type f | ${XARGS} ${REINPLACE_CMD} -e \
 		's|(pkgdatadir)/icons|(datadir)/icons| ; \
 		s|pixmaps/xfce4-mixer|pixmaps|'
+
+pre-configure:
+	(cd ${WRKSRC} && ./autogen.sh)
 
 .include <bsd.port.mk>

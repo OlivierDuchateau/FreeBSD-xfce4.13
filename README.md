@@ -1,6 +1,6 @@
 # FreeBSD ports overlay to test xfce 4.13
 
-**These are experimental ports, not ready for production use. Use at your own risk**
+**These are experimental ports, not ready for production use. Use at your own risk.**
 
 This repository contains a [FreeBSD ports](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/ports-using.html) overlay with [XFCE desktop environment](https://xfce.org/) ports updated to version 4.13 of the desktop, whcih is the development desktop on which the future version 4.14 wioll be based.
 
@@ -29,7 +29,7 @@ Configure portshaker to include this overlay in whatever ports tree tyou need it
 
 ### Binary packages
 
-**These are provided on a best effort basis and no availability warranty is given**
+**These are provided on a best effort basis and no availability warranty is given.**
 
 If you are confident of the binaries I'll provide this will save you time.
 

@@ -80,5 +80,6 @@ after this pkg should install xfce packagess from my repo.
 
 ## Notes
 
-- I added GIR options to some ports but they are not working properly. Work needed here
+- I added GIR options to some ports but they are not working properly. Work needed here.
 - xfce4-mixer, which has been unsupported upstream since xfce 4.10, is not compiling anymore. It should be possible to fix it though, so at some point I will get to that.
+- Lightdm is not working, needs investigation.

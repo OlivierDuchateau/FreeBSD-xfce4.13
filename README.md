@@ -61,7 +61,7 @@ I'll assume you saved the cert in `/usr/local/etc/pkg/xfce13.cert`.
 Since the repo I'm building is only partial best way to use it is to configure it alongside the "latest" official packages repo with an higher priority, so you could add to `/usr/local/etc/pkg/repos/xfce13.conf`:
 
 ```
-scrooge: {
+xfce413: {
   url: https://pkg.madpilot.net/120amd64-xfce13,
   mirror_type: none,
   signature_type: pubkey,

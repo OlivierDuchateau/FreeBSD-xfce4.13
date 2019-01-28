@@ -80,6 +80,31 @@ after this pkg should install xfce packagess from my repo.
 
 ## Notes
 
+### LightDM
+
+LightDM + GTK Greeter fails to start with default system configuration.
+
+I found out it requires more locked memory than what is allowed in the default login.conf.
+
+Please edit `/etc/login.conf` and in the `daemon:` section raise the `memorylocked` value from `128M` to `256M`:
+
+```
+daemon:\
+        :memorylocked=256M:\
+        :tc=default:
+```
+
+After this rebuild the database:
+
+```
+# cd /dtc
+# cap_mkdb login.conf
+```
+
+Then reboot. LightDM should now work fine.
+
+### Miscellaneous
+
 - I added GIR options to some ports but they are not working properly. Work needed here.
 - xfce4-mixer, which has been unsupported upstream since xfce 4.10, is not compiling anymore. It should be possible to fix it though, so at some point I will get to that.
-- Lightdm is not working, needs investigation.
+- Lightdm fails to start with default system configuration. It requires more llocked memory than allowed by default 

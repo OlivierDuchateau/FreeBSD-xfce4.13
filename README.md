@@ -76,7 +76,7 @@ FreeBSD: {
 }
 ```
 
-after this pkg should install xfce packagess from my repo.
+after this pkg should install xfce packages from my repo.
 
 ## Notes
 

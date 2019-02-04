@@ -1,6 +1,6 @@
---- src/x-server.c.orig	2018-03-21 23:13:29 UTC
+--- src/x-server.c.orig	2018-08-30 00:28:55 UTC
 +++ src/x-server.c
-@@ -142,10 +142,10 @@ x_server_connect_session (DisplayServer *display_serve
+@@ -152,10 +152,10 @@ x_server_connect_session (DisplayServer *display_serve
          g_autofree gchar *tty_text = NULL;
          g_autofree gchar *vt_text = NULL;
  

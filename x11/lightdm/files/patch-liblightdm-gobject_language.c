@@ -1,8 +1,8 @@
 https://bugs.launchpad.net/lightdm/+bug/790186
 
---- liblightdm-gobject/language.c.orig	2018-02-06 23:31:03 UTC
+--- liblightdm-gobject/language.c.orig	2018-08-29 22:30:07 UTC
 +++ liblightdm-gobject/language.c
-@@ -57,6 +57,12 @@ G_DEFINE_TYPE (LightDMLanguage, lightdm_language, G_TY
+@@ -57,6 +57,12 @@ G_DEFINE_TYPE_WITH_PRIVATE (LightDMLanguage, lightdm_l
  static gboolean have_languages = FALSE;
  static GList *languages = NULL;
  
@@ -55,10 +55,10 @@ https://bugs.launchpad.net/lightdm/+bug/790186
 +#endif
              setlocale (LC_MESSAGES, "");
  
-+#ifdef _NL_IDENTIFICATION_TERRITORY
++#ifdef _NL_IDENTIFICATION_LANGUAGE
              const gchar *language_en = nl_langinfo (_NL_IDENTIFICATION_LANGUAGE);
 +#else
-+            gchar *language_en = "Unknown";
++            const gchar *language_en = "Unknown";
 +#endif
              if (language_en && strlen (language_en) > 0)
                  priv->name = g_strdup (dgettext ("iso_639_3", language_en));
@@ -72,7 +72,7 @@ https://bugs.launchpad.net/lightdm/+bug/790186
 +#endif
              setlocale (LC_MESSAGES, "");
  
-+#ifdef _NL_IDENTIFICATION_LANGUAGE
++#ifdef _NL_IDENTIFICATION_TERRITORY
              gchar *country_en = nl_langinfo (_NL_IDENTIFICATION_TERRITORY);
 +#else
 +            gchar *country_en = "Unknown";

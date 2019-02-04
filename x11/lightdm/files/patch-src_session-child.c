@@ -1,4 +1,4 @@
---- src/session-child.c.orig	2018-03-21 23:13:29 UTC
+--- src/session-child.c.orig	2018-02-06 23:31:03 UTC
 +++ src/session-child.c
 @@ -13,7 +13,6 @@
  #include <grp.h>

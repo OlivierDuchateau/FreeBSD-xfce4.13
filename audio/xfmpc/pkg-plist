@@ -4,6 +4,7 @@ share/applications/xfmpc.desktop
 %%NLS%%share/locale/am/LC_MESSAGES/xfmpc.mo
 %%NLS%%share/locale/ar/LC_MESSAGES/xfmpc.mo
 %%NLS%%share/locale/ast/LC_MESSAGES/xfmpc.mo
+%%NLS%%share/locale/be/LC_MESSAGES/xfmpc.mo
 %%NLS%%share/locale/bg/LC_MESSAGES/xfmpc.mo
 %%NLS%%share/locale/ca/LC_MESSAGES/xfmpc.mo
 %%NLS%%share/locale/cs/LC_MESSAGES/xfmpc.mo
@@ -37,6 +38,7 @@ share/applications/xfmpc.desktop
 %%NLS%%share/locale/si/LC_MESSAGES/xfmpc.mo
 %%NLS%%share/locale/sk/LC_MESSAGES/xfmpc.mo
 %%NLS%%share/locale/sl/LC_MESSAGES/xfmpc.mo
+%%NLS%%share/locale/sq/LC_MESSAGES/xfmpc.mo
 %%NLS%%share/locale/sr/LC_MESSAGES/xfmpc.mo
 %%NLS%%share/locale/sv/LC_MESSAGES/xfmpc.mo
 %%NLS%%share/locale/th/LC_MESSAGES/xfmpc.mo

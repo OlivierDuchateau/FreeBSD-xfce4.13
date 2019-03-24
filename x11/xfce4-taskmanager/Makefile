@@ -1,5 +1,5 @@
 # Created by: DaJoob
-# $FreeBSD: head/x11/xfce4-taskmanager/Makefile 496260 2019-03-19 14:38:12Z madpilot $
+# $FreeBSD: head/x11/xfce4-taskmanager/Makefile 496710 2019-03-24 09:48:51Z madpilot $
 
 PORTNAME=	xfce4-taskmanager
 PORTVERSION=	1.2.2
@@ -25,7 +25,7 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 
 CONFIGURE_ARGS+=	--disable-silent-rules --disable-gksu \
-			--enable-wnck3 --enable-wnck --disable-gtk2
+			--enable-wnck3 --disable-wnck --disable-gtk2
 
 OPTIONS_DEFINE=		NLS
 OPTIONS_SUB=		yes

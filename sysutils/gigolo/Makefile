@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: head/sysutils/gigolo/Makefile 488415 2018-12-26 18:09:40Z linimon $
+# $FreeBSD: head/sysutils/gigolo/Makefile 496715 2019-03-24 10:10:02Z madpilot $
 
 PORTNAME=	gigolo
 PORTVERSION=	0.4.91

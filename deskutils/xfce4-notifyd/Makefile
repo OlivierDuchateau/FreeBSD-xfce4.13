@@ -6,7 +6,7 @@
 # Support of GTK+ is checked at compile time and themes directories too.
 
 PORTNAME=	xfce4-notifyd
-PORTVERSION=	0.4.3
+PORTVERSION=	0.4.4
 CATEGORIES=	deskutils xfce
 MASTER_SITES=	XFCE/src/apps/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
@@ -21,7 +21,7 @@ LIB_DEPENDS=	libnotify.so:devel/libnotify \
 		libdbus-1.so:devel/dbus
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
-USE_GNOME=	gtk30 glib20 cairo intltool
+USE_GNOME=	cairo glib20 gtk30 intltool
 USE_XFCE=	libutil panel
 USE_XORG=	ice sm x11
 

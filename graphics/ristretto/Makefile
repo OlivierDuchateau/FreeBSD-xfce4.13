@@ -1,9 +1,8 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: head/graphics/ristretto/Makefile 490953 2019-01-22 14:44:38Z madpilot $
+# $FreeBSD: head/graphics/ristretto/Makefile 498379 2019-04-08 15:30:20Z madpilot $
 
 PORTNAME=	ristretto
-PORTVERSION=	0.8.3
-PORTREVISION=	1
+PORTVERSION=	0.8.4
 CATEGORIES=	graphics xfce
 MASTER_SITES=	XFCE/src/apps/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4

@@ -31,7 +31,7 @@ Configure portshaker to include this overlay in whatever ports tree tyou need it
 
 **These are provided on a best effort basis and no availability warranty is given.**
 
-**The packages at this URL are, at present, quite outdated. I'm planning to provide new ones in the future, but not right away. **
+**The packages at this URL are, at present, quite outdated. I'm planning to provide new ones in the future, but not right away.**
 
 If you are confident of the binaries I'll provide this will save you time.
 

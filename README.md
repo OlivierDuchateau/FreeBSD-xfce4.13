@@ -99,7 +99,7 @@ daemon:\
 After this rebuild the database:
 
 ```
-# cd /dtc
+# cd /etc
 # cap_mkdb login.conf
 ```
 

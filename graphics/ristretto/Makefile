@@ -3,6 +3,7 @@
 
 PORTNAME=	ristretto
 PORTVERSION=	0.8.4
+PORTREVISION=	1
 CATEGORIES=	graphics xfce
 MASTER_SITES=	XFCE/src/apps/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4
@@ -16,8 +17,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libexif.so:graphics/libexif \
 		libdbus-glib-1.so:devel/dbus-glib \
 		libdbus-1.so:devel/dbus \
-		libfontconfig.so:x11-fonts/fontconfig \
-		libfreetype.so:print/freetype2
+		libfreetype.so:print/freetype2 \
+		libfontconfig.so:x11-fonts/fontconfig
 
 USES=		desktop-file-utils gettext-tools gmake gnome pkgconfig \
 		tar:bzip2 xfce:gtk2

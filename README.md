@@ -27,6 +27,8 @@ run_portshaker_command $*
 
 Configure portshaker to include this overlay in whatever ports tree tyou need it (I strongly suggect using [poudriere](https://github.com/freebsd/poudriere/wiki)) and compile your own packages.
 
+**NOTE: If you want to compile the sysutils/xfce4-places-plugin port you should manually remove it's line from MOVED after mergine the trees. Portshaker will not do this automatically.**
+
 ### Binary packages
 
 **These are provided on a best effort basis and no availability warranty is given.**

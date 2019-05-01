@@ -60,6 +60,8 @@ pV5ij9BTkYKsHQvWH6ufVeMdjcwvxzRe9HNek54mxbdT3qBjCRebdlCSrqF+2Gfc
 -----END PUBLIC KEY-----
 ```
 
+(changed on 2019-05-01)
+
 I'll assume you saved the cert in `/usr/local/etc/pkg/xfce413.cert`.
 
 Since the repo I'm building is only partial best way to use it is to configure it alongside the "latest" official packages repo with an higher priority, so you could add to `/usr/local/etc/pkg/repos/xfce13.conf`:

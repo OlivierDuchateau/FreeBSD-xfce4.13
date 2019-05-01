@@ -1,8 +1,8 @@
 # Created by: Matt Lancereau
-# $FreeBSD: head/x11/libexo/Makefile 490794 2019-01-20 14:27:22Z madpilot $
+# $FreeBSD: head/x11/libexo/Makefile 500599 2019-05-01 17:48:58Z madpilot $
 
 PORTNAME=	libexo
-PORTVERSION=	0.12.4
+PORTVERSION=	0.12.5
 PORTREVISION=	1
 CATEGORIES=	x11 xfce
 MASTER_SITES=	XFCE/src/xfce/${PORTNAME:C/lib//}/${PORTVERSION:R}
@@ -23,7 +23,7 @@ BUILD_DEPENDS=	p5-URI>=1.70:net/p5-URI
 RUN_DEPENDS=	p5-URI>=1.70:net/p5-URI
 
 USES=		desktop-file-utils gettext-tools gmake gnome libtool pathfix \
-		perl5 pkgconfig tar:bzip2 xfce
+		perl5 pkgconfig tar:bzip2 xfce:gtk3
 USE_GNOME=	cairo glib20 gtk20 gtk30 intltool
 USE_LDCONFIG=	yes
 USE_XFCE=	libmenu

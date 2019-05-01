@@ -39,7 +39,7 @@ If you are confident of the binaries I'll provide this will save you time.
 
 Please note that these binaries will be most often built with `WITH_DEBUG` enabled.
 
-I'm peridically building a package set for FreeBSD 12.0 from these ports which can be found at https://pkg.madpilot.net/120amd64-xfce13
+I'm peridically building a package set for FreeBSD 12.0 (amd64) from these ports which can be found at https://pkg.madpilot.net/120amd64-xfce413
 
 These packages are signed with an RSA key, you should use the following cert to verify the signature:
 
@@ -60,16 +60,16 @@ UlBI8RSv42DrQOv2LXeBHRkCAwEAAQ==
 -----END PUBLIC KEY-----
 ```
 
-I'll assume you saved the cert in `/usr/local/etc/pkg/xfce13.cert`.
+I'll assume you saved the cert in `/usr/local/etc/pkg/xfce413.cert`.
 
 Since the repo I'm building is only partial best way to use it is to configure it alongside the "latest" official packages repo with an higher priority, so you could add to `/usr/local/etc/pkg/repos/xfce13.conf`:
 
 ```
 xfce413: {
-  url: https://pkg.madpilot.net/120amd64-xfce13,
+  url: https://pkg.madpilot.net/120amd64-xfce413,
   mirror_type: none,
   signature_type: pubkey,
-  pubkey: /usr/local/etc/pkg/xfce13.cert,
+  pubkey: /usr/local/etc/pkg/xfce413.cert,
   enabled: yes,
   priority: 1
 }

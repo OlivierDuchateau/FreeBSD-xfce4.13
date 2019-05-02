@@ -2,7 +2,7 @@
 
 **These are experimental ports, not ready for production use. Use at your own risk.**
 
-This repository contains a [FreeBSD ports](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/ports-using.html) overlay with [XFCE desktop environment](https://xfce.org/) ports updated to version 4.13 of the desktop, whcih is the development desktop on which the future version 4.14 wioll be based.
+This repository contains a [FreeBSD ports](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/ports-using.html) overlay with [XFCE desktop environment](https://xfce.org/) ports updated to version 4.13 of the desktop, whcih is the development desktop on which the future version 4.14 will be based.
 
 As a further warning, I'm only testing these in virtual machines, and these ports are being tested, for the time being built, only with default options and get only very light usage. I suggest anyone interested in testing performs sugch testing in virtual machines only too, since I can't warrant stability, prompt updates, or any future availability of the compiled binary packages.
 

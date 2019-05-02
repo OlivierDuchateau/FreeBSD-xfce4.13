@@ -4,6 +4,8 @@
 
 This repository contains a [FreeBSD ports](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/ports-using.html) overlay with [XFCE desktop environment](https://xfce.org/) ports updated to version 4.13 of the desktop, which is the development desktop on which the future version 4.14 will be based.
 
+The XFCE people are targeting to [release XFCE 4.14 on 11 August 2019](https://wiki.xfce.org/releng/4.14/roadmap)
+
 This is not intended to be used on production/actual desktop systems. I'm only testing it in virtual machines, compiled with default options and WITH_DEBUG enabled, and gets very light usage.
 
 I can't give any warranties about stability, usability of these packages or future availability of the binary repository described below.
@@ -109,8 +111,28 @@ After this rebuild the database:
 
 Then reboot. LightDM should now work fine.
 
-### Miscellaneous
+### Known issues
 
-- I added GIR options to some ports but they are not working properly. Work needed here.
-- xfce4-mixer, which has been unsupported upstream since xfce 4.10, is not compiling anymore. It should be possible to fix it though, so at some point I will get to that.
-- Lightdm fails to start with default system configuration. It requires more locked memory than allowed by default.
+These are known issues with these modified ports which need to be worked on:
+
+#### Gobject Introspection support
+
+Some ports have GIR (Gobject Introspection) options, but they don't work properly.
+
+This should be fixed or the options removed eventually.
+
+####  xfce4-mixer
+
+The xfce-mixer port, which has been unsupported upstream since xfce 4.10, now fails to compile.
+
+A quick look at the errors I get makes me think that with some minor fixes it could be made to work even with XFCE 4.13.
+
+#### LightDM
+
+Making LightDM the default display manager for XFCE would be a good thing (IMHO).
+
+Unluckily the problem with failing with the login.conf file shipped by default on FreeBSD prevents this. Also, since we need it to work on all supported releases, even getting a modified login.conf accepted in current would not help.
+
+Some alternative solution is needed.
+
+An option suggested by the LightDM port maintainer is to modify LightDM to reduce it's locked memory usage to the minimum. At present LightDM requires all the memory it allocates to be locked.

@@ -2,15 +2,17 @@
 
 **These are experimental ports, not ready for production use. Use at your own risk.**
 
-This repository contains a [FreeBSD ports](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/ports-using.html) overlay with [XFCE desktop environment](https://xfce.org/) ports updated to version 4.13 of the desktop, whcih is the development desktop on which the future version 4.14 will be based.
+This repository contains a [FreeBSD ports](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/ports-using.html) overlay with [XFCE desktop environment](https://xfce.org/) ports updated to version 4.13 of the desktop, which is the development desktop on which the future version 4.14 will be based.
 
-As a further warning, I'm only testing these in virtual machines, and these ports are being tested, for the time being built, only with default options and get only very light usage. I suggest anyone interested in testing performs sugch testing in virtual machines only too, since I can't warrant stability, prompt updates, or any future availability of the compiled binary packages.
+This is not intended to be used on production/actual desktop systems. I'm only testing it in virtual machines, compiled with default options and WITH_DEBUG enabled, and gets very light usage.
+
+I can't give any warranties about stability, usability of these packages or future availability of the binary repository described below.
 
 ## How to test
 
 ### Compiling yourself
 
-Esiest way to use this overlay is through [portshaker](https://www.freshports.org/ports-mgmt/portshaker/).
+Easiest way to use this overlay is through [portshaker](https://www.freshports.org/ports-mgmt/portshaker/).
 
 to grab this repo as a source you can create a file `/usr/local/etc/portshaker.d/xfce413`:
 
@@ -25,9 +27,9 @@ git_clone_uri="https://github.com/madpilot78/FreeBSD-xfce4.13.git"
 run_portshaker_command $*
 ```
 
-Configure portshaker to include this overlay in whatever ports tree tyou need it (I strongly suggect using [poudriere](https://github.com/freebsd/poudriere/wiki)) and compile your own packages.
+Configure portshaker to include this overlay in whatever ports tree you need it (I strongly suggest using [poudriere](https://github.com/freebsd/poudriere/wiki)) and compile your own packages.
 
-**NOTE: If you want to compile the sysutils/xfce4-places-plugin port you should manually remove it's line from MOVED after mergine the trees. Portshaker will not do this automatically.**
+**NOTE: If you want to compile the sysutils/xfce4-places-plugin port you should manually remove it's line from MOVED after merging the trees. Portshaker will not do this automatically.**
 
 ### Binary packages
 
@@ -37,7 +39,7 @@ If you are confident of the binaries I'll provide this will save you time.
 
 Please note that these binaries will be most often built with `WITH_DEBUG` enabled.
 
-I'm peridically building a package set for FreeBSD 12.0 (amd64) from these ports which can be found at https://pkg.madpilot.net/120amd64-xfce413
+I'm periodically building a package set for FreeBSD 12.0 (amd64) from these ports which can be found at https://pkg.madpilot.net/120amd64-xfce413
 
 These packages are signed with an RSA key, you should use the following cert to verify the signature:
 

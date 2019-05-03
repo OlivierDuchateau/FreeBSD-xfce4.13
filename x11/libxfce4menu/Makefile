@@ -39,7 +39,7 @@ GIR_USE=		gnome=introspection:build
 GIR_CONFIGURE_ON=	--enable-introspection=yes
 GIR_CONFIGURE_OFF=	--enable-introspection=no
 
-GLADE_CONFIGURE_ENABLE=	gladeui
+GLADE_CONFIGURE_ENABLE=	gladeui2
 GLADE_LIB_DEPENDS=	libgladeui-2.so:devel/glade
 
 GTK2_CONFIGURE_ENABLE=	gtk2

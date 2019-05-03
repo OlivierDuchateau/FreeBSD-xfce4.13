@@ -1,0 +1,93 @@
+diff --git a/libxfce4util/Makefile.am b/libxfce4util/Makefile.am
+index e7dff26..a1abc31 100644
+--- libxfce4util/Makefile.am
++++ libxfce4util/Makefile.am
+@@ -39,7 +39,6 @@ libxfce4util_built_sources =						\
+ 
+ libxfce4utilincludedir = $(includedir)/xfce4/libxfce4util
+ libxfce4utilinclude_HEADERS =						\
+-	$(libxfce4util_built_public_sources)				\
+ 	$(libxfce4util_headers)						\
+ 	libxfce4util.h							\
+ 	libxfce4util-config.h
+@@ -91,13 +90,14 @@ INTROSPECTION_SCANNER_ARGS = \
+ 	--identifier-prefix=Xfce \
+ 	--identifier-prefix=xfce \
+ 	--identifier-prefix=libxfce \
+-	--c-include=libxfce4util.h
++	-DLIBXFCE4UTIL_COMPILATION \
++	--c-include=libxfce4util/libxfce4util.h
+ INTROSPECTION_COMPILER_ARGS = \
+ 	--includedir=$(srcdir) \
+ 	--includedir=.
+ 
+ if HAVE_INTROSPECTION
+-introspection_sources = $(libxfce4util_la_SOURCES)
++introspection_sources = $(filter-out %private.h, $(libxfce4util_la_SOURCES))
+ 
+ libxfce4util-1.0.gir: libxfce4util.la Makefile
+ libxfce4util_1_0_gir_INCLUDES = GObject-2.0 GLib-2.0
+diff --git a/libxfce4util/libxfce4util.symbols b/libxfce4util/libxfce4util.symbols
+index 02fb6a9..073c0b9 100644
+--- libxfce4util/libxfce4util.symbols
++++ libxfce4util/libxfce4util.symbols
+@@ -122,6 +122,7 @@ xfce_resource_save_location G_GNUC_MALLOC
+ /* xfce-rc functions */
+ #if IN_HEADER(__XFCE_RC_H__)
+ #if IN_SOURCE(__XFCE_RC_C__)
++xfce_rc_get_type
+ xfce_rc_simple_open G_GNUC_MALLOC
+ xfce_rc_config_open G_GNUC_MALLOC
+ xfce_rc_close
+diff --git a/libxfce4util/xfce-rc.c b/libxfce4util/xfce-rc.c
+index bd6402a..a97b3ca 100644
+--- libxfce4util/xfce-rc.c
++++ libxfce4util/xfce-rc.c
+@@ -65,7 +65,23 @@
+ #include <libxfce4util/xfce-rc-private.h>
+ #include <libxfce4util/libxfce4util-alias.h>
+ 
++static XfceRc *
++xfce_rc_copy (const XfceRc *rc)
++{
++  return g_slice_dup (XfceRc, rc);
++}
++
++static void
++xfce_rc_free (XfceRc *rc)
++{
++  if (G_LIKELY (rc != NULL))
++    {
++      g_slice_free (XfceRc, rc);
++    }
++}
+ 
++G_DEFINE_BOXED_TYPE (XfceRc, xfce_rc,
++  xfce_rc_copy, xfce_rc_free)
+ 
+ /* called by _xfce_rc_{simple,config}_new */
+ void
+diff --git a/libxfce4util/xfce-rc.h b/libxfce4util/xfce-rc.h
+index 6f97ada..2c13cef 100644
+--- libxfce4util/xfce-rc.h
++++ libxfce4util/xfce-rc.h
+@@ -26,15 +26,19 @@
+ #ifndef __XFCE_RC_H__
+ #define __XFCE_RC_H__
+ 
++#include <glib-object.h>
+ #include <libxfce4util/xfce-resource.h>
+ 
+ G_BEGIN_DECLS
+ 
+ typedef struct _XfceRc XfceRc;
+ 
++#define XFCE_TYPE_RC       (xfce_rc_get_type ())
+ #define XFCE_RC(obj)       ((XfceRc *) (obj))
+ #define XFCE_RC_CONST(obj) ((const XfceRc *) (obj))
+ 
++GType        xfce_rc_get_type                (void);
++
+ XfceRc*      xfce_rc_simple_open             (const gchar     *filename,
+                                               gboolean         readonly) G_GNUC_MALLOC G_GNUC_WARN_UNUSED_RESULT;
+ 

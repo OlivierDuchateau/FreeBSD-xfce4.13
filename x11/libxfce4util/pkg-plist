@@ -42,6 +42,7 @@ sbin/xfce4-kiosk-query
 %%NLS%%share/locale/hr/LC_MESSAGES/libxfce4util.mo
 %%NLS%%share/locale/hu/LC_MESSAGES/libxfce4util.mo
 %%NLS%%share/locale/id/LC_MESSAGES/libxfce4util.mo
+%%NLS%%share/locale/ie/LC_MESSAGES/libxfce4util.mo
 %%NLS%%share/locale/is/LC_MESSAGES/libxfce4util.mo
 %%NLS%%share/locale/it/LC_MESSAGES/libxfce4util.mo
 %%NLS%%share/locale/ja/LC_MESSAGES/libxfce4util.mo

@@ -2,7 +2,7 @@
 # $FreeBSD: head/x11-wm/xfce4-desktop/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-desktop
-PORTVERSION=	4.13.3
+PORTVERSION=	4.13.4
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	XFCE/src/xfce/xfdesktop/${PORTVERSION:R}/
 DISTNAME=	xfdesktop-${PORTVERSION}

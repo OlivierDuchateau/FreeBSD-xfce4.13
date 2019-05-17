@@ -1,9 +1,8 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: head/deskutils/xfce4-tumbler/Makefile 490953 2019-01-22 14:44:38Z madpilot $
+# $FreeBSD: head/deskutils/xfce4-tumbler/Makefile 501887 2019-05-17 22:23:46Z madpilot $
 
 PORTNAME=	tumbler
-PORTVERSION=	0.2.3
-PORTREVISION=	2
+PORTVERSION=	0.2.4
 CATEGORIES=	deskutils xfce
 MASTER_SITES=	XFCE/src/xfce/${PORTNAME}/${PORTVERSION:R}/
 PKGNAMEPREFIX=	xfce4-
@@ -63,6 +62,6 @@ ODF_CONFIGURE_ENABLE=	odf-thumbnailer
 ODF_USE=		gnome=libgsf
 
 POPPLER_CONFIGURE_ENABLE=	poppler-thumbnailer
-POPPLER_LIB_DEPENDS=		libpoppler-glib.so:graphics/poppler-glib
+POPPLER_LIB_DEPENDS=	libpoppler-glib.so:graphics/poppler-glib
 
 .include <bsd.port.mk>

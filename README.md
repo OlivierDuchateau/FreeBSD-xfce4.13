@@ -141,8 +141,4 @@ An option suggested by the LightDM port maintainer is to modify LightDM to reduc
 
 These are bug reports I have opened upstream about bugs in development versions of the XFCE software.
 
-#### Thunar dumps core on startup
-
-Happens with version 1.8.5
-
-https://bugzilla.xfce.org/show_bug.cgi?id=15411
+None at present.

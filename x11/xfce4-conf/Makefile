@@ -2,7 +2,7 @@
 # $FreeBSD: head/x11/xfce4-conf/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-conf
-PORTVERSION=	4.13.6
+PORTVERSION=	4.13.7
 CATEGORIES=	x11 xfce
 MASTER_SITES=	XFCE/src/xfce/xfconf/${PORTVERSION:R}
 DISTNAME=	xfconf-${PORTVERSION}

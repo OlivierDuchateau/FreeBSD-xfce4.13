@@ -2,7 +2,7 @@
 # $FreeBSD: head/x11-fm/thunar/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	Thunar
-DISTVERSION=	1.8.5
+DISTVERSION=	1.8.6
 CATEGORIES=	x11-fm xfce
 MASTER_SITES=	XFCE/src/xfce/${PORTNAME:tl}/${PORTVERSION:R}
 DIST_SUBDIR=	xfce4

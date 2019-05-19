@@ -80,4 +80,10 @@ post-install:
 	${RM} ${STAGEDIR}${PREFIX}/lib/systemd/user/thunar.service
 	(cd ${STAGEDIR}${PREFIX}/lib && ${RMDIR} -p systemd/user)
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if defined(WITH_DEBUG)
+CONFIGURE_ARGS+=        --enable-debug
+.endif
+
+.include <bsd.port.post.mk>

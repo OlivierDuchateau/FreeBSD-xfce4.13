@@ -86,6 +86,8 @@ FreeBSD: {
 
 after this pkg should install xfce packages from my repo.
 
+NOTE: If changing configuration on a machine which already has xfce packages installed from the official repositories you may need to set CONSERVATIVE_UPGRADE to false in pkg.conf for pkg to switch the already installed packages to my repo.
+
 ## Notes
 
 ### LightDM

@@ -2,8 +2,7 @@
 # $FreeBSD: head/x11/xfce4-goodies/Makefile 489584 2019-01-07 16:48:26Z tobik $
 
 PORTNAME=	xfce4-goodies
-PORTVERSION=	4.12
-PORTREVISION=	3
+PORTVERSION=	4.13
 CATEGORIES=	x11
 
 MAINTAINER=	xfce@FreeBSD.org

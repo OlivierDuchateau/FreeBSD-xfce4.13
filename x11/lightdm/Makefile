@@ -2,7 +2,8 @@
 # $FreeBSD: head/x11/lightdm/Makefile 492117 2019-02-04 11:52:12Z woodsb02 $
 
 PORTNAME=	lightdm
-PORTVERSION=	1.30.0
+PORTVERSION=	1.28.0
+PORTREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	https://github.com/CanonicalLtd/${PORTNAME}/releases/download/${DISTVERSIONPREFIX}${DISTVERSION}/
 

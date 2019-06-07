@@ -92,11 +92,9 @@ NOTE: If changing configuration on a machine which already has xfce packages ins
 
 ### LightDM
 
-LightDM + GTK Greeter fails to start with default system configuration.
+LightDM  default configuration is now tweaked to not use locked memory on FreeBSD. Also other bugs have been fixed, so it should now work reliably.
 
-I found out it requires more locked memory than what is allowed in the default login.conf.
-
-Please edit `/etc/login.conf` and in the `daemon:` section raise the `memorylocked` value from `128M` to `256M`:
+In case you want to use locked memory you need to set `lock-memory=true` in `/usr/local/etc/lightdm/lightdm.conf`, then edit `/etc/login.conf` and in the `daemon:` section raise the `memorylocked` value from `128M` to `256M`:
 
 ```
 daemon:\
@@ -131,16 +129,14 @@ A quick look at the errors I get makes me think that with some minor fixes it co
 
 #### LightDM
 
-Making LightDM the default display manager for XFCE would be a good thing (IMHO).
+~~Making LightDM the default display manager for XFCE would be a good thing (IMHO).~~
 
-Unluckily the problem with failing with the login.conf file shipped by default on FreeBSD prevents this. Also, since we need it to work on all supported releases, even getting a modified login.conf accepted in current would not help.
-
-Some alternative solution is needed.
-
-An option suggested by the LightDM port maintainer is to modify LightDM to reduce it's locked memory usage to the minimum. At present LightDM requires all the memory it allocates to be locked.
+This has been fixed, and now it is possible to suggest it for a default installation.
 
 ### Open bug reports upstream
 
 These are bug reports I have opened upstream about bugs in development versions of the XFCE software.
 
-None at present.
+#### Pull request for LightDM envionment reset code:
+
+https://github.com/CanonicalLtd/lightdm/pull/78

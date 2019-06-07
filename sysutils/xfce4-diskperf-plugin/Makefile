@@ -1,5 +1,5 @@
 # Created by: Danilo Egea Gondolfo <danilogondolfo@gmail.com>
-# $FreeBSD: head/sysutils/xfce4-diskperf-plugin/Makefile 435177 2017-03-01 17:35:59Z danilo $
+# $FreeBSD: head/sysutils/xfce4-diskperf-plugin/Makefile 503624 2019-06-07 09:01:49Z amdmi3 $
 
 PORTNAME=	xfce4-diskperf-plugin
 PORTVERSION=	2.6.1
@@ -14,7 +14,7 @@ COMMENT=	Graphical representation of the disk IO
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
+USES=		gettext-tools gnome gmake libtool pkgconfig tar:bzip2 xfce:gtk3
 USE_GNOME=	cairo gtk30 intltool
 USE_XFCE=	panel
 
@@ -30,12 +30,8 @@ OPTIONS_SUB=		yes
 NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=		gettext-runtime
 
-.include <bsd.port.options.mk>
-
-post-patch:
-.if empty(PORT_OPTIONS:MNLS)
+post-patch-NLS-off:
 	@${REINPLACE_CMD} -e 's|[[:blank:]]po||' \
 		-e 's|po$$||'  ${WRKSRC}/Makefile.in
-.endif
 
 .include <bsd.port.mk>

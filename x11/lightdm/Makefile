@@ -1,5 +1,5 @@
 # Created by: Ben Woods <woodsb02@FreeBSD.org>
-# $FreeBSD: head/x11/lightdm/Makefile 492117 2019-02-04 11:52:12Z woodsb02 $
+# $FreeBSD: head/x11/lightdm/Makefile 503608 2019-06-06 23:05:21Z woodsb02 $
 
 PORTNAME=	lightdm
 PORTVERSION=	1.30.0

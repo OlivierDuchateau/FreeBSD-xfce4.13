@@ -1,7 +1,7 @@
 # $FreeBSD: head/x11/menulibre/Makefile 479406 2018-09-10 13:14:50Z mat $
 
 PORTNAME=	menulibre
-PORTVERSION=	2.2.0
+PORTVERSION=	2.2.1
 CATEGORIES=	x11
 MASTER_SITES=	https://launchpad.net/menulibre/${PORTVERSION:R}/${PORTVERSION}/+download/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}

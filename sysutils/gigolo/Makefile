@@ -3,6 +3,7 @@
 
 PORTNAME=	gigolo
 PORTVERSION=	0.4.91
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	XFCE/src/apps/${PORTNAME}/${PORTVERSION:R}
 
@@ -16,7 +17,7 @@ ONLY_FOR_ARCHS_REASON=	Does not compile
 
 BUILD_DEPENDS=	p5-XML-Parser>=0:textproc/p5-XML-Parser
 
-USES=		fuse gettext-tools gmake pkgconfig tar:bzip2 xfce:gtk3
+USES=		fuse gettext-tools gmake pkgconfig tar:bzip2 xfce
 USE_GNOME=	cairo gdkpixbuf2 gtk30 gvfs intlhack
 USE_XORG=	x11
 

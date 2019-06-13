@@ -17,7 +17,7 @@ LIB_DEPENDS=	libnotify.so:devel/libnotify \
 		libdbus-1.so:devel/dbus
 
 USES=		gettext-tools gmake gnome libtool pkgconfig \
-		tar:bzip2 xfce:gtk3
+		tar:bzip2 xfce
 USE_GNOME=	cairo gdkpixbuf2 gtk30 intltool
 USE_XFCE=	panel thunar
 USE_XORG=	ice sm x11

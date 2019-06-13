@@ -23,7 +23,7 @@ BUILD_DEPENDS=	p5-URI>=1.70:net/p5-URI
 RUN_DEPENDS=	p5-URI>=1.70:net/p5-URI
 
 USES=		desktop-file-utils gettext-tools gmake gnome libtool pathfix \
-		perl5 pkgconfig tar:bzip2 xfce:gtk3
+		perl5 pkgconfig tar:bzip2 xfce
 USE_GNOME=	cairo glib20 gtk20 gtk30 intltool
 USE_LDCONFIG=	yes
 USE_XFCE=	libmenu

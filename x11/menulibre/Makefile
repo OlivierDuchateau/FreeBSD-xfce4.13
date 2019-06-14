@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11/menulibre/Makefile 479406 2018-09-10 13:14:50Z mat $
+# $FreeBSD: head/x11/menulibre/Makefile 504183 2019-06-14 12:45:45Z madpilot $
 
 PORTNAME=	menulibre
 PORTVERSION=	2.2.1

@@ -1,5 +1,5 @@
 #
-# $FreeBSD: head/Mk/Uses/xfce.mk 450042 2017-09-18 14:17:15Z madpilot $
+# $FreeBSD: head/Mk/Uses/xfce.mk 504557 2019-06-19 16:14:27Z madpilot $
 #
 # Provide support for Xfce related ports.
 #
@@ -18,8 +18,6 @@ _INCLUDE_USES_XFCE_Mk=	yes
 _USES_POST+=	xfce
 
 _USE_XFCE_ALL=	garcon libexo libgui libmenu libutil panel thunar xfconf
-
-XFCE_MASTER_SITE_VER=	4.13
 
 xfce_ARGS?=	# empty
 

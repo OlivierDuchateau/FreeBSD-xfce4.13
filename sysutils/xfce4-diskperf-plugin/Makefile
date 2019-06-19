@@ -5,7 +5,7 @@ PORTNAME=	xfce4-diskperf-plugin
 PORTVERSION=	2.6.1
 PORTREVISION=	1
 CATEGORIES=	sysutils xfce
-MASTER_SITES=	XFCE/src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
+MASTER_SITES=	XFCE/panel-plugins
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	danilo@FreeBSD.org

@@ -5,7 +5,7 @@ PORTNAME=	xfce4-mpc-plugin
 PORTVERSION=	0.5.1
 PORTREVISION=	1
 CATEGORIES=	audio xfce
-MASTER_SITES=	XFCE/src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
+MASTER_SITES=	XFCE/panel-plugins
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org

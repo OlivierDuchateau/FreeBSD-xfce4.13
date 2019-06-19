@@ -4,7 +4,7 @@
 PORTNAME=	thunar-vcs-plugin
 PORTVERSION=	0.2.0
 CATEGORIES=	devel xfce
-MASTER_SITES=	XFCE/src/thunar-plugins/${PORTNAME}/${PORTVERSION:R}
+MASTER_SITES=	XFCE/thunar-plugins
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	sergey.dyatko@gmail.com

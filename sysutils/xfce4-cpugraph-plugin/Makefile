@@ -2,7 +2,7 @@
 # $FreeBSD: head/sysutils/xfce4-cpugraph-plugin/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-cpugraph-plugin
-PORTVERSION=	1.0.90
+PORTVERSION=	1.0.91
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	XFCE/panel-plugins
 DIST_SUBDIR=	xfce4

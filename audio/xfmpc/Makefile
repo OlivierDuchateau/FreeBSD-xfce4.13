@@ -1,8 +1,9 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: head/audio/xfmpc/Makefile 490953 2019-01-22 14:44:38Z madpilot $
+# $FreeBSD: head/audio/xfmpc/Makefile 504930 2019-06-23 07:53:33Z madpilot $
 
 PORTNAME=	xfmpc
-PORTVERSION=	0.2.90
+PORTVERSION=	0.3.0
+PORTREVISION=	1
 CATEGORIES=	audio xfce
 MASTER_SITES=	XFCE/apps
 DIST_SUBDIR=	xfce4

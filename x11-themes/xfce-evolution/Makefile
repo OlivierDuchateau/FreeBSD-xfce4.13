@@ -1,13 +1,12 @@
-# $FreeBSD: head/x11-themes/xfce-evolution/Makefile 501884 2019-05-17 19:46:26Z ak $
+# $FreeBSD: head/x11-themes/xfce-evolution/Makefile 505150 2019-06-26 11:52:23Z rene $
 
 PORTNAME=	xfce-evolution
-PORTREVISION=	1
-DISTVERSION=	6.0.3
+DISTVERSION=	6.0.4
 CATEGORIES=	x11-themes
 MASTER_SITES=	SF/${PORTNAME}
 
 MAINTAINER=	fbsd@opal.com
-COMMENT=	Complete Xfce Evolution Gtk2, Gtk3, Qt4, Qt5, wxWidgets, Xfce themes
+COMMENT=	Complete Xfce Evolution Gtk2, Gtk3, Qt5, wxWidgets, Xfce themes
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/GPL-v2

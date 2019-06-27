@@ -2,8 +2,7 @@
 # $FreeBSD: head/devel/xfce4-dev-tools/Makefile 472376 2018-06-14 12:47:58Z tijl $
 
 PORTNAME=	xfce4-dev-tools
-PORTVERSION=	4.12.0
-PORTREVISION=	1
+PORTVERSION=	4.13.0
 CATEGORIES=	devel xfce
 MASTER_SITES=	XFCE
 DIST_SUBDIR=	xfce4
@@ -21,7 +20,6 @@ RUN_DEPENDS=	autoconf>=2.69:devel/autoconf \
 
 GNU_CONFIGURE=	yes
 USE_GNOME=	glib20
-USES=		pkgconfig shebangfix tar:bzip2 xfce
-SHEBANG_FILES=	scripts/xdt-commit
+USES=		pkgconfig tar:bzip2 xfce
 
 .include <bsd.port.mk>

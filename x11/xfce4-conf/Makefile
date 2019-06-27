@@ -2,7 +2,7 @@
 # $FreeBSD: head/x11/xfce4-conf/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-conf
-PORTVERSION=	4.13.7
+PORTVERSION=	4.13.8
 CATEGORIES=	x11 xfce
 MASTER_SITES=	XFCE
 DISTNAME=	xfconf-${DISTVERSIONFULL}
@@ -29,8 +29,15 @@ GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 CONFIGURE_ARGS=	--without-html-dir
 
-OPTIONS_DEFINE=		PERL NLS
+OPTIONS_DEFINE=		GIR PERL NLS
 OPTIONS_SUB=		yes
+
+GIR_DESC=		Use Gobject Introspection
+
+GIR_BUILD_DEPENDS=	vapigen:lang/vala
+GIR_USE=		gnome=introspection:build
+GIR_CONFIGURE_ON=	--enable-introspection=yes
+GIR_CONFIGURE_OFF=	--enable-introspection=no
 
 NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=		gettext-runtime

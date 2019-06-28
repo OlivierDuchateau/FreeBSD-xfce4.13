@@ -109,7 +109,7 @@ After this rebuild the database:
 # cap_mkdb login.conf
 ```
 
-Then reboot. LightDM should now work fine.
+Then reboot.
 
 ### Known issues
 
@@ -117,9 +117,7 @@ These are known issues with these modified ports which need to be worked on:
 
 #### Gobject Introspection support
 
-Some ports have GIR (Gobject Introspection) options, but they don't work properly.
-
-This should be fixed or the options removed eventually.
+Some ports have GIR (Gobject Introspection) options, I still have to test these.
 
 ####  xfce4-mixer
 
@@ -131,7 +129,7 @@ I fixed this and now compiles and seems to work fine. This is anyway unsupported
 
 ~~Making LightDM the default display manager for XFCE would be a good thing (IMHO).~~
 
-This has been fixed, and now it is possible to suggest it for a default installation.
+This has been fixed. I plan to make it the default suggested Display Manager for xfce.
 
 ### Open bug reports upstream
 

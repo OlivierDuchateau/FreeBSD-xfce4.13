@@ -123,9 +123,9 @@ This should be fixed or the options removed eventually.
 
 ####  xfce4-mixer
 
-The xfce-mixer port, which has been unsupported upstream since xfce 4.10, now fails to compile.
+~~The xfce-mixer port, which has been unsupported upstream since xfce 4.10, now fails to compile.~~
 
-A quick look at the errors I get makes me think that with some minor fixes it could be made to work even with XFCE 4.13.
+I fixed this and now compiles and seems to work fine. This is anyway unsupported upstream and can't be fixed indefinitely.
 
 #### LightDM
 

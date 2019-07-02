@@ -6,9 +6,15 @@ From: Stefan Seyfried <seife+dev@b1-systems.com>
 Date: Sat, 3 Mar 2018 20:25:24 +0100
 Subject: [PATCH] fix build with libical version 3
 
---- src/ical-code.c.orig	2015-04-10 10:26:26 UTC
+---
+ src/ical-code.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+diff --git a/src/ical-code.c b/src/ical-code.c
+index d5831404..c40042c3 100644
+--- src/ical-code.c
 +++ src/ical-code.c
-@@ -2579,7 +2579,9 @@ static struct icaltimetype count_first_alarm_time(xfic
+@@ -2579,7 +2579,9 @@ static struct icaltimetype count_first_alarm_time(xfical_period per
   * when counting alarm time. */
          if (rel == ICAL_RELATED_START) {
              per.stime.is_date       = 0;
@@ -18,7 +24,7 @@ Subject: [PATCH] fix build with libical version 3
              per.stime.is_daylight   = 0;
              per.stime.zone          = utc_icaltimezone;
              per.stime.hour          = 0;
-@@ -2588,7 +2590,9 @@ static struct icaltimetype count_first_alarm_time(xfic
+@@ -2588,7 +2590,9 @@ static struct icaltimetype count_first_alarm_time(xfical_period per
          }
          else {
              per.etime.is_date       = 0;
@@ -28,7 +34,7 @@ Subject: [PATCH] fix build with libical version 3
              per.etime.is_daylight   = 0;
              per.etime.zone          = utc_icaltimezone;
              per.etime.hour          = 0;
-@@ -2613,7 +2617,9 @@ static struct icaltimetype count_next_alarm_time(struc
+@@ -2613,7 +2617,9 @@ static struct icaltimetype count_next_alarm_time(struct icaltimetype start_time
  /* HACK: convert to UTC time so that we can use time arithmetic
   * when counting alarm time. */
          start_time.is_date       = 0;
@@ -38,7 +44,7 @@ Subject: [PATCH] fix build with libical version 3
          start_time.is_daylight   = 0;
          start_time.zone          = utc_icaltimezone;
          start_time.hour          = 0;
-@@ -2768,7 +2774,9 @@ static alarm_struct *process_alarm_trigger(icalcompone
+@@ -2768,7 +2774,9 @@ static alarm_struct *process_alarm_trigger(icalcomponent *c
       */
      if (icaltime_is_date(per.stime)) {
          if (local_icaltimezone != utc_icaltimezone) {
@@ -48,7 +54,7 @@ Subject: [PATCH] fix build with libical version 3
              next_alarm_time.is_daylight   = 0;
              next_alarm_time.zone          = local_icaltimezone;
          }
-@@ -2850,7 +2858,9 @@ orage_message(120, P_N "Alarm rec loop next_start:%s n
+@@ -2850,7 +2858,9 @@ orage_message(120, P_N "Alarm rec loop next_start:%s next_alarm:%s per.stime:%s"
           */
          if (icaltime_is_date(per.stime)) {
              if (local_icaltimezone != utc_icaltimezone) {
@@ -58,7 +64,7 @@ Subject: [PATCH] fix build with libical version 3
                  next_alarm_time.is_daylight   = 0;
                  next_alarm_time.zone          = local_icaltimezone;
              }
-@@ -2944,7 +2954,9 @@ orage_message(120, P_N "*****After loop Alarm %s %s", 
+@@ -2944,7 +2954,9 @@ orage_message(120, P_N "*****After loop Alarm %s %s", icaltime_as_ical_string(ne
           */
          if (icaltime_is_date(per.stime)) {
              if (local_icaltimezone != utc_icaltimezone) {
@@ -68,3 +74,6 @@ Subject: [PATCH] fix build with libical version 3
                  next_alarm_time.is_daylight   = 0;
                  next_alarm_time.zone          = local_icaltimezone;
              }
+-- 
+2.16.2
+

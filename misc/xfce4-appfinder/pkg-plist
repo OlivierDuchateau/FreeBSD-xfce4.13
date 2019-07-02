@@ -25,6 +25,7 @@ share/applications/xfce4-run.desktop
 %%NLS%%share/locale/he/LC_MESSAGES/xfce4-appfinder.mo
 %%NLS%%share/locale/hr/LC_MESSAGES/xfce4-appfinder.mo
 %%NLS%%share/locale/hu/LC_MESSAGES/xfce4-appfinder.mo
+%%NLS%%share/locale/hy_AM/LC_MESSAGES/xfce4-appfinder.mo
 %%NLS%%share/locale/id/LC_MESSAGES/xfce4-appfinder.mo
 %%NLS%%share/locale/ie/LC_MESSAGES/xfce4-appfinder.mo
 %%NLS%%share/locale/is/LC_MESSAGES/xfce4-appfinder.mo

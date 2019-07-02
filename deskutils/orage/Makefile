@@ -21,14 +21,14 @@ LIB_DEPENDS=	libpopt.so:devel/popt \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
 
-GNU_CONFIGURE=	yes
-INSTALLS_ICONS=	yes
 USES=		desktop-file-utils gettext gmake gnome libtool pkgconfig \
 		tar:bzip2 xfce
 USE_GNOME=	cairo gtk20 intltool
 USE_XFCE=	panel
 USE_XORG=	x11
 
+GNU_CONFIGURE=	yes
+INSTALLS_ICONS=	yes
 CFLAGS+=	-I${LOCALBASE}/include/libical
 CONFIGURE_ARGS=	--enable-dbus
 

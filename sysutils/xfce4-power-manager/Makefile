@@ -1,8 +1,8 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: head/sysutils/xfce4-power-manager/Makefile 501877 2019-05-17 16:51:46Z madpilot $
+# $FreeBSD: head/sysutils/xfce4-power-manager/Makefile 505665 2019-07-02 08:17:06Z madpilot $
 
 PORTNAME=	xfce4-power-manager
-PORTVERSION=	1.6.2
+PORTVERSION=	1.6.3
 PORTREVISION=	1
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	XFCE

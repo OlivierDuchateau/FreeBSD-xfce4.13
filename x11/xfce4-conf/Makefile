@@ -29,6 +29,8 @@ GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 CONFIGURE_ARGS=	--without-html-dir
 
+PORTSCOUT=	limitw:1,even
+
 OPTIONS_DEFINE=		GIR PERL NLS
 OPTIONS_SUB=		yes
 

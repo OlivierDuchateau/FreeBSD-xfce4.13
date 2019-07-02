@@ -36,6 +36,8 @@ SUB_FILES=	pkg-message
 PLIST_SUB=	VERSION="4.6"
 INSTALL_TARGET=	install-strip
 
+PORTSCOUT=	limitw:1,even
+
 OPTIONS_DEFINE=		NLS
 OPTIONS_SUB=		yes
 

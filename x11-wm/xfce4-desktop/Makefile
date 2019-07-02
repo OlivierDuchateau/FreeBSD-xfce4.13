@@ -27,6 +27,8 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 
+PORTSCOUT=	limitw:1,even
+
 CONFIGURE_ARGS=	--enable-gio-unix \
 		--enable-notifications
 

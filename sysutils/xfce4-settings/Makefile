@@ -29,6 +29,8 @@ CONFIGURE_ARGS=	--enable-debug=yes \
 		--disable-xorg-libinput
 INSTALLS_ICONS=	yes
 
+PORTSCOUT=	limitw:1,even
+
 OPTIONS_DEFINE=		NOTIFY NLS UPOWER
 OPTIONS_DEFAULT=	NOTIFY
 OPTIONS_SUB=		yes

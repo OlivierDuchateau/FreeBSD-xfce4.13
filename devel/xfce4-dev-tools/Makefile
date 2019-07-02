@@ -18,8 +18,11 @@ RUN_DEPENDS=	autoconf>=2.69:devel/autoconf \
 		libtoolize:devel/libtool \
 		bash:shells/bash
 
-GNU_CONFIGURE=	yes
-USE_GNOME=	glib20
 USES=		pkgconfig tar:bzip2 xfce
+USE_GNOME=	glib20
+
+GNU_CONFIGURE=	yes
+
+PORTSCOUT=	limitw:1,even
 
 .include <bsd.port.mk>

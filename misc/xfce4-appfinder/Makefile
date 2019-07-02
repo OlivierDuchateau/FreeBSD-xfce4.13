@@ -21,6 +21,8 @@ USE_XFCE=	garcon
 
 GNU_CONFIGURE=	yes
 
+PORTSCOUT=	limitw:1,even
+
 OPTIONS_DEFINE=		NLS
 OPTIONS_SUB=		yes
 

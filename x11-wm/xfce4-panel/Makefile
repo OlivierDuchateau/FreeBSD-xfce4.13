@@ -32,6 +32,8 @@ INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 CONFIGURE_ARGS=	--enable-gio-unix --without-html-dir
 
+PORTSCOUT=	limitw:1,even
+
 OPTIONS_DEFINE=		GIR GTK2 NLS
 OPTIONS_DEFAULT=	GTK2
 OPTIONS_SUB=		yes

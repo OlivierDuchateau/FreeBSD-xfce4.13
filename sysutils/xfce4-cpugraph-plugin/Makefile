@@ -1,5 +1,5 @@
 # Created by: Matt Lancereau <matt@rimasec.net>
-# $FreeBSD: head/sysutils/xfce4-cpugraph-plugin/Makefile 505758 2019-07-03 14:54:02Z madpilot $
+# $FreeBSD: head/sysutils/xfce4-cpugraph-plugin/Makefile 506482 2019-07-12 16:56:53Z madpilot $
 
 PORTNAME=	xfce4-cpugraph-plugin
 PORTVERSION=	1.1.0
@@ -18,6 +18,7 @@ LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 
 USES=		gettext-tools gmake gnome libtool pkgconfig \
 		tar:bzip2 xfce
+USE_CSTD=	c99
 USE_GNOME=	cairo gtk30 intltool
 USE_XFCE=	panel
 

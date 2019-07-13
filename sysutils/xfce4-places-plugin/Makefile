@@ -3,7 +3,7 @@
 PORTNAME=	xfce4-places-plugin
 PORTVERSION=	1.8.0
 CATEGORIES=	sysutils xfce
-MASTER_SITES=	XFCE/src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
+MASTER_SITES=	XFCE/panel-plugins
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org

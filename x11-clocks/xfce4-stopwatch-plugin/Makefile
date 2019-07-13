@@ -3,7 +3,7 @@
 PORTNAME=	xfce4-stopwatch-plugin
 PORTVERSION=	0.3.1
 CATEGORIES=	x11-clocks xfce
-MASTER_SITES=	XFCE/src/panel-plugins/${PORTNAME}/${PORTVERSION:R}
+MASTER_SITES=	XFCE/panel-plugins
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org

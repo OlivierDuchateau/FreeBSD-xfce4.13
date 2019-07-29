@@ -1,8 +1,8 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: head/sysutils/garcon/Makefile 505664 2019-07-02 08:16:40Z madpilot $
+# $FreeBSD: head/sysutils/garcon/Makefile 507599 2019-07-29 21:36:06Z madpilot $
 
 PORTNAME=	garcon
-PORTVERSION=	0.6.3
+PORTVERSION=	0.6.4
 PORTREVISION=	1
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	XFCE

@@ -1,8 +1,8 @@
 # Created by: jpaetzel@FreeBSD.org
-# $FreeBSD: head/sysutils/catfish/Makefile 491439 2019-01-27 21:42:21Z madpilot $
+# $FreeBSD: head/sysutils/catfish/Makefile 507597 2019-07-29 21:34:37Z madpilot $
 
 PORTNAME=	catfish
-PORTVERSION=	1.4.7
+PORTVERSION=	1.4.8
 CATEGORIES=	sysutils
 MASTER_SITES=	XFCE/apps
 DIST_SUBDIR=	xfce4

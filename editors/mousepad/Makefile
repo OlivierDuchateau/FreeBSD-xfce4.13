@@ -1,9 +1,9 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: head/editors/mousepad/Makefile 490953 2019-01-22 14:44:38Z madpilot $
+# $FreeBSD: head/editors/mousepad/Makefile 507601 2019-07-29 21:37:13Z madpilot $
 
 PORTNAME=	mousepad
-PORTVERSION=	0.4.1
-PORTREVISION=	2
+PORTVERSION=	0.4.2
+PORTREVISION=	1
 CATEGORIES=	editors xfce
 MASTER_SITES=	XFCE/apps
 DIST_SUBDIR=	xfce4
@@ -14,12 +14,12 @@ COMMENT=	Simple text editor for the Xfce Desktop
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib \
-		libdbus-1.so:devel/dbus
+LIB_DEPENDS=	libdbus-1.so:devel/dbus
 
 USES=		desktop-file-utils gettext-tools gmake gnome libtool perl5 \
 		pkgconfig tar:bzip2
-USE_GNOME=	cairo gdkpixbuf2 glib20 intltool
+USE_GNOME=	cairo gdkpixbuf2 glib20 intlhack intltool
+USE_XFCE=	xfconf
 
 GNU_CONFIGURE=	yes
 
@@ -32,6 +32,9 @@ OPTIONS_SUB=		yes
 GTK3_CONFIGURE_ENABLE=	gtk3
 GTK3_USE=		gnome=gtk30,gtksourceview3,dconf
 GTK3_USE_OFF=		gnome=gtk20,gtksourceview2
+GTK3_USES=		xfce
+GTK3_USES_OFF=		xfce:gtk2
+GTK3_CFLAGS_OFF=	-I${LOCALBASE}/include/gio-unix-2.0
 
 NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=		gettext-runtime

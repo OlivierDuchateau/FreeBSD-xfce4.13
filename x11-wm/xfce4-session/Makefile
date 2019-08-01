@@ -33,7 +33,6 @@ INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--enable-legacy-sm \
 		--with-xsession-prefix=${PREFIX}
 SUB_FILES=	pkg-message
-PLIST_SUB=	VERSION="4.6"
 INSTALL_TARGET=	install-strip
 
 PORTSCOUT=	limitw:1,even

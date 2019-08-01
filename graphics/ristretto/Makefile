@@ -15,8 +15,6 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libexif.so:graphics/libexif \
-		libdbus-glib-1.so:devel/dbus-glib \
-		libdbus-1.so:devel/dbus \
 		libfreetype.so:print/freetype2 \
 		libfontconfig.so:x11-fonts/fontconfig
 

@@ -17,10 +17,7 @@ LICENSE_FILE_LGPL20=	${WRKSRC}/COPYING.LIB
 
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libdbus-glib-1.so:devel/dbus-glib \
-		libnotify.so:devel/libnotify \
-		libstartup-notification-1.so:x11/startup-notification \
-		libxklavier.so:x11/libxklavier \
-		libconsolekit.so:sysutils/consolekit2
+		libxklavier.so:x11/libxklavier
 
 USES=		gettext-tools gl gmake gnome pkgconfig python:3.5+ shebangfix \
 		tar:bzip2 xfce

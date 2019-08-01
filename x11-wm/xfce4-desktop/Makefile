@@ -14,9 +14,7 @@ COMMENT=	Xfce's desktop manager
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libdbus-1.so:devel/dbus \
-		libdbus-glib-1.so:devel/dbus-glib \
-		libnotify.so:devel/libnotify
+LIB_DEPENDS=	libnotify.so:devel/libnotify
 
 USES=		gettext-tools gmake gnome pkgconfig tar:bzip2 xfce
 USE_GNOME=	cairo glib20 gtk30 intltool libwnck3

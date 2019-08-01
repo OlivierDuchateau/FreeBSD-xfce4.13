@@ -15,9 +15,7 @@ LICENSE_COMB=	multi
 LICENSE_FILE_GPLv2=	${WRKSRC}/COPYING
 LICENSE_FILE_LGPL20=	${WRKSRC}/COPYING.LIB
 
-LIB_DEPENDS=	libtumbler-1.so:deskutils/xfce4-tumbler \
-		libdbus-1.so:devel/dbus \
-		libdbus-glib-1.so:devel/dbus-glib
+LIB_DEPENDS=	libtumbler-1.so:deskutils/xfce4-tumbler
 RUN_DEPENDS=	pkexec:sysutils/polkit
 
 USES=		desktop-file-utils gettext-tools gmake gnome libtool pathfix \
@@ -29,8 +27,7 @@ USE_XORG=	ice sm x11
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-gio-unix \
-		--disable-gudev \
-		--enable-dbus
+		--disable-gudev
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 

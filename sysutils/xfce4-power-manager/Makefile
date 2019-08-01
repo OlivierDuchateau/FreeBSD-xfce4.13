@@ -14,8 +14,6 @@ COMMENT=	Power manager for the Xfce Desktop
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	libnotify.so:devel/libnotify \
-		libdbus-1.so:devel/dbus \
-		libdbus-glib-1.so:devel/dbus-glib \
 		libpolkit-gobject-1.so:sysutils/polkit \
 		libupower-glib.so:sysutils/upower
 

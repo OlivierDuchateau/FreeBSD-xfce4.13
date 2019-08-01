@@ -14,8 +14,6 @@ COMMENT=	Simple text editor for the Xfce Desktop
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libdbus-1.so:devel/dbus
-
 USES=		desktop-file-utils gettext-tools gmake gnome libtool perl5 \
 		pkgconfig tar:bzip2
 USE_GNOME=	cairo gdkpixbuf2 glib20 intlhack intltool

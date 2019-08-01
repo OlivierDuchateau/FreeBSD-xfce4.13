@@ -14,8 +14,6 @@ COMMENT=	D-Bus-based configuration storage system
 LICENSE=	GPLv2
 
 BUILD_DEPENDS=	p5-XML-Parser>=2.44:textproc/p5-XML-Parser
-LIB_DEPENDS=	libdbus-1.so:devel/dbus \
-		libdbus-glib-1.so:devel/dbus-glib
 
 USES=		gettext-tools gmake gnome libtool pathfix perl5 pkgconfig \
 		tar:bzip2 xfce:gtk2

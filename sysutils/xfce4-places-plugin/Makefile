@@ -12,9 +12,7 @@ COMMENT=	File browser launcher for Xfce4 panel plugin
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libnotify.so:devel/libnotify \
-		libdbus-glib-1.so:devel/dbus-glib \
-		libdbus-1.so:devel/dbus
+LIB_DEPENDS=	libnotify.so:devel/libnotify
 
 USES=		gettext-tools gmake gnome libtool pkgconfig \
 		tar:bzip2 xfce

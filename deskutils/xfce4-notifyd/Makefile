@@ -17,9 +17,7 @@ COMMENT=	Visually-appealing notification daemon for Xfce
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	libnotify.so:devel/libnotify \
-		libdbus-glib-1.so:devel/dbus-glib \
-		libdbus-1.so:devel/dbus
+LIB_DEPENDS=	libnotify.so:devel/libnotify
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
 USE_GNOME=	cairo glib20 gtk30 intltool

@@ -15,9 +15,7 @@ LICENSE=	GPLv2
 BUILD_DEPENDS=	iceauth:x11/iceauth
 RUN_DEPENDS=	iceauth:x11/iceauth \
 		console-kit-daemon:sysutils/consolekit2
-LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib \
-		libdbus-1.so:devel/dbus \
-		libupower-glib.so:sysutils/upower \
+LIB_DEPENDS=	libupower-glib.so:sysutils/upower \
 		libpolkit-gobject-1.so:sysutils/polkit
 
 USES=		gettext-tools gmake gnome libtool pathfix pkgconfig \

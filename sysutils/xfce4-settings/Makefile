@@ -13,8 +13,7 @@ COMMENT=	Xfce 4 settings application
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libdbus-1.so:devel/dbus \
-		libdbus-glib-1.so:devel/dbus-glib \
+LIB_DEPENDS=	libcolord.so:graphics/colord \
 		libxklavier.so:x11/libxklavier \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2

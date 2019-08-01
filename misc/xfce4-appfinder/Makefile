@@ -12,9 +12,6 @@ COMMENT=	Application launcher and finder
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	libdbus-glib-1.so:devel/dbus-glib \
-		libdbus-1.so:devel/dbus
-
 USES=		gettext-tools gmake gnome pkgconfig tar:bzip2 xfce
 USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30 intltool
 USE_XFCE=	garcon

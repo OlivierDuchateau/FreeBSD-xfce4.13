@@ -14,8 +14,6 @@ COMMENT=	Notes plugin for the Xfce panel
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	libunique-1.0.so:x11-toolkits/unique \
-		libdbus-glib-1.so:devel/dbus-glib \
-		libdbus-1.so:devel/dbus \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
 

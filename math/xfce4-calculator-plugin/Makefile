@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: madpilot-test/math/xfce4-calculator-plugin/Makefile 9131 2019-02-24 22:02:51Z mad $
+# $FreeBSD: head/math/xfce4-calculator-plugin/Makefile 504557 2019-06-19 16:14:27Z madpilot $
 
 PORTNAME=	xfce4-calculator-plugin
 PORTVERSION=	0.7.0

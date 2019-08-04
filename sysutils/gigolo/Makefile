@@ -1,5 +1,5 @@
 # Created by: Rusmir Dusko <nemysis@FreeBSD.org>
-# $FreeBSD: head/sysutils/gigolo/Makefile 496715 2019-03-24 10:10:02Z madpilot $
+# $FreeBSD: head/sysutils/gigolo/Makefile 505889 2019-07-05 08:09:58Z madpilot $
 
 PORTNAME=	gigolo
 PORTVERSION=	0.4.91
@@ -7,7 +7,7 @@ PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	XFCE/apps
 
-MAINTAINER=	koalative@gmail.com
+MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Frontend to easily manage filesystem connections
 
 LICENSE=	GPLv2

@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau <duchateau.olivier@gmail.com>
-# $FreeBSD: head/x11-fm/thunar-vfs/Makefile 490953 2019-01-22 14:44:38Z madpilot $
+# $FreeBSD: head/x11-fm/thunar-vfs/Makefile 504557 2019-06-19 16:14:27Z madpilot $
 
 PORTNAME=	thunar-vfs
 PORTVERSION=	1.2.0
@@ -9,14 +9,14 @@ MASTER_SITES=	XFCE/archive
 DIST_SUBDIR=	xfce4
 
 MAINTAINER=	xfce@FreeBSD.org
-COMMENT=	The virtual filesystem for Thunar
+COMMENT=	Virtual filesystem for Thunar
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libpng.so:graphics/png \
-		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
+		libfontconfig.so:x11-fonts/fontconfig \
 		libgamin-1.so:devel/gamin \
 		libdbus-1.so:devel/dbus
 

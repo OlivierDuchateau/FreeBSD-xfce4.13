@@ -1,5 +1,5 @@
 # Created by: Sergey V. Dyatko <sergey.dyatko@gmail.com>
-# $FreeBSD: head/devel/thunar-vcs-plugin/Makefile 417861 2016-07-01 03:43:57Z olivierd $
+# $FreeBSD: head/devel/thunar-vcs-plugin/Makefile 504557 2019-06-19 16:14:27Z madpilot $
 
 PORTNAME=	thunar-vcs-plugin
 PORTVERSION=	0.2.0
@@ -9,6 +9,9 @@ DIST_SUBDIR=	xfce4
 
 MAINTAINER=	sergey.dyatko@gmail.com
 COMMENT=	Version Control System plugin for Thunar
+
+LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		gettext-tools gmake gnome libtool localbase pkgconfig tar:bzip2 \
 		xfce
@@ -25,14 +28,14 @@ OPTIONS_SUB=		yes
 
 GIT_DESC=		Git support
 
-NLS_USES=		gettext-runtime
 NLS_CONFIGURE_ENABLE=	nls
+NLS_USES=		gettext-runtime
 
-GIT_RUN_DEPENDS=	git:devel/git
 GIT_CONFIGURE_ENABLE=	git
+GIT_RUN_DEPENDS=	git:devel/git
 
+SVN_CONFIGURE_ENABLE=	subversion
 SVN_LIB_DEPENDS=	libsvn_client-1.so:devel/subversion \
 			libapr-1.so:devel/apr1
-SVN_CONFIGURE_ENABLE=	subversion
 
 .include <bsd.port.mk>

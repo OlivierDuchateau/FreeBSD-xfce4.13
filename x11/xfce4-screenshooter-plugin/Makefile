@@ -1,5 +1,5 @@
 # Created by: Martin Wilke (miwi@FreeBSD.org)
-# $FreeBSD: head/x11/xfce4-screenshooter-plugin/Makefile 498598 2019-04-10 20:52:57Z madpilot $
+# $FreeBSD: head/x11/xfce4-screenshooter-plugin/Makefile 504557 2019-06-19 16:14:27Z madpilot $
 
 PORTNAME=	xfce4-screenshooter-plugin
 PORTVERSION=	1.9.5

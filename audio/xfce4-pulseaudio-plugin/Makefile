@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: head/audio/xfce4-pulseaudio-plugin/Makefile 490953 2019-01-22 14:44:38Z madpilot $
+# $FreeBSD: head/audio/xfce4-pulseaudio-plugin/Makefile 504557 2019-06-19 16:14:27Z madpilot $
 
 PORTNAME=	xfce4-pulseaudio-plugin
 PORTVERSION=	0.4.1

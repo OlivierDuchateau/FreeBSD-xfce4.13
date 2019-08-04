@@ -1,5 +1,5 @@
 # Created by: J.R. Oldroyd <fbsd@opal.com>
-# $FreeBSD: head/sysutils/xfburn/Makefile 490953 2019-01-22 14:44:38Z madpilot $
+# $FreeBSD: head/sysutils/xfburn/Makefile 504557 2019-06-19 16:14:27Z madpilot $
 
 PORTNAME=	xfburn
 PORTVERSION=	0.5.5
@@ -14,9 +14,9 @@ COMMENT=	CD/DVD burning tool for Xfce
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	libburn.so:devel/libburn \
-		libisofs.so:devel/libisofs \
 		libfontconfig.so:x11-fonts/fontconfig \
-		libfreetype.so:print/freetype2
+		libfreetype.so:print/freetype2 \
+		libisofs.so:devel/libisofs
 RUN_DEPENDS=	cdrdao:sysutils/cdrdao \
 		${LOCALBASE}/include/libburn/libburn.h:devel/libburn \
 		${LOCALBASE}/include/libisofs/libisofs.h:devel/libisofs

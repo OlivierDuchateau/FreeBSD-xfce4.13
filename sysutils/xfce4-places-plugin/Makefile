@@ -28,11 +28,4 @@ OPTIONS_SUB=	yes
 
 NLS_USES=	gettext-runtime
 
-# exo_url_show function is still missing
-#post-patch:
-#	@${REINPLACE_CMD} -e 's|--libs "libxfce4panel-1.0"|& "libxfcegui4-1.0"|g; \
-#		s|--cflags "libxfce4panel-1.0"|& "libxfcegui4-1.0"|g; \
-#		s|exo-0.3|exo-1|g' \
-#		${WRKSRC}/configure
-
 .include <bsd.port.mk>

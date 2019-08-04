@@ -14,6 +14,7 @@ LICENSE=	GPLv3
 USES=		gettext gmake gnome python:3.3+ shebangfix tar:bz2
 USE_GNOME=	gtk30 intltool
 USE_XFCE=	panel
+
 NO_ARCH=	yes
 HAS_CONFIGURE=	yes
 SHEBANG_FILES=	xfce4-panel-profiles/xfce4-panel-profiles.py \

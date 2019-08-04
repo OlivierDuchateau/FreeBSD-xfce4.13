@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: head/x11-fm/thunar/Makefile 490953 2019-01-22 14:44:38Z madpilot $
+# $FreeBSD: head/x11-fm/thunar/Makefile 504557 2019-06-19 16:14:27Z madpilot $
 
 PORTNAME=	Thunar
 DISTVERSION=	1.8.8
@@ -80,7 +80,7 @@ post-install:
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_DEBUG)
-CONFIGURE_ARGS+=        --enable-debug
+CONFIGURE_ARGS+=	--enable-debug
 .endif
 
 .include <bsd.port.post.mk>

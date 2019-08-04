@@ -1,5 +1,5 @@
 # Created by: Filippo Natali <filippo@widestore.net>
-# $FreeBSD: head/misc/xfce4-weather-plugin/Makefile 496711 2019-03-24 09:52:14Z madpilot $
+# $FreeBSD: head/misc/xfce4-weather-plugin/Makefile 504557 2019-06-19 16:14:27Z madpilot $
 
 PORTNAME=	xfce4-weather-plugin
 PORTVERSION=	0.9.1

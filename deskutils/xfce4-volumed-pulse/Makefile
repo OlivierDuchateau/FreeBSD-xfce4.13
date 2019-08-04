@@ -1,5 +1,5 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: head/deskutils/xfce4-volumed-pulse/Makefile 490953 2019-01-22 14:44:38Z madpilot $
+# $FreeBSD: head/deskutils/xfce4-volumed-pulse/Makefile 504557 2019-06-19 16:14:27Z madpilot $
 
 PORTNAME=	xfce4-volumed-pulse
 PORTVERSION=	0.2.3

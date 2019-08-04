@@ -19,15 +19,22 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
 USES=		desktop-file-utils gettext-tools gnome python:2.7 tar:bz2
-NO_ARCH=	yes
 USE_PYTHON=	distutils
 USE_GNOME=	gtk30 intltool pygobject3
+
+NO_ARCH=	yes
+INSTALLS_ICONS=	yes
 
 OPTIONS_DEFINE=	DOCS ZEITGEIST
 OPTIONS_DEFAULT=ZEITGEIST
 
 ZEITGEIST_DESC=	Provide recent search suggestions
 ZEITGEIST_LIB_DEPENDS=	libzeitgeist-2.0.so:sysutils/zeitgeist
+
+post-install:
+	${MV} ${STAGEDIR}${PREFIX}/share/man/man1/catfish.1 ${STAGEDIR}${PREFIX}/man/man1/catfish.1
+	${RMDIR} -p ${STAGEDIR}${PREFIX}/share/man
+	${GZIP} ${STAGEDIR}${PREFIX}/man/man1/catfish.1
 
 .include <bsd.port.pre.mk>
 

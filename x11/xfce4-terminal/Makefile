@@ -14,9 +14,6 @@ COMMENT=	Terminal emulator for the X windowing system
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libpcre2-8.so:devel/pcre2 \
-		libgnutls.so:security/gnutls
-
 USES=		gettext-tools gmake gnome pkgconfig tar:bzip2 xfce
 USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30 intltool libxml2 vte3
 USE_XFCE=	libmenu

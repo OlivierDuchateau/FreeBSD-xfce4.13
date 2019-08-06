@@ -13,9 +13,6 @@ COMMENT=	Graphical representation of the CPU load
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
-		libfreetype.so:print/freetype2
-
 USES=		gettext-tools gmake gnome libtool pkgconfig \
 		tar:bzip2 xfce
 USE_CSTD=	c99

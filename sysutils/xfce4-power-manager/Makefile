@@ -14,7 +14,6 @@ COMMENT=	Power manager for the Xfce Desktop
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	libnotify.so:devel/libnotify \
-		libpolkit-gobject-1.so:sysutils/polkit \
 		libupower-glib.so:sysutils/upower
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce

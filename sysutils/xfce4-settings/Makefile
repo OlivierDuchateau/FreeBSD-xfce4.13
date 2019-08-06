@@ -15,7 +15,6 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libcolord.so:graphics/colord \
 		libfontconfig.so:x11-fonts/fontconfig \
-		libfreetype.so:print/freetype2 \
 		libxklavier.so:x11/libxklavier
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce

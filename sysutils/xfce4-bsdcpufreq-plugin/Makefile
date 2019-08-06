@@ -13,6 +13,9 @@ COMMENT=	Displays the current CPU clock frequency in the panel
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
+		libfreetype.so:print/freetype2
+
 USES=		pkgconfig xfce
 USE_XFCE=	panel
 USE_GNOME=	cairo gdkpixbuf2 gtk20

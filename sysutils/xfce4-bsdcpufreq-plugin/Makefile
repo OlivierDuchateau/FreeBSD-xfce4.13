@@ -4,7 +4,7 @@
 
 PORTNAME=	xfce4-bsdcpufreq-plugin
 PORTVERSION=	0.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	sysutils xfce
 
 MAINTAINER=	riggs@FreeBSD.org

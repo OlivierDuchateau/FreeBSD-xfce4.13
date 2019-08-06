@@ -34,6 +34,7 @@ ZEITGEIST_LIB_DEPENDS=	libzeitgeist-2.0.so:sysutils/zeitgeist
 
 post-install:
 	${MV} ${STAGEDIR}${PREFIX}/share/man/man1/catfish.1 ${STAGEDIR}${PREFIX}/man/man1/catfish.1
+	${RMDIR} ${STAGEDIR}${PREFIX}/share/man/man1
 	${GZIP} ${STAGEDIR}${PREFIX}/man/man1/catfish.1
 
 .include <bsd.port.pre.mk>

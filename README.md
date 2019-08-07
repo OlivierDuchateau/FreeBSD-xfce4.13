@@ -144,6 +144,7 @@ While testing on my desktop I have noticed the desktop switcher is not properly 
 This was already reported upstream and a fix committes, so it will be fixed in the final version:
 
 https://bugzilla.xfce.org/show_bug.cgi?id=15703
+
 https://git.xfce.org/xfce/xfce4-panel/commit?id=95319248145b5506f5a639c7ccdd7732772d74bd
 
 #### Pull request for LightDM envionment reset code:

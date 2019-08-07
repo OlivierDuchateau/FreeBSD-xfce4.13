@@ -133,13 +133,18 @@ I fixed this and now compiles and seems to work fine. This is anyway unsupported
 
 This has been fixed. I plan to make it the default suggested Display Manager for xfce.
 
-#### Workspace switcher panle plugin
-
-While testing on my desktop I have noticed the desktop switcher is not properly working when moving miniatures between desktops. I'm still investigating and will file a bug report or looik for an existing one about this.
-
 ### Open bug reports upstream
 
 These are bug reports I have opened upstream about bugs in development versions of the XFCE software.
+
+####  Workspace switcher panel plugin
+
+While testing on my desktop I have noticed the desktop switcher is not properly working when moving miniatures between desktops.
+
+This was already reported upstream and a fix committes, so it will be fixed in the final version:
+
+https://bugzilla.xfce.org/show_bug.cgi?id=15703
+https://git.xfce.org/xfce/xfce4-panel/commit?id=95319248145b5506f5a639c7ccdd7732772d74bd
 
 #### Pull request for LightDM envionment reset code:
 

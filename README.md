@@ -6,7 +6,7 @@ This repository contains a [FreeBSD ports](https://www.freebsd.org/doc/en_US.ISO
 
 The XFCE people are targeting to [release XFCE 4.14 on 11 August 2019](https://wiki.xfce.org/releng/4.14/roadmap).
 
-This is not intended to be used on production/actual desktop systems. I'm only testing it in virtual machines, compiled with default options and WITH_DEBUG enabled, and gets very light usage.
+In preparation for XFCE 4.14 final I'm now running this set of patches on my own desktop systems with success, and plan to commit these (updatesd to 4.14 packages) soon after the official release of XFCE 4.14.
 
 I can't give any warranties about stability, usability of these packages or future availability of the binary repository described below.
 
@@ -117,7 +117,9 @@ These are known issues with these modified ports which need to be worked on:
 
 #### Gobject Introspection support
 
-Some ports have GIR (Gobject Introspection) options, I still have to test these.
+~~Some ports have GIR (Gobject Introspection) options, I still have to test these.~~
+
+GIR options have been tested and ports compile fine with them now.
 
 ####  xfce4-mixer
 
@@ -131,10 +133,14 @@ I fixed this and now compiles and seems to work fine. This is anyway unsupported
 
 This has been fixed. I plan to make it the default suggested Display Manager for xfce.
 
+#### Workspace switcher panle plugin
+
+While testing on my desktop I have noticed the desktop switcher is not properly working when moving miniatures between desktops. I'm still investigating and will file a bug report or looik for an existing one about this.
+
 ### Open bug reports upstream
 
 These are bug reports I have opened upstream about bugs in development versions of the XFCE software.
 
 #### Pull request for LightDM envionment reset code:
 
-https://github.com/CanonicalLtd/lightdm/pull/78
+~~https://github.com/CanonicalLtd/lightdm/pull/78~~ Merged upstream.

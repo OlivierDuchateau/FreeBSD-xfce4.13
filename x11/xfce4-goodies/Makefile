@@ -127,7 +127,7 @@ MEDIATAGS_RUN_DEPENDS=		thunar-media-tags-plugin>=0:audio/thunar-media-tags-plug
 VCS_RUN_DEPENDS=		thunar-vcs-plugin>=0:devel/thunar-vcs-plugin
 
 OPTIONS_GROUP_UNOFFICIAL=	BSDCPUFREQ EQUAKE MENULIBRE MIXER PRINT THEMES \
-				VALA VFS VOLUMED
+				VALA VOLUMED
 BSDCPUFREQ_DESC=		Display the CPU clock frequency in Xfce panel
 EQUAKE_DESC=			Earthquake monitor plugin for the Xfce panel
 MENULIBRE_DESC=			Advanced compliant menu editor
@@ -135,7 +135,6 @@ MIXER_DESC=			Volume control for the Xfce desktop
 PRINT_DESC=			Print system support for the Xfce Desktop
 THEMES_DESC=			Additional themes for xfwm4
 VALA_DESC=			Vala binding for the Xfce core libraries
-VFS_DESC=			The virtual filesystem for Thunar
 VOLUMED_DESC=			Volume management daemon for the Xfce desktop
 
 BSDCPUFREQ_RUN_DEPENDS=		xfce4-bsdcpufreq-plugin>=0:sysutils/xfce4-bsdcpufreq-plugin
@@ -145,7 +144,6 @@ MIXER_RUN_DEPENDS=		xfce4-mixer>=0:audio/xfce4-mixer
 PRINT_RUN_DEPENDS=		xfce4-print>=0:print/xfce4-print
 THEMES_RUN_DEPENDS=		xfce4-wm-themes>=0:misc/xfce4-wm-themes
 VALA_RUN_DEPENDS=		xfce4-vala>=0:devel/xfce4-vala
-VFS_RUN_DEPENDS=		thunar-vfs>=0:x11-fm/thunar-vfs
 VOLUMED_RUN_DEPENDS=		xfce4-volumed>=0:deskutils/xfce4-volumed
 
 .include <bsd.port.mk>

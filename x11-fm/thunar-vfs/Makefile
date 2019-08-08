@@ -11,6 +11,9 @@ DIST_SUBDIR=	xfce4
 MAINTAINER=	xfce@FreeBSD.org
 COMMENT=	Virtual filesystem for Thunar
 
+DEPRECATED=	Functionality included in Thunar
+EXPIRATION_DATE=2019-10-01
+
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 

@@ -12,18 +12,19 @@ RUN_DEPENDS=	xfwm4:x11-wm/xfce4-wm \
 		xfce4-session:x11-wm/xfce4-session \
 		xfce4-panel:x11-wm/xfce4-panel \
 		xfdesktop:x11-wm/xfce4-desktop \
-		xfsettingsd:sysutils/xfce4-settings \
-		gtk-xfce-engine>0:x11-themes/gtk-xfce-engine
+		xfsettingsd:sysutils/xfce4-settings
 
 USES=	metaport
 
-OPTIONS_DEFINE=		APPFINDER GREYBIRD ICONS LIGHTDM MOUSEPAD NOTIFY ORAGE PRINT SQUEEZE \
+OPTIONS_DEFINE=		APPFINDER GREYBIRD GTK2ENGINE ICONS LIGHTDM MOUSEPAD NOTIFY ORAGE PRINT SQUEEZE \
 			TERMINAL XPM
 OPTIONS_DEFAULT=	APPFINDER GREYBIRD ICONS MOUSEPAD NOTIFY TERMINAL
 APPFINDER_RUN_DEPENDS=	xfce4-appfinder:misc/xfce4-appfinder
 APPFINDER_DESC=		Launcher and finder
 GREYBIRD_DESC=		Install Greybird theme
 GREYBIRD_RUN_DEPENDS=	greybird-theme>0:x11-themes/greybird-theme
+GTK2ENGINE_DESC=	Install old gtk2 only engine theme
+GTK2ENGINE_RUN_DEPENDS=	gtk-xfce-engine>0:x11-themes/gtk-xfce-engine
 ICONS_RUN_DEPENDS=	adwaita-icon-theme>0:x11-themes/adwaita-icon-theme
 LIGHTDM_RUN_DEPENDS=	lightdm-gtk-greeter:x11/lightdm-gtk-greeter
 LIGHTDM_DESC=		LightDM display manger

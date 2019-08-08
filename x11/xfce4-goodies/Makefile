@@ -119,7 +119,7 @@ XKB_RUN_DEPENDS=		xfce4-xkb-plugin>=0:deskutils/xfce4-xkb-plugin
 
 OPTIONS_GROUP_THUNARPLUGINS=	ARCHIVE MEDIATAGS VCS
 ARCHIVE_DESC=			Create/extract archives from file context menus
-MEDIATAGS_DESC=		View/edit id3/ogg tags in file properties dialog
+MEDIATAGS_DESC=			View/edit id3/ogg tags in file properties dialog
 VCS_DESC=			SVN+GIT Version Control System integration
 
 ARCHIVE_RUN_DEPENDS=		thunar-archive-plugin>=0:archivers/thunar-archive-plugin

@@ -2,7 +2,7 @@
 # $FreeBSD: head/x11/xfce4-conf/Makefile 504557 2019-06-19 16:14:27Z madpilot $
 
 PORTNAME=	xfce4-conf
-PORTVERSION=	4.14.0
+PORTVERSION=	4.14.1
 CATEGORIES=	x11 xfce
 MASTER_SITES=	XFCE
 DISTNAME=	xfconf-${DISTVERSIONFULL}
@@ -49,9 +49,5 @@ PERL_USE=		perl5=run
 VAPI_BUILD_DEPENDS=	vapigen:lang/vala
 VAPI_CONFIGURE_ENABLE=	vala
 VALA_IMPLIES=		GIR
-
-post-extract-VAPI-on:
-	@${CP} ${FILESDIR}/libxfconf-0.deps \
-		${WRKSRC}/xfconf/
 
 .include <bsd.port.mk>

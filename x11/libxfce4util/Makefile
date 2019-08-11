@@ -21,19 +21,21 @@ GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 CONFIGURE_ARGS=	--without-html-dir
 
-PORTSCOUT=	limitw:1,even
-
-OPTIONS_DEFINE=		GIR NLS
+OPTIONS_DEFINE=		GIR NLS VAPI
+OPTIONS_DEFAULT=	GIR VAPI
 OPTIONS_SUB=		yes
 
 GIR_DESC=		Use Gobject Introspection
 
-GIR_BUILD_DEPENDS=	vapigen:lang/vala
 GIR_USE=		gnome=introspection:build
 GIR_CONFIGURE_ON=       --enable-introspection=yes
 GIR_CONFIGURE_OFF=      --enable-introspection=no
 
 NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=		gettext-runtime
+
+VAPI_BUILD_DEPENDS=	vapigen:lang/vala
+VAPI_CONFIGURE_ENABLE=	vala
+VAPI_IMPLIES=		GIR
 
 .include <bsd.port.mk>

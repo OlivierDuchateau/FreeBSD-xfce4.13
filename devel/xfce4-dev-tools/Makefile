@@ -2,7 +2,7 @@
 # $FreeBSD: head/devel/xfce4-dev-tools/Makefile 472376 2018-06-14 12:47:58Z tijl $
 
 PORTNAME=	xfce4-dev-tools
-PORTVERSION=	4.13.0
+PORTVERSION=	4.14.0
 CATEGORIES=	devel xfce
 MASTER_SITES=	XFCE
 DIST_SUBDIR=	xfce4

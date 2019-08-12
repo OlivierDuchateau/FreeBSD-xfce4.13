@@ -2,7 +2,7 @@
 # $FreeBSD: head/x11/libxfce4menu/Makefile 504557 2019-06-19 16:14:27Z madpilot $
 
 PORTNAME=	libxfce4menu
-PORTVERSION=	4.13.7
+PORTVERSION=	4.14.1
 CATEGORIES=	x11 xfce
 MASTER_SITES=	XFCE
 DISTNAME=	libxfce4ui-${DISTVERSIONFULL}
@@ -30,19 +30,19 @@ INSTALL_TARGET=	install-strip
 
 PORTSCOUT=	limitw:1,even
 
-OPTIONS_DEFINE=		GIR GLADE GTK2 NLS STARTUP
+OPTIONS_DEFINE=		GIR GLADE GTK2 NLS STARTUP VAPI
 OPTIONS_DEFAULT=	GTK2 STARTUP
 OPTIONS_SUB=		yes
 
 GIR_DESC=		Use Gobject Introspection
 
-GIR_BUILD_DEPENDS=	vapigen:lang/vala
 GIR_USE=		gnome=introspection:build
 GIR_CONFIGURE_ON=	--enable-introspection=yes
 GIR_CONFIGURE_OFF=	--enable-introspection=no
 
 GLADE_CONFIGURE_ENABLE=	gladeui2
 GLADE_LIB_DEPENDS=	libgladeui-2.so:devel/glade
+GLADE_USE=		gnome=libxml2
 
 GTK2_CONFIGURE_ENABLE=	gtk2
 GTK2_USE=		gnome=gtk20
@@ -53,5 +53,9 @@ NLS_USES=		gettext-runtime
 STARTUP_CONFIGURE_ENABLE=	startup-notification
 STARTUP_DESC=		Startup notification
 STARTUP_LIB_DEPENDS=	libstartup-notification-1.so:x11/startup-notification
+
+VAPI_BUILD_DEPENDS=	vapigen:lang/vala
+VAPI_CONFIGURE_ENABLE=	vala
+VAPI_IMPLIES=		GIR
 
 .include <bsd.port.mk>

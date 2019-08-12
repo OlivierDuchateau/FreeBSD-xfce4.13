@@ -1,0 +1,23 @@
+[
+{
+	type: upgrade
+	maximum_version: "4.14.0"
+	message: <<EOD
+Since XFCE 4.14 was updated to use gtk3 it is suggested to move to
+a gtk3 compliant theme.
+
+The Greybird theme and the xfce-elementary icons are now the defaults for xfce.
+
+To switch to these new defaults you can:
+
+Launch 'xfce4-appearance-settings', also available in the applications
+menu, under settings/appearence, and go to 'Style' tab to select
+the greybird theme and then to the 'Icons' tab to select the
+xfce-elementary icons.
+
+Or launch these command in a shell:
+  xfconf-query -c xsettings -p /Net/ThemeName -t string -s "Greybird"
+  xfconf-query -c xsettings -p /Net/IconThemeName -t string -s "elementary-xfce"
+EOD
+}
+]

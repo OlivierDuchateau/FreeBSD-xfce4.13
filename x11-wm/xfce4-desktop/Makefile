@@ -2,7 +2,7 @@
 # $FreeBSD: head/x11-wm/xfce4-desktop/Makefile 504557 2019-06-19 16:14:27Z madpilot $
 
 PORTNAME=	xfce4-desktop
-PORTVERSION=	4.13.6
+PORTVERSION=	4.14.1
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	XFCE
 DISTNAME=	xfdesktop-${DISTVERSIONFULL}
@@ -24,8 +24,6 @@ USE_XORG=	ice sm x11
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
-
-PORTSCOUT=	limitw:1,even
 
 CONFIGURE_ARGS=	--enable-gio-unix \
 		--enable-notifications

@@ -2,7 +2,7 @@
 # $FreeBSD: head/x11-wm/xfce4-session/Makefile 504557 2019-06-19 16:14:27Z madpilot $
 
 PORTNAME=	xfce4-session
-PORTVERSION=	4.13.4
+PORTVERSION=	4.14.0
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	XFCE
 DIST_SUBDIR=	xfce4
@@ -21,7 +21,7 @@ LIB_DEPENDS=	libupower-glib.so:sysutils/upower \
 USES=		gettext-tools gmake gnome libtool pathfix pkgconfig \
 		tar:bzip2 xfce
 USE_GNOME=	cairo gtk30 glib20 intltool libwnck3
-USE_XFCE=	libmenu
+USE_XFCE=	libexo xfconf
 USE_XORG=	ice sm x11
 
 GNU_CONFIGURE=	yes
@@ -38,9 +38,5 @@ OPTIONS_SUB=		yes
 
 NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=		gettext-runtime
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
-		${WRKSRC}/scripts/xflock4
 
 .include <bsd.port.mk>

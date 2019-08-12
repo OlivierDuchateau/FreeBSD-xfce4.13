@@ -2,7 +2,7 @@
 # $FreeBSD: head/sysutils/xfce4-settings/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-settings
-PORTVERSION=	4.13.8
+PORTVERSION=	4.14.0
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	XFCE
 DIST_SUBDIR=	xfce4
@@ -19,12 +19,13 @@ LIB_DEPENDS=	libcolord.so:graphics/colord \
 
 USES=		gettext-tools gmake gnome libtool pkgconfig tar:bzip2 xfce
 USE_GNOME=	cairo glib20 gtk30 intltool
-USE_XFCE=	garcon libexo
+USE_XFCE=	garcon libexo xfconf
 USE_XORG=	xorgproto x11 xcursor xi xrandr
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-debug=yes \
-		--disable-xorg-libinput
+		--disable-xorg-libinput \
+		--enable-pluggable-dialogs
 INSTALLS_ICONS=	yes
 
 PORTSCOUT=	limitw:1,even
@@ -45,10 +46,10 @@ UPOWER_CONFIGURE_ENABLE=	upower-glib
 UPOWER_LIB_DEPENDS=		libupower-glib.so:sysutils/upower
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|Rodent|Adwaita|g' \
+	@${REINPLACE_CMD} -e 's|Rodent|elementary-xfce|g' \
 		${WRKSRC}/dialogs/appearance-settings/main.c
-	@${REINPLACE_CMD} -e 's|IconThemeName" type="empty|IconThemeName" type="string" value="Adwaita|; \
-		s|"ThemeName" type="empty|"ThemeName" type="string" value="Xfce|' \
+	@${REINPLACE_CMD} -e 's|IconThemeName" type="empty|IconThemeName" type="string" value="elementary-xfce|; \
+		s|"ThemeName" type="empty|"ThemeName" type="string" value="Greybird|' \
 		${WRKSRC}/xfsettingsd/xsettings.xml
 
 .include <bsd.port.mk>

@@ -2,7 +2,7 @@
 # $FreeBSD: head/x11-fm/thunar/Makefile 504557 2019-06-19 16:14:27Z madpilot $
 
 PORTNAME=	Thunar
-DISTVERSION=	1.8.8
+DISTVERSION=	1.8.9
 CATEGORIES=	x11-fm xfce
 MASTER_SITES=	XFCE
 DIST_SUBDIR=	xfce4
@@ -34,7 +34,7 @@ INSTALL_TARGET=	install-strip
 OPTIONS_DEFINE=		GIR NLS NOTIFY
 OPTIONS_GROUP=		PLUGINS
 OPTIONS_GROUP_PLUGINS=	PLUG_APR PLUG_SBR PLUG_TPA PLUG_UCA PLUG_WALL
-OPTIONS_DEFAULT=	NOTIFY PLUG_APR PLUG_SBR PLUG_TPA PLUG_UCA PLUG_WALL
+OPTIONS_DEFAULT=	GIR NOTIFY PLUG_APR PLUG_SBR PLUG_TPA PLUG_UCA PLUG_WALL
 OPTIONS_SUB=		yes
 
 # Override NOTIFY_DESC
@@ -46,7 +46,6 @@ PLUG_TPA_DESC=	Trash Panel Applet plugin
 PLUG_UCA_DESC=	User Customizable Actions plugin
 PLUG_WALL_DESC=	Wallpaper plugin
 
-GIR_BUILD_DEPENDS=		vapigen:lang/vala
 GIR_USE=			gnome=introspection:build
 GIR_CONFIGURE_ON=		--enable-introspection=yes
 GIR_CONFIGURE_OFF=		--enable-introspection=no
@@ -70,7 +69,7 @@ PLUG_UCA_CONFIGURE_ENABLE=	uca-plugin
 PLUG_WALL_CONFIGURE_ENABLE=	wallpaper-plugin
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|internet-mail|emblem-mail|' \
+	@${REINPLACE_CMD} -e 's|mail-send|emblem-mail|' \
 		${WRKSRC}/plugins/thunar-sendto-email/thunar-sendto-email.desktop.in.in
 
 post-install:

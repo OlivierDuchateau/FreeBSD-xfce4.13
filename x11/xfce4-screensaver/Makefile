@@ -1,8 +1,7 @@
 # $FreeBSD: head/x11/xfce4-screensaver/Makefile 507603 2019-07-29 21:38:20Z madpilot $
 
 PORTNAME=	xfce4-screensaver
-PORTVERSION=	0.1.7
-PORTREVISION=	1
+PORTVERSION=	0.1.8
 CATEGORIES=	x11 xfce
 MASTER_SITES=	XFCE/apps
 DIST_SUBDIR=	xfce4
@@ -23,7 +22,7 @@ USES=		gettext-tools gl gmake gnome pkgconfig python:3.5+ shebangfix \
 		tar:bzip2 xfce
 USE_GL=		gl
 USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30 intltool
-USE_XFCE=	garcon libexo libutil
+USE_XFCE=	garcon libexo xfconf
 USE_XORG=	ice sm x11 xext xrandr xscrnsaver xxf86vm
 
 SHEBANG_FILES=	src/xfce4-screensaver-configure

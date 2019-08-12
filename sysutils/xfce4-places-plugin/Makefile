@@ -1,7 +1,7 @@
 # $FreeBSD: head/sysutils/xfce4-places-plugin/Makefile 284387 2011-10-26 20:27:27Z rene $
 
 PORTNAME=	xfce4-places-plugin
-PORTVERSION=	1.8.0
+PORTVERSION=	1.8.1
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	XFCE/panel-plugins
 DIST_SUBDIR=	xfce4

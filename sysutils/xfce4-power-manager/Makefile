@@ -2,8 +2,7 @@
 # $FreeBSD: head/sysutils/xfce4-power-manager/Makefile 507600 2019-07-29 21:36:40Z madpilot $
 
 PORTNAME=	xfce4-power-manager
-PORTVERSION=	1.6.4
-PORTREVISION=	1
+PORTVERSION=	1.6.5
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	XFCE
 DIST_SUBDIR=	xfce4

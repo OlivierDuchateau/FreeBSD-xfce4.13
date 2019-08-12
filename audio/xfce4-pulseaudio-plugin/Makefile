@@ -2,8 +2,7 @@
 # $FreeBSD: head/audio/xfce4-pulseaudio-plugin/Makefile 504557 2019-06-19 16:14:27Z madpilot $
 
 PORTNAME=	xfce4-pulseaudio-plugin
-PORTVERSION=	0.4.1
-PORTREVISION=	3
+PORTVERSION=	0.4.2
 CATEGORIES=	audio xfce
 MASTER_SITES=	XFCE/panel-plugins
 DIST_SUBDIR=	xfce4

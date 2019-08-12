@@ -2,7 +2,7 @@
 # $FreeBSD: head/x11-wm/xfce4-wm/Makefile 504557 2019-06-19 16:14:27Z madpilot $
 
 PORTNAME=	xfce4-wm
-PORTVERSION=	4.13.4
+PORTVERSION=	4.14.0
 CATEGORIES=	x11-wm xfce
 MASTER_SITES=	XFCE
 DISTNAME=	xfwm4-${DISTVERSIONFULL}
@@ -17,7 +17,7 @@ LIB_DEPENDS=	libepoxy.so:graphics/libepoxy
 
 USES=		gettext-tools gmake gnome pkgconfig tar:bzip2 xfce
 USE_GNOME=	cairo gtk30 intltool libwnck3
-USE_XFCE=	libmenu
+USE_XFCE=	libmenu xfconf
 USE_XORG=	ice sm x11 xcomposite xdamage xext xfixes xi xinerama \
 		xrandr xrender
 
@@ -30,17 +30,11 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 DATADIR=	${PREFIX}/share/xfwm4
 
-PORTSCOUT=	limitw:1,even
-
-OPTIONS_DEFINE=		DRM NLS STARTUP
+OPTIONS_DEFINE=		NLS STARTUP
 OPTIONS_DEFAULT=	STARTUP
 OPTIONS_SUB=		yes
 
-DRM_DESC=		Direct Rendering Module service
 STARTUP_DESC=		Startup notification
-
-DRM_CONFIGURE_ENABLE=	libdrm
-DRM_LIB_DEPENDS=	libdrm.so:graphics/libdrm
 
 NLS_CONFIGURE_ENABLE=	nls
 NLS_USES=		gettext-runtime

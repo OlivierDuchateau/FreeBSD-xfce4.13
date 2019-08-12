@@ -50,16 +50,16 @@ libexo_USE_XFCE_REQ=	libmenu
 panel_LIB_DEPENDS=	libxfce4panel-2.0.so:x11-wm/xfce4-panel
 panel_RUN_DEPENDS=	xfce4-panel:x11-wm/xfce4-panel
 panel_USE_XFCE_REQ=	garcon libexo xfconf
-
-thunar_LIB_DEPENDS=	libthunarx-3.so:x11-fm/thunar
-thunar_RUN_DEPENDS=	Thunar:x11-fm/thunar
-thunar_USE_XFCE_REQ=	xfconf libmenu
 .endif
 
 libgui_LIB_DEPENDS=	libxfcegui4.so:x11-toolkits/libxfce4gui
 libgui_USE_XFCE_REQ=	libutil
 
 libutil_LIB_DEPENDS=	libxfce4util.so:x11/libxfce4util
+
+thunar_LIB_DEPENDS=	libthunarx-3.so:x11-fm/thunar
+thunar_RUN_DEPENDS=	Thunar:x11-fm/thunar
+thunar_USE_XFCE_REQ=	xfconf libmenu
 
 xfconf_LIB_DEPENDS=	libxfconf-0.so:x11/xfce4-conf
 xfconf_USE_XFCE_REQ=	libutil

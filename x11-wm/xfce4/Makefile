@@ -2,7 +2,7 @@
 # $FreeBSD: head/x11-wm/xfce4/Makefile 412351 2016-04-01 14:33:55Z mat $
 
 PORTNAME=	xfce
-PORTVERSION=	4.13
+PORTVERSION=	4.14
 CATEGORIES=	x11-wm xfce
 
 MAINTAINER=	xfce@FreeBSD.org

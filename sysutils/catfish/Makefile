@@ -18,9 +18,11 @@ RUN_DEPENDS=	\
 BUILD_DEPENDS=	${RUN_DEPENDS}
 
 USES=		desktop-file-utils gettext-tools gnome python:2.7 tar:bz2
-NO_ARCH=	yes
 USE_PYTHON=	distutils
 USE_GNOME=	gtk30 intltool pygobject3
+
+NO_ARCH=	yes
+INSTALLS_ICONS=	yes
 
 OPTIONS_DEFINE=	DOCS ZEITGEIST
 OPTIONS_DEFAULT=ZEITGEIST POLKIT
@@ -35,6 +37,11 @@ POLKIT_RUN_DEPENDS=	pkexec:sysutils/polkit
 
 SUDO_DESC=	Provide sudo support
 SUDO_RUN_DEPENDS=	sudo:security/sudo
+
+post-install:
+	${MV} ${STAGEDIR}${PREFIX}/share/man/man1/catfish.1 ${STAGEDIR}${PREFIX}/man/man1/catfish.1
+	(cd ${STAGEDIR}${PREFIX}/share && ${RMDIR} -p man/man1)
+	${GZIP} ${STAGEDIR}${PREFIX}/man/man1/catfish.1
 
 .include <bsd.port.pre.mk>
 

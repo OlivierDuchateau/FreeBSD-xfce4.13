@@ -28,7 +28,7 @@ CONFIGURE_ARGS=	--enable-debug=yes \
 		--enable-pluggable-dialogs
 INSTALLS_ICONS=	yes
 
-SUB_FILES=	pkg-message
+PORTSCOUT=	limitw:1,even
 
 OPTIONS_DEFINE=		NOTIFY NLS UPOWER
 OPTIONS_DEFAULT=	NOTIFY

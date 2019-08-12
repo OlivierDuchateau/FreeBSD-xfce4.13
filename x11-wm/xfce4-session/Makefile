@@ -31,6 +31,8 @@ CONFIGURE_ARGS=	--enable-legacy-sm \
 SUB_FILES=	pkg-message
 INSTALL_TARGET=	install-strip
 
+PORTSCOUT=	limitw:1,even
+
 OPTIONS_DEFINE=		NLS
 OPTIONS_SUB=		yes
 

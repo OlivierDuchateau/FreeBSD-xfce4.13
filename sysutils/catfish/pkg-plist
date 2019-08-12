@@ -1,4 +1,5 @@
 bin/catfish
+man/man1/catfish.1.gz
 %%PYTHON_SITELIBDIR%%/catfish/AboutCatfishDialog.py
 %%PYTHON_SITELIBDIR%%/catfish/AboutCatfishDialog.pyc
 %%PYTHON_SITELIBDIR%%/catfish/AboutCatfishDialog.pyo
@@ -93,5 +94,4 @@ share/locale/tr/LC_MESSAGES/catfish.mo
 share/locale/uk/LC_MESSAGES/catfish.mo
 share/locale/zh_CN/LC_MESSAGES/catfish.mo
 share/locale/zh_TW/LC_MESSAGES/catfish.mo
-share/man/man1/catfish.1
 share/metainfo/catfish.appdata.xml

@@ -21,7 +21,7 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 USES=		gettext-tools gl gmake gnome pkgconfig python:3.5+ shebangfix \
 		tar:bzip2 xfce
 USE_GL=		gl
-USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30 intltool
+USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30 intltool libwnck3
 USE_XFCE=	garcon libexo xfconf
 USE_XORG=	ice sm x11 xext xrandr xscrnsaver xxf86vm
 

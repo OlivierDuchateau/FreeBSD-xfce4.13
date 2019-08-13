@@ -13,6 +13,9 @@ COMMENT=	Vala binding for the Xfce core libraries
 
 LICENSE=	LGPL21
 
+DEPRECATED=	EOL, use the VAPI/GIR functionality included in the XFCE ports
+EXPIRATION_DATE=2019-09-30
+
 BUILD_DEPENDS=	valac:lang/vala
 
 USES=		gmake gnome pathfix pkgconfig tar:bzip2 xfce

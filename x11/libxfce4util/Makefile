@@ -24,6 +24,7 @@ CONFIGURE_ARGS=	--without-html-dir
 PORTSCOUT=	limitw:1,even
 
 OPTIONS_DEFINE=		GIR NLS VAPI
+OPTIONS_DEFAULT=	GIR VAPI
 OPTIONS_SUB=		yes
 
 GIR_DESC=		Use Gobject Introspection

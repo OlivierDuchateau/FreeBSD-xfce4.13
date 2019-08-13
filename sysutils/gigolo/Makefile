@@ -2,8 +2,7 @@
 # $FreeBSD: head/sysutils/gigolo/Makefile 505889 2019-07-05 08:09:58Z madpilot $
 
 PORTNAME=	gigolo
-PORTVERSION=	0.4.91
-PORTREVISION=	1
+PORTVERSION=	0.5.0
 CATEGORIES=	sysutils
 MASTER_SITES=	XFCE/apps
 
@@ -18,7 +17,7 @@ ONLY_FOR_ARCHS_REASON=	Does not compile
 BUILD_DEPENDS=	p5-XML-Parser>=0:textproc/p5-XML-Parser
 
 USES=		fuse gettext-tools gmake pkgconfig tar:bzip2 xfce
-USE_GNOME=	cairo gdkpixbuf2 gtk30 gvfs intlhack
+USE_GNOME=	cairo gdkpixbuf2 gtk30 gvfs
 USE_XORG=	x11
 
 GNU_CONFIGURE=	yes

@@ -17,7 +17,7 @@ ONLY_FOR_ARCHS_REASON=	Does not compile
 BUILD_DEPENDS=	p5-XML-Parser>=0:textproc/p5-XML-Parser
 
 USES=		fuse gettext-tools gmake pkgconfig tar:bzip2 xfce
-USE_GNOME=	cairo gdkpixbuf2 gtk30 gvfs
+USE_GNOME=	cairo gdkpixbuf2 gtk30 gvfs intltool
 USE_XORG=	x11
 
 GNU_CONFIGURE=	yes

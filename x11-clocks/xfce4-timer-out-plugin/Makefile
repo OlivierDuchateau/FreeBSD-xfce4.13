@@ -2,8 +2,7 @@
 # $FreeBSD: head/x11-clocks/xfce4-timer-out-plugin/Makefile 504557 2019-06-19 16:14:27Z madpilot $
 
 PORTNAME=	xfce4-time-out-plugin
-PORTVERSION=	1.0.2
-PORTREVISION=	3
+PORTVERSION=	1.0.3
 CATEGORIES=	x11-clocks xfce
 MASTER_SITES=	XFCE/panel-plugins
 DIST_SUBDIR=	xfce4

@@ -2,8 +2,7 @@
 # $FreeBSD: head/sysutils/xfce4-netload-plugin/Makefile 490953 2019-01-22 14:44:38Z madpilot $
 
 PORTNAME=	xfce4-netload-plugin
-PORTVERSION=	1.3.1
-PORTREVISION=	1
+PORTVERSION=	1.3.2
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	XFCE/panel-plugins
 DIST_SUBDIR=	xfce4

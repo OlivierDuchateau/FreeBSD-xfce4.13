@@ -2,8 +2,7 @@
 # $FreeBSD: head/sysutils/xfce4-fsguard-plugin/Makefile 504557 2019-06-19 16:14:27Z madpilot $
 
 PORTNAME=	xfce4-fsguard-plugin
-PORTVERSION=	1.1.0
-PORTREVISION=	1
+PORTVERSION=	1.1.1
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	XFCE/panel-plugins
 DIST_SUBDIR=	xfce4

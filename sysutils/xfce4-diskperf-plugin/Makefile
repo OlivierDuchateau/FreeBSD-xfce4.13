@@ -2,8 +2,7 @@
 # $FreeBSD: head/sysutils/xfce4-diskperf-plugin/Makefile 503624 2019-06-07 09:01:49Z amdmi3 $
 
 PORTNAME=	xfce4-diskperf-plugin
-PORTVERSION=	2.6.1
-PORTREVISION=	1
+PORTVERSION=	2.6.2
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	XFCE/panel-plugins
 DIST_SUBDIR=	xfce4

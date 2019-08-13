@@ -2,8 +2,7 @@
 # $FreeBSD: head/www/xfce4-smartbookmark-plugin/Makefile 504557 2019-06-19 16:14:27Z madpilot $
 
 PORTNAME=	xfce4-smartbookmark-plugin
-PORTVERSION=	0.5.0
-PORTREVISION=	1
+PORTVERSION=	0.5.1
 CATEGORIES=	www xfce
 MASTER_SITES=	XFCE/panel-plugins
 DIST_SUBDIR=	xfce4

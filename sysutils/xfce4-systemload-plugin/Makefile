@@ -2,8 +2,7 @@
 # $FreeBSD: head/sysutils/xfce4-systemload-plugin/Makefile 504427 2019-06-17 15:10:19Z woodsb02 $
 
 PORTNAME=	xfce4-systemload-plugin
-PORTVERSION=	1.2.2
-PORTREVISION=	2
+PORTVERSION=	1.2.3
 CATEGORIES=	sysutils xfce
 MASTER_SITES=	XFCE/panel-plugins
 DIST_SUBDIR=	xfce4

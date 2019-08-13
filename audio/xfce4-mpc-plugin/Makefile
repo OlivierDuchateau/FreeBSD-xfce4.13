@@ -2,8 +2,7 @@
 # $FreeBSD: head/audio/xfce4-mpc-plugin/Makefile 504557 2019-06-19 16:14:27Z madpilot $
 
 PORTNAME=	xfce4-mpc-plugin
-PORTVERSION=	0.5.1
-PORTREVISION=	1
+PORTVERSION=	0.5.2
 CATEGORIES=	audio xfce
 MASTER_SITES=	XFCE/panel-plugins
 DIST_SUBDIR=	xfce4

@@ -11,7 +11,7 @@ in the release notes and/or placed into UPDATING.
 All ports committers are allowed to commit to this file.
 
 20190816:
-AUTHOR: madpilot@freebsd.org
+AUTHOR: madpilot@FreeBSD.org
 
   USES=xfce now defaults to gtk3, so for ported applications requiring
   GTK2 XFCE support USES=xfce:gtk2 should be used.

@@ -29,14 +29,14 @@ OPTIONS_DEFAULT=ZEITGEIST POLKIT
 OPTIONS_MULTI=	PRIVILEGES
 OPTIONS_MULTI_PRIVILEGES=	POLKIT SUDO
 
-ZEITGEIST_DESC=	Provide recent search suggestions
-ZEITGEIST_LIB_DEPENDS=	libzeitgeist-2.0.so:sysutils/zeitgeist
-
 POLKIT_DESC=	Provide Polkit (pkexec) support
 POLKIT_RUN_DEPENDS=	pkexec:sysutils/polkit
 
 SUDO_DESC=	Provide sudo support
 SUDO_RUN_DEPENDS=	sudo:security/sudo
+
+ZEITGEIST_DESC=	Provide recent search suggestions
+ZEITGEIST_LIB_DEPENDS=	libzeitgeist-2.0.so:sysutils/zeitgeist
 
 post-install:
 	${MV} ${STAGEDIR}${PREFIX}/share/man/man1/catfish.1 ${STAGEDIR}${PREFIX}/man/man1/catfish.1

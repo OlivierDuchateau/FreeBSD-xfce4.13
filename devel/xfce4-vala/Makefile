@@ -24,6 +24,6 @@ USE_XFCE=	panel
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-vala-api=0.40
 
-CONFLICTS=	libxfce4util-4.14.*
+CONFLICTS_INSTALL=	libxfce4util-4.14.*
 
 .include <bsd.port.mk>

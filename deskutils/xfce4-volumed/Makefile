@@ -24,4 +24,5 @@ USE_GSTREAMER=	yes
 USE_XFCE=	xfconf
 
 GNU_CONFIGURE=	yes
+
 .include <bsd.port.mk>

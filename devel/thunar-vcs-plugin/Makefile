@@ -28,11 +28,11 @@ OPTIONS_SUB=		yes
 
 GIT_DESC=		Git support
 
-NLS_CONFIGURE_ENABLE=	nls
-NLS_USES=		gettext-runtime
-
 GIT_CONFIGURE_ENABLE=	git
 GIT_RUN_DEPENDS=	git:devel/git
+
+NLS_CONFIGURE_ENABLE=	nls
+NLS_USES=		gettext-runtime
 
 SVN_CONFIGURE_ENABLE=	subversion
 SVN_LIB_DEPENDS=	libsvn_client-1.so:devel/subversion \

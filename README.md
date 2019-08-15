@@ -4,7 +4,11 @@
 
 This repository contains a [FreeBSD ports](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/ports-using.html) overlay with [XFCE desktop environment](https://xfce.org/) ports updated to version 4.13 of the desktop, which is the development desktop on which the future version 4.14 will be based.
 
-The XFCE people are targeting to [release XFCE 4.14 on 11 August 2019](https://wiki.xfce.org/releng/4.14/roadmap).
+[XFCE 4.14 was released on 11 August 2019](https://wiki.xfce.org/releng/4.14/roadmap).
+
+Code review for the update to the ports tree is available here:
+
+https://reviews.freebsd.org/D21278
 
 In preparation for XFCE 4.14 final I'm now running this set of patches on my own desktop systems with success, and plan to commit these (updatesd to 4.14 packages) soon after the official release of XFCE 4.14.
 

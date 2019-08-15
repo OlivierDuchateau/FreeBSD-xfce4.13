@@ -15,8 +15,12 @@ menu, under settings/appearence, and go to 'Style' tab to select
 the greybird theme and then to the 'Icons' tab to select the
 xfce-elementary icons.
 
+Then go to 'Window Manager' or launch 'xfwm4-settings' select greybird
+theme.
+
 Or launch these command in a shell:
   xfconf-query -c xsettings -p /Net/ThemeName -t string -s "Greybird"
+  xfconf-query -c xfwm4 -p /general/theme -t string -s "Greybird"
   xfconf-query -c xsettings -p /Net/IconThemeName -t string -s "elementary-xfce"
 EOD
 }

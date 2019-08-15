@@ -44,4 +44,8 @@ NLS_USES=		gettext-runtime
 STARTUP_CONFIGURE_ENABLE=	startup-notification
 STARTUP_LIB_DEPENDS=	libstartup-notification-1.so:x11/startup-notification
 
+post-patch:
+	@${REINPLACE_CMD} -e 's|Default|Greybird|' \
+		${WRKSRC}/settings-dialogs/xfwm4-settings.c
+
 .include <bsd.port.mk>

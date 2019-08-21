@@ -14,9 +14,9 @@
  # Location of locate.db file
 -__locate_db_path__ = '/var/lib/mlocate/mlocate.db'
 +if sys.platform.startswith('linux'):
-+	__locate_db_path__ = '/var/lib/mlocate/mlocate.db'
++    __locate_db_path__ = '/var/lib/mlocate/mlocate.db'
 +elif 'bsd' in sys.platform or sys.platform.startswith('dragonfly'):
-+	__locate_db_path__ = '/var/db/locate.database'
++    __locate_db_path__ = '/var/db/locate.database'
  __license__ = 'GPL-3+'
  __version__ = '1.4.9'
  
